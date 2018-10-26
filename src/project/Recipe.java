@@ -12,7 +12,7 @@ public class Recipe {
 	 * tail is the last node
 	 * think of this as array,
 	 * 	instead of boxes together, it is a box then point to
-	 *  another box using "arrow" or reference
+	 *  another box using "arrow" or references
 	 */
 	private static RecipeLL_Node head, tail;
 
