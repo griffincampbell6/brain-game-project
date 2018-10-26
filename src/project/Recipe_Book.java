@@ -1,11 +1,18 @@
 package project;
 
+import javafx.*;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
 /**
  * This is the recipe book that the user can pick to create their game
  * 
  * @author 
  */
-public class Recipe_Book {
+public class Recipe_Book extends Application{
 	private static RecipeLL_Node head, tail, n;
 
 	private static final Ingredient FLOUR = new Ingredient("Flour", "cup");
@@ -48,7 +55,23 @@ public class Recipe_Book {
 	}
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		createCake();
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		primaryStage.setTitle("Recipe Book");
+		
+		Button button = new Button();
+		button.setText("Create Cake");
+		
+		StackPane stack = new StackPane();
+		stack.getChildren().add(button);
+		
+		Scene scene = new Scene(stack, 400, 400);
+		primaryStage.setScene(scene);
+		primaryStage.show();
 	}
 }
