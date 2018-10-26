@@ -26,7 +26,7 @@ public class Recipe_Book {
 	/**
 	 * create a ingredient list(LL) for cake
 	 */
-	public static void createCake() {
+	public static void createChocolateCake() {
 		/*
 		 * each recipe uses similar ingredient
 		 * the only difference is the amount of each
@@ -35,6 +35,8 @@ public class Recipe_Book {
 		 */
 		FLOUR.setAmount(3);
 		EGG.setAmount(2);
+		MILK.setAmount(4);
+		CHOCOLATE.setAmount(2);
 		BUTTER.setAmount(3);
 		SUGAR.setAmount(4);
 		
@@ -56,6 +58,8 @@ public class Recipe_Book {
 		 */
 		tail.setNext(tail = new RecipeLL_Node(FLOUR));
 		tail.setNext(tail = new RecipeLL_Node(EGG));
+		tail.setNext(tail = new RecipeLL_Node(MILK));
+		tail.setNext(tail = new RecipeLL_Node(CHOCOLATE));
 		tail.setNext(tail = new RecipeLL_Node(BUTTER));
 		tail.setNext(tail = new RecipeLL_Node(SUGAR));
 		
@@ -99,6 +103,6 @@ public class Recipe_Book {
 	 * @param args command-line, ignored
 	 */
 	public static void main(String[] args) {
-		createCake();
+		createChocolateCake();
 	}
 }
