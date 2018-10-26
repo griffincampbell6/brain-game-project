@@ -6,13 +6,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.event.*;
 
 /**
  * This is the recipe book that the user can pick to create their game
  * 
  * @author 
  */
-public class Recipe_Book extends Application{
+public class Recipe_Book extends Application implements EventHandler<ActionEvent>{
 	private static RecipeLL_Node head, tail, n;
 
 	private static final Ingredient FLOUR = new Ingredient("Flour", "cup");
@@ -59,19 +60,52 @@ public class Recipe_Book extends Application{
 		createCake();
 		launch(args);
 	}
+	
+	Button createCake;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Recipe Book");
 		
-		Button button = new Button();
-		button.setText("Create Cake");
+		Button flourButton = new Button();
+		flourButton.setLayoutX(20);
+		flourButton.setLayoutY(20);
+		flourButton.setText("Flour");
+		Button eggButton = new Button();
+		eggButton.setLayoutX(50);
+		eggButton.setLayoutY(20);
+		eggButton.setText("Egg");
+		Button butterButton = new Button();
+		butterButton.setText("Butter");
+		Button sugarButton = new Button();
+		sugarButton.setText("Sugar");
+		createCake = new Button();
+		createCake.setText("Create Cake");
+		
+		createCake.setOnAction((ActionEvent e) -> {
+			System.out.println("Cake created!");
+		});
 		
 		StackPane stack = new StackPane();
-		stack.getChildren().add(button);
+		stack.getChildren().add(flourButton);
+		stack.getChildren().add(eggButton);
+		stack.getChildren().add(butterButton);
+		stack.getChildren().add(sugarButton);
+		stack.getChildren().add(createCake);
+		
 		
 		Scene scene = new Scene(stack, 400, 400);
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		
+		createCake.setOnAction(this);
 	}
+
+	/*@Override
+	public void handle(ActionEvent event) {
+		if(event.getSource() == createCake) {
+			System.out.println("Cake created!");
+		}
+		
+	}*/
 }
