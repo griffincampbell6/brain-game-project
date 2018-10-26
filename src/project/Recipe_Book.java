@@ -59,7 +59,7 @@ public class Recipe_Book {
 		tail.setNext(tail = new RecipeLL_Node(BUTTER));
 		tail.setNext(tail = new RecipeLL_Node(SUGAR));
 		
-		printLL(head);
+		printLL(head); // make sure it works
 	}
 	
 	/**
