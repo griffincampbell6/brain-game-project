@@ -15,10 +15,11 @@ public class Client extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		/**
+		 * loads start menu
 		 * root is set to start menu fxml file
 		 */
-		Parent root = 
-FXMLLoader.load(getClass().getResource("StartMenu.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("StartMenu.fxml"));
+		Parent root = loader.load();
 		Scene scene = new Scene(root, 1280, 720);
 		
 		/*
