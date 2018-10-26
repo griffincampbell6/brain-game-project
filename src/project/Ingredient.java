@@ -20,6 +20,14 @@ public class Ingredient {
 	}
 	
 	/**
+	 * If it is just a string, that would be the name of the recipe
+	 * @param name the recipe
+	 */
+	public Ingredient(String name) {
+		this(name, null);
+	}
+	
+	/**
 	 * default constructor for an ingredient
 	 * the name would be null
 	 */
