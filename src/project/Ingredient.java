@@ -73,6 +73,6 @@ public class Ingredient {
 	 */
 	@Override
 	public String toString() {
-		return String.format("%s: %d%s", name, amount, unit);
+		return String.format("%s: %d %s", name, amount, unit);
 	}
 }
