@@ -4,7 +4,7 @@ package project;
  * A linked list for a list of ingredients
  * Array is restricted, and arraylist is not efficient 
  * 
- * @author 
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  */
 public class RecipeLL_Node {
 	private Ingredient ingred;
