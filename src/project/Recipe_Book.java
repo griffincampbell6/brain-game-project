@@ -3,10 +3,18 @@ package project;
 /**
  * This is the recipe book that the user can pick to create their game
  * 
- * @author 
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  */
 public class Recipe_Book {
-	private static RecipeLL_Node head, tail, n;
+	/*
+	 * reference for using linked list
+	 * head is the first node 
+	 * tail is the last node
+	 * think of this as array,
+	 * 	instead of boxes together, it is a box then point to
+	 *  another box using "arrow" or reference
+	 */
+	private static RecipeLL_Node head, tail;
 
 	private static final Ingredient FLOUR = new Ingredient("Flour", "cup");
 	private static final Ingredient EGG = new Ingredient("Egg", "eggs");
@@ -15,15 +23,37 @@ public class Recipe_Book {
 	private static final Ingredient BUTTER = new Ingredient("Butter", "tbs");
 	private static final Ingredient SUGAR = new Ingredient("Sugar", "gram");
 
+	/**
+	 * create a ingredient list(LL) for cake
+	 */
 	public static void createCake() {
+		/*
+		 * each recipe uses similar ingredient
+		 * the only difference is the amount of each
+		 * therefore create the ingredient object, static final,
+		 * then set the amount for each recipe
+		 */
 		FLOUR.setAmount(3);
 		EGG.setAmount(2);
 		BUTTER.setAmount(3);
 		SUGAR.setAmount(4);
 		
+		/*
+		 * setting the first node of the linked list
+		 * when there is only one node. the head and tail is the 
+		 * same "box"
+		 */
 		head = new RecipeLL_Node(new Ingredient("Cake"));
 		tail = head;
 		
+		/*
+		 * tail is pointed to a new ingredient
+		 * then that new ingredient becomes the new tail of 
+		 * the linked list
+		 * 
+		 * think as connecting marker together, adding a marker to the end
+		 * then the new marker is the new end rinse and repeat
+		 */
 		tail.setNext(tail = new RecipeLL_Node(FLOUR));
 		tail.setNext(tail = new RecipeLL_Node(EGG));
 		tail.setNext(tail = new RecipeLL_Node(BUTTER));
@@ -32,6 +62,11 @@ public class Recipe_Book {
 		printLL(head);
 	}
 	
+	/**
+	 * print the linked list to the console
+	 * for checking to see if the recipe is correct
+	 * @param head of a linked list
+	 */
 	private static void printLL(RecipeLL_Node h) {
 		String name = "";
 		String ingredient = "";
