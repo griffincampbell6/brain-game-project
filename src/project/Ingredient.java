@@ -14,8 +14,9 @@ public class Ingredient {
 	 * Create an ingredient by its name
 	 * @param name this ingredient's name
 	 */
-	public Ingredient(String name) {
+	public Ingredient(String name, String unit) {
 		this.name = name;
+		this.unit = unit;
 	}
 	
 	/**
@@ -23,7 +24,7 @@ public class Ingredient {
 	 * the name would be null
 	 */
 	public Ingredient() {
-		this(null);
+		this(null, null);
 	}
 	
 	/**
@@ -32,14 +33,6 @@ public class Ingredient {
 	 */
 	public void setAmount(int amount) {
 		this.amount = amount;
-	}
-
-	/**
-	 * set the unit of measurement for this ingredient
-	 * @param the unit of measure (lb, g, tsp)
-	 */
-	public void setUnit(String unit) {
-		this.unit = unit;
 	}
 
 	/**
