@@ -9,11 +9,11 @@ import java.util.Queue;
  * @param <K>
  * @param <V>
  */
-public class Recipe<K extends RecipeLL_Node, V extends Queue<String>> implements IngredAndSteps<K,V> {
+public class Recipe_Book<K extends RecipeLL_Node, V extends Queue<String>> implements IngredAndSteps<K,V> {
 	final private K key;
 	final private V value;
 
-	public Recipe(K key, V value) {
+	public Recipe_Book(K key, V value) {
 		this.key = key;
 		this.value = value;
 	}

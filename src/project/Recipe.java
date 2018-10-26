@@ -5,7 +5,7 @@ package project;
  * 
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  */
-public class Recipe_Book {
+public class Recipe {
 	/*
 	 * reference for using linked list
 	 * head is the first node 
