@@ -3,7 +3,7 @@ package project;
 /**
  * This is a class to instantiate an ingredient for a recipe
  * 
- * @author 
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  */
 public class Ingredient {
 	private final String name;
