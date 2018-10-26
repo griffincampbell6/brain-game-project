@@ -2,6 +2,13 @@ package project;
 
 import java.util.Queue;
 
+/**
+ * TESTING
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
+ *
+ * @param <K>
+ * @param <V>
+ */
 public class Recipe<K extends RecipeLL_Node, V extends Queue<String>> implements IngredAndSteps<K,V> {
 	final private K key;
 	final private V value;
