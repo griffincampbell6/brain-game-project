@@ -1,117 +1,108 @@
 package project;
 
-<<<<<<< HEAD
-import javafx.*;
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
-import javafx.event.*;
-=======
-import java.util.Queue;
->>>>>>> branch 'master' of https://eagle.cs.wit.edu/campbellg4/brain-game-project.git
-
 /**
- * TESTING
+ * This is the recipe book that the user can pick to create their game
+ * 
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
- *
- * @param <K>
- * @param <V>
  */
-<<<<<<< HEAD
-public class Recipe_Book extends Application implements EventHandler<ActionEvent>{
-	private static RecipeLL_Node head, tail, n;
-=======
-public class Recipe_Book<K extends RecipeLL_Node, V extends Queue<String>> implements IngredAndSteps<K,V> {
-	final private K key;
-	final private V value;
->>>>>>> branch 'master' of https://eagle.cs.wit.edu/campbellg4/brain-game-project.git
+public class Recipe {
+	/*
+	 * reference for using linked list
+	 * head is the first node 
+	 * tail is the last node
+	 * think of this as array,
+	 * 	instead of boxes together, it is a box then point to
+	 *  another box using "arrow" or references
+	 */
+	private static RecipeLL_Node head, tail;
 
-	public Recipe_Book(K key, V value) {
-		this.key = key;
-		this.value = value;
-	}
+	private static final Ingredient FLOUR = new Ingredient("Flour", "cup");
+	private static final Ingredient EGG = new Ingredient("Egg", "eggs");
+	private	static final Ingredient MILK = new Ingredient("Milk", "cup");
+	private static final Ingredient CHOCOLATE = new Ingredient("Chocolate", "cup");
+	private static final Ingredient BUTTER = new Ingredient("Butter", "tbs");
+	private static final Ingredient SUGAR = new Ingredient("Sugar", "gram");
 
-	@Override
-	public K getKey() {
-		return key;
+	/**
+	 * create a ingredient list(LL) for cake
+	 */
+	public static void createChocolateCake() {
+		/*
+		 * each recipe uses similar ingredient
+		 * the only difference is the amount of each
+		 * therefore create the ingredient object, static final,
+		 * then set the amount for each recipe
+		 */
+		FLOUR.setAmount(3);
+		EGG.setAmount(2);
+		MILK.setAmount(4);
+		CHOCOLATE.setAmount(2);
+		BUTTER.setAmount(3);
+		SUGAR.setAmount(4);
+		
+		/*
+		 * setting the first node of the linked list
+		 * when there is only one node. the head and tail is the 
+		 * same "box"
+		 */
+		head = new RecipeLL_Node(new Ingredient("Cake"));
+		tail = head;
+		
+		/*
+		 * tail is pointed to a new ingredient
+		 * then that new ingredient becomes the new tail of 
+		 * the linked list
+		 * 
+		 * think as connecting marker together, adding a marker to the end
+		 * then the new marker is the new end rinse and repeat
+		 */
+		tail.setNext(tail = new RecipeLL_Node(FLOUR));
+		tail.setNext(tail = new RecipeLL_Node(EGG));
+		tail.setNext(tail = new RecipeLL_Node(MILK));
+		tail.setNext(tail = new RecipeLL_Node(CHOCOLATE));
+		tail.setNext(tail = new RecipeLL_Node(BUTTER));
+		tail.setNext(tail = new RecipeLL_Node(SUGAR));
+		
+		printLL(head); // make sure it works
 	}
-<<<<<<< HEAD
 	
+	/**
+	 * print the linked list to the console
+	 * for checking to see if the recipe is correct
+	 * @param head of a linked list
+	 */
 	private static void printLL(RecipeLL_Node h) {
 		String name = "";
 		String ingredient = "";
 		
+		/*
+		 * if there is a head, there is a linked list
+		 * the first node is the name of the recipe
+		 */
 		if(h != null) {
 			name = String.format("%s:", h.getIngred());
 		}
 		
+		/*
+		 * looping through a linked list, not using a while-loop
+		 * similar to regular for-loop, the element to start, where to end 
+		 * and how to move the reference/pointer
+		 * 
+		 * this is the part to show the ingredient 
+		 */
 		for(RecipeLL_Node n = h.getNext(); n != null; n = n.getNext()) {
 			ingredient += String.format("%s ", n.toString());
 		}
 		
+		//print to console
 		System.out.format("%s%n%-5s%s", name, "", ingredient);
 	}
 	
-	
-	public static void main(String[] args){
-		createCake();
-		launch(args);
-=======
-
-	@Override
-	public V getValue() {
-		return value;
->>>>>>> branch 'master' of https://eagle.cs.wit.edu/campbellg4/brain-game-project.git
+	/**
+	 * test each recipe
+	 * @param args command-line, ignored
+	 */
+	public static void main(String[] args) {
+		createChocolateCake();
 	}
-	
-	Button createCake;
-
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		primaryStage.setTitle("Recipe Book");
-		
-		Button flourButton = new Button();
-		flourButton.setLayoutX(20);
-		flourButton.setLayoutY(20);
-		flourButton.setText("Flour");
-		Button eggButton = new Button();
-		eggButton.setLayoutX(50);
-		eggButton.setLayoutY(20);
-		eggButton.setText("Egg");
-		Button butterButton = new Button();
-		butterButton.setText("Butter");
-		Button sugarButton = new Button();
-		sugarButton.setText("Sugar");
-		createCake = new Button();
-		createCake.setText("Create Cake");
-		
-		createCake.setOnAction((ActionEvent e) -> {
-			System.out.println("Cake created!");
-		});
-		
-		StackPane stack = new StackPane();
-		stack.getChildren().add(flourButton);
-		stack.getChildren().add(eggButton);
-		stack.getChildren().add(butterButton);
-		stack.getChildren().add(sugarButton);
-		stack.getChildren().add(createCake);
-		
-		
-		Scene scene = new Scene(stack, 400, 400);
-		primaryStage.setScene(scene);
-		primaryStage.show();
-		
-		createCake.setOnAction(this);
-	}
-
-	/*@Override
-	public void handle(ActionEvent event) {
-		if(event.getSource() == createCake) {
-			System.out.println("Cake created!");
-		}
-		
-	}*/
 }
-
