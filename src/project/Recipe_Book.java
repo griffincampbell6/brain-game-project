@@ -71,18 +71,33 @@ public class Recipe_Book {
 		String name = "";
 		String ingredient = "";
 		
+		/*
+		 * if there is a head, there is a linked list
+		 * the first node is the name of the recipe
+		 */
 		if(h != null) {
 			name = String.format("%s:", h.getIngred());
 		}
 		
+		/*
+		 * looping through a linked list, not using a while-loop
+		 * similar to regular for-loop, the element to start, where to end 
+		 * and how to move the reference/pointer
+		 * 
+		 * this is the part to show the ingredient 
+		 */
 		for(RecipeLL_Node n = h.getNext(); n != null; n = n.getNext()) {
 			ingredient += String.format("%s ", n.toString());
 		}
 		
+		//print to console
 		System.out.format("%s%n%-5s%s", name, "", ingredient);
 	}
 	
-	
+	/**
+	 * test each recipe
+	 * @param args command-line, ignored
+	 */
 	public static void main(String[] args) {
 		createCake();
 	}
