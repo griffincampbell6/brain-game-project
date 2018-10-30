@@ -80,7 +80,7 @@ public class Recipe {
 		 * the first node is the name of the recipe
 		 */
 		if(h != null) {
-			name = String.format("%s:", h.getIngred().toString());
+			name = String.format("%s:", h.getIngred().getName());
 		}
 		
 		/*
