@@ -47,8 +47,8 @@ public class RecipeLL_Node {
 	 * getter for the ingredient object
 	 * @return the toString of the ingredient
 	 */
-	public String getIngred() {
-		return ingred.getName();
+	public Ingredient getIngred() {
+		return ingred;
 	}
 	
 	/**
