@@ -15,6 +15,7 @@ public class Recipe {
 	 *  another box using "arrow" or references
 	 */
 	private static RecipeLL_Node head, tail;
+	private static myLinkedList<Ingredient> head2, tail2;
 
 	private static final Ingredient FLOUR = new Ingredient("Flour", "cup");
 	private static final Ingredient EGG = new Ingredient("Egg", "eggs");
@@ -23,6 +24,10 @@ public class Recipe {
 	private static final Ingredient BUTTER = new Ingredient("Butter", "tbs");
 	private static final Ingredient SUGAR = new Ingredient("Sugar", "gram");
 
+	private static final String BAKE = "Bake";
+	private static final String MIX = "Mix";
+	private static final String CRACK = "Crack";
+	private static final String COOL = "Cool";
 	/**
 	 * create a ingredient list(LL) for cake
 	 */
@@ -63,7 +68,19 @@ public class Recipe {
 		tail.setNext(tail = new RecipeLL_Node(BUTTER));
 		tail.setNext(tail = new RecipeLL_Node(SUGAR));
 		
-		printLL(head); // make sure it works
+		//Queue<String> q = new Queue<String>
+		
+		head2 = new myLinkedList<Ingredient>(new Ingredient("Cake"));
+		tail2 = head2;
+		tail2.setNext(tail2 = new myLinkedList<Ingredient>(FLOUR));
+		tail2.setNext(tail2 = new myLinkedList<Ingredient>(EGG));
+		tail2.setNext(tail2 = new myLinkedList<Ingredient>(MILK));
+		tail2.setNext(tail2 = new myLinkedList<Ingredient>(CHOCOLATE));
+		tail2.setNext(tail2 = new myLinkedList<Ingredient>(BUTTER));
+		tail2.setNext(tail2 = new myLinkedList<Ingredient>(SUGAR));
+		
+		printRLL(head); // make sure it works
+		printMLL(head2);
 	}
 	
 	/**
@@ -71,7 +88,7 @@ public class Recipe {
 	 * for checking to see if the recipe is correct
 	 * @param head of a linked list
 	 */
-	private static void printLL(RecipeLL_Node h) {
+	private static void printRLL(RecipeLL_Node h) {
 		String name = "";
 		String ingredient = "";
 		
@@ -95,6 +112,23 @@ public class Recipe {
 		}
 		
 		//print to console
+		System.out.format("%s%n%-5s%s", name, "", ingredient);
+		System.out.println();
+	}
+	
+	private static <T> void printMLL(myLinkedList<Ingredient> h) {
+		String name = "";
+		String ingredient = "";
+		
+	
+		if(h != null) {
+			name = String.format("%s:", h.getInfo().getName());
+		}
+		
+		for(myLinkedList<Ingredient> n = h.getNext(); n != null; n = n.getNext()) {
+			ingredient += String.format("%s ", n.toString());
+		}
+	
 		System.out.format("%s%n%-5s%s", name, "", ingredient);
 	}
 	
