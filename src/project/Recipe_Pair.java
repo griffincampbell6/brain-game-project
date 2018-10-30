@@ -54,7 +54,7 @@ public class Recipe_Pair<K extends RecipeLL_Node, V extends Queue<String>> imple
 		 * the first node is the name of the recipe
 		 */
 		if(key != null) {
-			name = String.format("%s:", key.getIngred().toString());
+			name = String.format("%s:", key.getIngred().getName());
 		}
 
 		/*
