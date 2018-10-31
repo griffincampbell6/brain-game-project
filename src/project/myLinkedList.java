@@ -5,6 +5,7 @@ package project;
  *  this is the node class for  
  *  
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
+ * @param <T> any type of object that will be stored in this linked list
  */
 public class myLinkedList<T> {
 	private T info;
