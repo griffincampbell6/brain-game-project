@@ -73,6 +73,15 @@ public class Ingredient {
 	 */
 	@Override
 	public String toString() {
-		return String.format("%s: %d %s", name, amount, unit);
+		// this is just for the name of the recipe
+		if(amount == 0 && unit == null) {
+			return String.format("%s:%n", name);
+		}
+		
+		String n = (name != null)? name + ": ": "";
+		String a = (amount != 0)? amount+"": "";
+		String u = (unit != null)? unit: "";
+		
+		return String.format("%-5s %s %s %s", "", n, a, u);
 	}
 }
