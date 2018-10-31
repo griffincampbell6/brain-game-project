@@ -42,10 +42,9 @@ public class Recipe_Book<T> {
 			 * for each loop to iterate through the arraylist
 			 * to print all the recipe in the game
 			 */
-			for(Recipe_Pair<myLinkedList<Ingredient>, myQueue<String>> r: recipeBook) {
-				s += String.format("%s%n", r.toString());
+			for(int i = 0; i < recipeBook.size(); i++) {
+				s += String.format("%s%n%s%n", recipeBook.get(i).getKey().printList(), recipeBook.get(i).getValue().printQueue());
 			}
-
 			return s;
 		}
 	}
