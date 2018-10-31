@@ -1,7 +1,5 @@
 package project;
 
-import java.util.Queue;
-
 /**
  * TESTING
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
@@ -10,7 +8,7 @@ import java.util.Queue;
  * @param <V> generic, restricting to a queue of string
  * @param <T> generic, for the linked list
  */
-public class Recipe_Pair<K extends myLinkedList<Ingredient>, V extends Queue<String>> implements Pair<K,V> {
+public class Recipe_Pair<K extends myLinkedList<Ingredient>, V extends myQueue<String>> implements Pair<K,V> {
 	final private K key;
 	final private V value;
 
