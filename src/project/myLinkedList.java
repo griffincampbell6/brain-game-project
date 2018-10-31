@@ -8,10 +8,10 @@ package project;
  * @param <T> any type of object that will be stored in this linked list
  */
 public class myLinkedList<T> {
-	private T info;
-	private myLinkedList<T> head = null;
-	private myLinkedList<T> tail, next;
-	private int size = 0;
+	protected T info;
+	protected myLinkedList<T> head = null;
+	protected myLinkedList<T> tail, next;
+	protected int size = 0;
 
 	/**
 	 * Create a node with an ingredient and a pointer
@@ -63,7 +63,16 @@ public class myLinkedList<T> {
 	public T getInfo() {
 		return info;
 	}
-
+	
+	/**
+	 * toString method (just like the getter)
+	 * @return the toString of the ingredient
+	 */
+	@Override
+	public String toString() {
+		return info.toString();
+	}
+	
 	//////////////////// Linked List Information \\\\\\\\\\\\\\\\\\\\
 
 	/**
@@ -89,7 +98,10 @@ public class myLinkedList<T> {
 		return size;
 	}
 
-	// TODO: to be changed
+	/**
+	 * Similar to a toString, except for the whole list
+	 * @return the printed version of the linked list
+	 */
 	public String printList() {
 		String s = "";
 		
@@ -102,14 +114,5 @@ public class myLinkedList<T> {
 			
 			return s;
 		}
-	}
-	
-	/**
-	 * toString method (just like the getter)
-	 * @return the toString of the ingredient
-	 */
-	@Override
-	public String toString() {
-		return info.toString();
 	}
 }

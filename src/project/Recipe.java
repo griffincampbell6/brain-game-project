@@ -13,12 +13,12 @@ public class Recipe {
 	private static final Ingredient BUTTER = new Ingredient("Butter", "tbs");
 	private static final Ingredient SUGAR = new Ingredient("Sugar", "gram");
 
-	/*
-	 * private static final String BAKE = "Bake";
-	 * private static final String MIX = "Mix";
-	 * private static final String CRACK = "Crack";
-	 * private static final String COOL = "Cool";
-	 */
+
+	private static final String BAKE = "Bake";
+	private static final String MIX = "Mix";
+	private static final String CRACK = "Crack";
+	private static final String COOL = "Cool";
+
 
 	/**
 	 * create a ingredient list(LL) for cake
@@ -42,7 +42,7 @@ public class Recipe {
 		 * then the new marker is the new end rinse and repeat
 		 */
 		myLinkedList<Ingredient> ig = new myLinkedList<Ingredient>();
-		
+
 		ig.addLast(new myLinkedList<Ingredient>(new Ingredient("Cake")));
 		ig.addLast(new myLinkedList<Ingredient>(FLOUR));
 		ig.addLast(new myLinkedList<Ingredient>(EGG));
@@ -51,10 +51,15 @@ public class Recipe {
 		ig.addLast(new myLinkedList<Ingredient>(BUTTER));
 		ig.addLast(new myLinkedList<Ingredient>(SUGAR));
 
-		//Queue<String> q = new Queue<String>
+		myQueue<String> q = new myQueue<String>();
 
+		q.add(CRACK);
+		q.add(MIX);
+		q.add(BAKE);
+		q.add(COOL);
 
 		System.out.println(ig.printList());
+		System.out.println(q.printQueue());
 	}
 
 	/**
