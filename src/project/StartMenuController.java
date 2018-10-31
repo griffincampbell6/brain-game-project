@@ -15,7 +15,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-public class MenuController implements Initializable {
+public class StartMenuController implements Initializable {
 	@FXML 
 	private Button startBtn;
 	@FXML 
@@ -33,6 +33,9 @@ public class MenuController implements Initializable {
 			System.exit(0);
 		}));
 		
+		/*
+		 * loads diffifculty menu into stage
+		 */
 		startBtn.setOnAction((event -> {
 			try {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource(DIFF_MENU));
