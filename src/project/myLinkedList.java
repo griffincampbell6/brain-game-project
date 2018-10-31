@@ -108,7 +108,7 @@ public class myLinkedList<T> {
 		if(head == null) {
 			return "";
 		}else {
-			for(myLinkedList<T> curNode = head; curNode != null; curNode = curNode.getNext()) {
+			for(myLinkedList<T> curNode = head.getNext(); curNode != null; curNode = curNode.getNext()) {
 				s += String.format("%s ", curNode.getInfo().toString());
 			}
 			
