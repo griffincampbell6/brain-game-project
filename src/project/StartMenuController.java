@@ -23,7 +23,6 @@ public class StartMenuController implements Initializable {
 	
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
 
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		/*
@@ -41,7 +40,7 @@ public class StartMenuController implements Initializable {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource(DIFF_MENU));
 				Parent root;
 				root = loader.load();
-				Scene scene = new Scene(root, 1280, 720);
+				Scene scene = new Scene(root);
 				Stage stage = (Stage) startBtn.getScene().getWindow();
 				stage.setScene(scene);
 			} catch (IOException e) {
