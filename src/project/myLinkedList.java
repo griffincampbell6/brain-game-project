@@ -63,7 +63,16 @@ public class myLinkedList<T> {
 	public T getInfo() {
 		return info;
 	}
-
+	
+	/**
+	 * toString method (just like the getter)
+	 * @return the toString of the ingredient
+	 */
+	@Override
+	public String toString() {
+		return info.toString();
+	}
+	
 	//////////////////// Linked List Information \\\\\\\\\\\\\\\\\\\\
 
 	/**
@@ -89,7 +98,10 @@ public class myLinkedList<T> {
 		return size;
 	}
 
-	// TODO: to be changed
+	/**
+	 * Similar to a toString, except for the whole list
+	 * @return the printed version of the linked list
+	 */
 	public String printList() {
 		String s = "";
 		
@@ -102,14 +114,5 @@ public class myLinkedList<T> {
 			
 			return s;
 		}
-	}
-	
-	/**
-	 * toString method (just like the getter)
-	 * @return the toString of the ingredient
-	 */
-	@Override
-	public String toString() {
-		return info.toString();
 	}
 }
