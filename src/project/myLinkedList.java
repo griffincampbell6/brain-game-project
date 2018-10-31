@@ -8,10 +8,10 @@ package project;
  * @param <T> any type of object that will be stored in this linked list
  */
 public class myLinkedList<T> {
-	private T info;
-	private myLinkedList<T> head = null;
-	private myLinkedList<T> tail, next;
-	private int size = 0;
+	protected T info;
+	protected myLinkedList<T> head = null;
+	protected myLinkedList<T> tail, next;
+	protected int size = 0;
 
 	/**
 	 * Create a node with an ingredient and a pointer
