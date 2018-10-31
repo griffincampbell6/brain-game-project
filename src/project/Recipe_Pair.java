@@ -8,8 +8,9 @@ import java.util.Queue;
  *
  * @param <K> generic, restricting to a linked list of recipe node
  * @param <V> generic, restricting to a queue of string
+ * @param <T> generic, for the linked list
  */
-public class Recipe_Pair<K extends RecipeLL_Node, V extends Queue<String>> implements Pair<K,V> {
+public class Recipe_Pair<K extends myLinkedList<Ingredient>, V extends Queue<String>> implements Pair<K,V> {
 	final private K key;
 	final private V value;
 
@@ -43,36 +44,8 @@ public class Recipe_Pair<K extends RecipeLL_Node, V extends Queue<String>> imple
 	 * a toString to display the pair
 	 */
 	@Override
-	public String toString() {		
-		String name = "";
-		String ingredient = "";
-		String instruction = "";
-		int i = 1;
+	public String toString() {
 
-		/*
-		 * if there is a head, there is a linked list
-		 * the first node is the name of the recipe
-		 */
-		if(key != null) {
-			name = String.format("%s:", key.getIngred().getName());
-		}
-
-		/*
-		 * looping through a linked list, not using a while-loop
-		 * similar to regular for-loop, the element to start, where to end 
-		 * and how to move the reference/pointer
-		 * 
-		 * this is the part to show the ingredient 
-		 */
-		for(RecipeLL_Node n = key.getNext(); n != null; n = n.getNext()) {
-			ingredient += String.format("%s ", n.getIngred().toString());
-		}
-
-		for(String s : value) { 
-			instruction += String.format("%d. %s ", i, s);
-		}
-
-		//print to console
-		return String.format("%s%n%-5s%s%n%-5s%s", name, "", ingredient, "", instruction);
+		return null;
 	}
 }
