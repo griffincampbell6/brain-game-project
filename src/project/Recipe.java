@@ -13,12 +13,12 @@ public class Recipe {
 	private static final Ingredient BUTTER = new Ingredient("Butter", "tbs");
 	private static final Ingredient SUGAR = new Ingredient("Sugar", "gram");
 
-	/*
-	 * private static final String BAKE = "Bake";
-	 * private static final String MIX = "Mix";
-	 * private static final String CRACK = "Crack";
-	 * private static final String COOL = "Cool";
-	 */
+
+	private static final String BAKE = "Bake";
+	private static final String MIX = "Mix";
+	private static final String CRACK = "Crack";
+	private static final String COOL = "Cool";
+
 
 	/**
 	 * create a ingredient list(LL) for cake
@@ -41,8 +41,9 @@ public class Recipe {
 		 * think as connecting marker together, adding a marker to the end
 		 * then the new marker is the new end rinse and repeat
 		 */
+/////////////////// Linked List Test \\\\\\\\\\\\\\\\\\\\
 		myLinkedList<Ingredient> ig = new myLinkedList<Ingredient>();
-		
+
 		ig.addLast(new myLinkedList<Ingredient>(new Ingredient("Cake")));
 		ig.addLast(new myLinkedList<Ingredient>(FLOUR));
 		ig.addLast(new myLinkedList<Ingredient>(EGG));
@@ -50,11 +51,35 @@ public class Recipe {
 		ig.addLast(new myLinkedList<Ingredient>(CHOCOLATE));
 		ig.addLast(new myLinkedList<Ingredient>(BUTTER));
 		ig.addLast(new myLinkedList<Ingredient>(SUGAR));
-
-		//Queue<String> q = new Queue<String>
-
-
+		
 		System.out.println(ig.printList());
+		/*
+		 * size is one extra becuase the first node is to store
+		 * the name of the baking-food
+		 */
+		System.out.println(ig.getSize());
+		
+/////////////////// Queue Test \\\\\\\\\\\\\\\\\\\\
+		myQueue<String> in = new myQueue<String>();
+
+		in.add(CRACK);
+		in.add(MIX);
+		in.add(BAKE);
+		in.add(COOL);
+		
+		System.out.println(in.printQueue());
+		System.out.println(in.peek());
+		System.out.println(in.isEmpty());
+		System.out.println(in.size());
+
+/////////////////// Recipe_Book Test \\\\\\\\\\\\\\\\\\\\
+		Recipe_Book<Recipe_Pair<myLinkedList<Ingredient>, myQueue<String>>> recipeBook = new Recipe_Book<>();
+		
+		recipeBook.add(new Recipe_Pair<myLinkedList<Ingredient>, myQueue<String>>(ig, in));
+		recipeBook.add(ig, in);
+		
+		System.out.println(recipeBook.printAll());
+		
 	}
 
 	/**
