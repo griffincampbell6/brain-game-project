@@ -19,8 +19,8 @@ public class Client extends Application  {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
-			Recipe.setUp(); // creates the recipes we discussed 
-			
+			Recipe.setUp(); // create the recipe
+
 			/**
 			 * loads start menu
 			 * root is set to start menu fxml file

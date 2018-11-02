@@ -27,6 +27,18 @@ public class Recipe {
 	private static final String SPRINKLES = "Sprinkles";
 
 	/**
+	 * test each recipe
+	 * @param args command-line, cakeIGnored
+	 */
+	public static void setUp() {
+		createSugarCookies();
+		createChocolateChipCookies();
+		createBananaBread();
+		createWhiteBread();
+		createFancyCakee();
+	}
+	
+	/**
 	 * create sugar cookies
 	 */
 	private static void createSugarCookies() {
@@ -146,17 +158,5 @@ public class Recipe {
 		bananaBreadIS.add(ADD + " " + SPRINKLES);
 
 		recipeBook.add(bananaBreadIG, bananaBreadIS);
-	}
-
-	/**
-	 * test each recipe
-	 * @param args command-line, cakeIGnored
-	 */
-	public static void setUp() {
-		createSugarCookies();
-		createChocolateChipCookies();
-		createBananaBread();
-		createWhiteBread();
-		createFancyCakee();
 	}
 }
