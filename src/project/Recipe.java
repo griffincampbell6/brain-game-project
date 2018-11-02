@@ -113,7 +113,7 @@ public class Recipe {
 
 		chocolateCakeIS.add(CREAM);
 		chocolateCakeIS.add(STIR);
-		chocolateCakeIS.add(ADD + COCO);
+		chocolateCakeIS.add(ADD + " " + COCO);
 		chocolateCakeIS.add(SHAPE);
 		chocolateCakeIS.add(BAKE);
 
@@ -161,7 +161,7 @@ public class Recipe {
 		myQueue<String> whiteBreadIS = new myQueue<>();
 
 		whiteBreadIS.add(YEAST);
-		whiteBreadIS.add(ADD + MILK);
+		whiteBreadIS.add(ADD + " " + MILK);
 		whiteBreadIS.add(RISE);
 		whiteBreadIS.add(PAN);
 		whiteBreadIS.add(RISE);
@@ -191,7 +191,7 @@ public class Recipe {
 		bananaBreadIS.add(BAKE);
 		bananaBreadIS.add(COOL);
 		bananaBreadIS.add(FROST);
-		bananaBreadIS.add(ADD + SPRINKLES);
+		bananaBreadIS.add(ADD + " " + SPRINKLES);
 
 		recipeBook.add(bananaBreadIG, bananaBreadIS);
 	}
