@@ -159,6 +159,6 @@ public class Recipe {
 		createWhiteBread();
 		createFancyCakee();
 
-		System.out.println("\n\n" + recipeBook.printAll());
+		System.out.println(recipeBook.printAll());
 	}
 }
