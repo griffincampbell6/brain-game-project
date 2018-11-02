@@ -152,13 +152,11 @@ public class Recipe {
 	 * test each recipe
 	 * @param args command-line, cakeIGnored
 	 */
-	public static void main(String[] args) {
+	public static void setUp() {
 		createSugarCookies();
 		createChocolateChipCookies();
 		createBananaBread();
 		createWhiteBread();
 		createFancyCakee();
-
-		System.out.println(recipeBook.printAll());
 	}
 }
