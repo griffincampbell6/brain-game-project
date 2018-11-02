@@ -10,7 +10,6 @@ public class Recipe {
 
 	private static final String BAKE = "Bake";
 	private static final String MIX = "Mix";
-	private static final String CRACK = "Crack";
 	private static final String COOL = "Cool";
 	private static final String CREAM = "Cream";
 	private static final String FROST = "Frost";
@@ -27,73 +26,26 @@ public class Recipe {
 	private static final String COCO = "Chocolate Chips";
 	private static final String SPRINKLES = "Sprinkles";
 
-
-	/**
-	 * create a ingredient list(LL) for cake
-	 */
-	private static void createChocolateCake() {
-
-		/* 
-		 * think as connecting marker together, adding a marker to the end
-		 * then the new marker is the new end rinse and repeat
-		 */
-		/////////////////// Linked List Test \\\\\\\\\\\\\\\\\\\\
-		myLinkedList<Ingredient> cakeIG = new myLinkedList<Ingredient>();
-
-		cakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Cake")));
-		cakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("FLOUR")));
-		cakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("EGG")));
-		cakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("MILK")));
-		cakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("COCO")));
-		cakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("BUTTER")));
-		cakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("SUGAR")));
-
-		System.out.println(cakeIG.head.toString() + ": ");
-		System.out.println(cakeIG.printList());
-		/*
-		 * size is one extra becuase the first node is to store
-		 * the name of the baking-food
-		 */
-		System.out.println(cakeIG.getSize());
-
-		/////////////////// Queue Test \\\\\\\\\\\\\\\\\\\\
-		myQueue<String> cakeIS = new myQueue<String>();
-
-		cakeIS.add(CRACK);
-		cakeIS.add(MIX);
-		cakeIS.add(BAKE);
-		cakeIS.add(COOL);
-
-		System.out.println(cakeIS.printQueue());
-		System.out.println(cakeIS.peek());
-		System.out.println(cakeIS.isEmpty());
-		System.out.println(cakeIS.size());
-
-		/////////////////// Recipe_Book Test \\\\\\\\\\\\\\\\\\\\		
-		recipeBook.add(new Recipe_Pair<myLinkedList<Ingredient>, myQueue<String>>(cakeIG, cakeIS));
-		recipeBook.add(cakeIG, cakeIS);		
-	}
-
 	/**
 	 * create sugar cookies
 	 */
 	private static void createSugarCookies() {
-		myLinkedList<Ingredient> sugarCookiesIG = new myLinkedList<>();
+		myLinkedList<Ingredient> sugarCookiesIG = new myLinkedList<>(); // Instantiate a linked list for ingredients 
 
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar Cookies")));
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter")));
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar Cookies"))); // add the title of the recipe
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter"))); // add the ingredients IG
 		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar")));
 		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour")));
 		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg")));
 
-		myQueue<String> sugarCookiesIS = new myQueue<>();
+		myQueue<String> sugarCookiesIS = new myQueue<>();	// Instantiate a queue for instruction
 
-		sugarCookiesIS.add(CREAM);
+		sugarCookiesIS.add(CREAM); // add the instructions IS
 		sugarCookiesIS.add(STIR);
 		sugarCookiesIS.add(ROLL);
 		sugarCookiesIS.add(BAKE);
 
-		recipeBook.add(sugarCookiesIG, sugarCookiesIS);
+		recipeBook.add(sugarCookiesIG, sugarCookiesIS); // put it in the recipe book
 	}
 
 	/**
@@ -201,8 +153,6 @@ public class Recipe {
 	 * @param args command-line, cakeIGnored
 	 */
 	public static void main(String[] args) {
-		createChocolateCake();
-
 		createSugarCookies();
 		createChocolateChipCookies();
 		createBananaBread();
