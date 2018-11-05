@@ -1,13 +1,13 @@
 package project;
 
+import java.util.ArrayList;
+
 /**
  * This is the recipe book that the user can pick to create their game
  * 
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  */
-public class Recipe {	
-	private static Recipe_Book<Recipe_Pair<myLinkedList<Ingredient>, myQueue<String>>> recipeBook = new Recipe_Book<>();
-
+public class Game {	
 	private static final String BAKE = "Bake";
 	private static final String MIX = "Mix";
 	private static final String COOL = "Cool";
@@ -80,8 +80,6 @@ public class Recipe {
 		chocolateCakeIS.add(ADD + " " + COCO);
 		chocolateCakeIS.add(SHAPE);
 		chocolateCakeIS.add(BAKE);
-
-		recipeBook.add(chocolateCakeIG, chocolateCakeIS);
 	}
 
 	/**
@@ -104,8 +102,6 @@ public class Recipe {
 		bananaBreadIS.add(POUR);
 		bananaBreadIS.add(BAKE);
 		bananaBreadIS.add(COOL);
-
-		recipeBook.add(bananaBreadIG, bananaBreadIS);
 	}
 
 	/**
@@ -130,8 +126,6 @@ public class Recipe {
 		whiteBreadIS.add(PAN);
 		whiteBreadIS.add(RISE);
 		whiteBreadIS.add(BAKE);
-
-		recipeBook.add(whiteBreadIG, whiteBreadIS);
 	}
 
 	/**
@@ -156,7 +150,16 @@ public class Recipe {
 		bananaBreadIS.add(COOL);
 		bananaBreadIS.add(FROST);
 		bananaBreadIS.add(ADD + " " + SPRINKLES);
-
-		recipeBook.add(bananaBreadIG, bananaBreadIS);
+	}
+	
+	/**
+	 * checking to see if the ingredients the player picked match 
+	 * the one created by the developer
+	 * @param an ArrayList of the users choice
+	 * @return if the user list and the recipe list are the same
+	 */
+	public static boolean checkIngredients(ArrayList<String> userIngredient) {
+		if(userIngredient.size() == )
+		
 	}
 }
