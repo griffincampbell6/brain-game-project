@@ -7,7 +7,7 @@ package project;
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  * @param <E> any element that can be placed in the linked list
  */
-public class myQueue<E>{
+public class myQueue<E> {
 	private myLinkedList<String> queue = new myLinkedList<>(); 
 	
 	/**
