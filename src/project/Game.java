@@ -25,23 +25,12 @@ public class Game {
 	private static final String PAN = "Place in Pan";
 	private static final String COCO = "Chocolate Chips";
 	private static final String SPRINKLES = "Sprinkles";
-
-	/**
-	 * test each recipe
-	 * @param args command-line, cakeIGnored
-	 */
-	public static void setUp() {
-		createSugarCookies();
-		createChocolateChipCookies();
-		createBananaBread();
-		createWhiteBread();
-		createFancyCakee();
-	}
 	
 	/**
-	 * create sugar cookies
+	 * Create the InGredients for a sugar cookies
+	 * @return the linked list of the ingredients
 	 */
-	private static void createSugarCookies() {
+	private static myLinkedList<Ingredient> sugarCookiesIG(){
 		myLinkedList<Ingredient> sugarCookiesIG = new myLinkedList<>(); // Instantiate a linked list for ingredients 
 
 		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar Cookies"))); // add the title of the recipe
@@ -49,21 +38,30 @@ public class Game {
 		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar")));
 		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour")));
 		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg")));
-
+		
+		return sugarCookiesIG;
+	}
+	
+	/**
+	 * Create the InStruction for a sugar cookies
+	 * @return the queue of instructions 
+	 */
+	private static myQueue<String> sugarCookiesIS(){
 		myQueue<String> sugarCookiesIS = new myQueue<>();	// Instantiate a queue for instruction
 
 		sugarCookiesIS.add(CREAM); // add the instructions IS
 		sugarCookiesIS.add(STIR);
 		sugarCookiesIS.add(ROLL);
 		sugarCookiesIS.add(BAKE);
-
-		recipeBook.add(sugarCookiesIG, sugarCookiesIS); // put it in the recipe book
+		
+		return sugarCookiesIS;
 	}
 
 	/**
-	 * create chocolate chip cookies
+	 * Create the InGredients for a chocolate chip cookies
+	 * @return the linked list of the ingredients
 	 */
-	private static void createChocolateChipCookies() {
+	private static myLinkedList<Ingredient> chocolateCakeIG(){
 		myLinkedList<Ingredient> chocolateCakeIG = new myLinkedList<>();
 
 		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Chocolate Chip Cookie")));
@@ -72,7 +70,15 @@ public class Game {
 		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour")));
 		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg")));
 		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Chocolate Chips")));
-
+		
+		return chocolateCakeIG;
+	}
+	
+	/**
+	 * Create the InStruction for a chocolate chip cookies
+	 * @return the queue of instructions
+	 */
+	private static myQueue<String> chocolateCakeIS(){
 		myQueue<String> chocolateCakeIS = new myQueue<>();
 
 		chocolateCakeIS.add(CREAM);
@@ -80,12 +86,15 @@ public class Game {
 		chocolateCakeIS.add(ADD + " " + COCO);
 		chocolateCakeIS.add(SHAPE);
 		chocolateCakeIS.add(BAKE);
+		
+		return chocolateCakeIS;
 	}
 
 	/**
-	 * create banana bread
+	 * Create the InGredients for a banana bread
+	 * @return the linked list of the ingredients
 	 */
-	private static void createBananaBread() {
+	private static myLinkedList<Ingredient> bananaBreadIG(){
 		myLinkedList<Ingredient> bananaBreadIG = new myLinkedList<>();
 
 		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Banana Bread")));
@@ -94,7 +103,15 @@ public class Game {
 		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar")));
 		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg")));
 		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Cinnamon")));
-
+		
+		return bananaBreadIG;
+	}
+	
+	/**
+	 * Create the InStruction for a banana bread
+	 * @return the queue of instructions
+	 */
+	private static myQueue<String> bananaBreadIS(){
 		myQueue<String> bananaBreadIS = new myQueue<>();
 
 		bananaBreadIS.add(MASH);
@@ -102,12 +119,15 @@ public class Game {
 		bananaBreadIS.add(POUR);
 		bananaBreadIS.add(BAKE);
 		bananaBreadIS.add(COOL);
+		
+		return bananaBreadIS;
 	}
-
+	
 	/**
-	 * create white bread
+	 * Create the InGredients for a white bread
+	 * @return the linked list of the ingredients
 	 */
-	private static void createWhiteBread() {
+	private static myLinkedList<Ingredient> whiteBreadIG(){
 		myLinkedList<Ingredient> whiteBreadIG = new myLinkedList<>();
 
 		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("White Bread")));
@@ -117,7 +137,15 @@ public class Game {
 		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Water")));
 		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Salt")));
 		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter")));
-
+		
+		return whiteBreadIG;
+	}
+	
+	/**
+	 * Create the InStruction for a white bread
+	 * @return the queue of instructions
+	 */
+	private static myQueue<String> whiteBreadIS(){
 		myQueue<String> whiteBreadIS = new myQueue<>();
 
 		whiteBreadIS.add(YEAST);
@@ -126,40 +154,132 @@ public class Game {
 		whiteBreadIS.add(PAN);
 		whiteBreadIS.add(RISE);
 		whiteBreadIS.add(BAKE);
+		
+		return whiteBreadIS;
 	}
 
 	/**
-	 * create fancy cake
+	 * Create the InGredients for a fancy cake
+	 * @return the linked list of the ingredients
 	 */
-	private static void createFancyCakee() {
-		myLinkedList<Ingredient> bananaBreadIG = new myLinkedList<>();
+	private static myLinkedList<Ingredient> fancyCakeIG(){
+		myLinkedList<Ingredient> fancyCakeIG = new myLinkedList<>();
 
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Fancy Cake")));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour")));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter")));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar")));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg")));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Frosting")));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sprinkles")));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Fancy Cake")));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour")));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter")));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar")));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg")));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Frosting")));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sprinkles")));
+		
+		return fancyCakeIG;
+	}
+	
+	/**
+	 * Create the InStruction for a fancy cake
+	 * @return the queue of instructions
+	 */
+	private static myQueue<String> fancyCakeIS(){
+		myQueue<String> fancyCakeIS = new myQueue<>();
 
-		myQueue<String> bananaBreadIS = new myQueue<>();
-
-		bananaBreadIS.add(CREAM);
-		bananaBreadIS.add(STIR);
-		bananaBreadIS.add(BAKE);
-		bananaBreadIS.add(COOL);
-		bananaBreadIS.add(FROST);
-		bananaBreadIS.add(ADD + " " + SPRINKLES);
+		fancyCakeIS.add(CREAM);
+		fancyCakeIS.add(STIR);
+		fancyCakeIS.add(BAKE);
+		fancyCakeIS.add(COOL);
+		fancyCakeIS.add(FROST);
+		fancyCakeIS.add(ADD + " " + SPRINKLES);
+		
+		return fancyCakeIS;
 	}
 	
 	/**
 	 * checking to see if the ingredients the player picked match 
 	 * the one created by the developer
-	 * @param an ArrayList of the users choice
+	 * @param definedIG the linked list of the created ingredient
+	 * @param userIG an ArrayList of the users ingredient selection
 	 * @return if the user list and the recipe list are the same
 	 */
-	public static boolean checkIngredients(ArrayList<String> userIngredient) {
-		if(userIngredient.size() == )
+	public static boolean checkIngredients(myLinkedList<Ingredient> definedIG , ArrayList<String> userIG) {
+		/*
+		 * if the two lists are not the same size,
+		 * then it is obvious that it is false
+		 */
+		if(definedIG.getSize()-1 != userIG.size()) {
+			return false;
+		}else {
+			/*
+			 * since both lists have the same size now we can check their elements
+			 * the linked list starts at .getNext() because the first node is the title node
+			 */
+			for(myLinkedList<Ingredient> curNode = definedIG.getNext(); curNode != null; curNode = curNode.getNext()) {
+				if(!(userIG.contains(curNode.toString()))) {
+					return false;
+				}
+			}
+			
+			return true;
+		}
+	}
+	
+	/**
+	 * checking to see if the instructions the player picked match 
+	 * the one created by the developer
+	 * @param definedIS the queue of the created instruction
+	 * @param userIS the queue of the users instruction selection
+	 * @return if the both queue are the same
+	 */
+	public static boolean checkInstruction(myQueue<String> definedIS, myQueue<String> userIS) {
+		/*
+		 * if the two lists are not the same size,
+		 * then it is obvious that it is false
+		 */
+		if(definedIS.size() != userIS.size()) {
+			return false;
+		}else {
+			/*
+			 * looping through the queue, does not use iterator 
+			 */
+			int size = definedIS.size();
+			for(int i = 0; i < size; i++) {
+				if(!(definedIS.peek().toString().equals(userIS.peek().toString()))) {
+					return false;
+				}
+				/*
+				 * moving the queue elements,
+				 * while also retaining its information
+				 */
+				String temp = definedIS.remove().toString();
+				definedIS.add(temp);
+				temp = userIS.remove().toString();
+				userIS.add(temp);
+			}
+			return true;
+		}
+	}
+	
+	public static void main (String[] args) {
+		////////// Check Ingredients \\\\\\\\\\
+		ArrayList<String> a = new ArrayList<>();
+		a.add("Flour");
+		a.add("Egg");
+		a.add("Butter");
+		a.add("Sugar");
+
+		System.out.println(sugarCookiesIG().printList());
+		System.out.println(checkIngredients(sugarCookiesIG(), a));
+		System.out.println();
+		
+		//////////Check Ingredients \\\\\\\\\\
+		myQueue<String> b = new myQueue<>();
+		b.add("Cream");
+		b.add("Stir");
+		b.add("Roll");
+		b.add("Bake");
+		
+		System.out.println(sugarCookiesIS().printQueue());
+		System.out.println(checkInstruction(sugarCookiesIS(), b));
+		System.out.println();
 		
 	}
 }
