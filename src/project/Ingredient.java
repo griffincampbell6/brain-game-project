@@ -14,9 +14,10 @@ public class Ingredient {
 	 * Create an ingredient by its name
 	 * @param name this ingredient's name
 	 */
-	public Ingredient(String name, String unit) {
+	public Ingredient(String name, String unit, int amount) {
 		this.name = name;
 		this.unit = unit;
+		this.amount = amount;
 	}
 	
 	/**
@@ -24,7 +25,7 @@ public class Ingredient {
 	 * @param name the recipe
 	 */
 	public Ingredient(String name) {
-		this(name, null);
+		this(name, "unit", 1);
 	}
 	
 	/**
@@ -32,7 +33,7 @@ public class Ingredient {
 	 * the name would be null
 	 */
 	public Ingredient() {
-		this(null, null);
+		this(null, null, 0);
 	}
 	
 	/**
