@@ -255,29 +255,4 @@ public class Game {
 			return true;
 		}
 	}
-
-	public static void main (String[] args) {
-		////////// Check Ingredients \\\\\\\\\\
-		Map<String, Integer> a = new HashMap<>();
-		a.put("Flour", 1);
-		a.put("Egg", 1);
-		a.put("Butter", 1);
-		a.put("Sugar", 1);
-
-		System.out.println(sugarCookiesIG().printList());
-		System.out.println(checkIngredients(sugarCookiesIG(), a));
-		System.out.println();
-
-		//////////Check Instructions \\\\\\\\\\
-		myQueue<String> b = new myQueue<>();
-		b.add("Roll");
-		b.add("Cream");
-		b.add("Stir");
-		b.add("Bake");
-
-		System.out.println(sugarCookiesIS().printQueue());
-		System.out.println(checkInstruction(sugarCookiesIS(), b));
-		System.out.println();
-
-	}
 }
