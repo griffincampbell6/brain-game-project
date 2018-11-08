@@ -8,7 +8,11 @@ public class EndScreenController {
     private Label lblIGResult;
     @FXML
     private Label lblISResult;
-	
+    @FXML
+    private Label lblPlayAgain;
+    @FXML
+    private Label lblExit;
+    
 	public void initialize(){
 		if(Game.isIGCorrect) {
 			lblIGResult.setText("Horray! You have all ingredients correct!");
@@ -21,5 +25,21 @@ public class EndScreenController {
 		}else {
 			lblISResult.setText("Oops! You do not have the correct steps for the recipe.");
 		}
+	}
+	
+	public void increaseSize() {
+		
+	}
+	
+	public void originalSize() {
+		
+	}
+	
+	public void endGame() {
+		
+	}
+	
+	public void playAgain() {
+		
 	}
 }
