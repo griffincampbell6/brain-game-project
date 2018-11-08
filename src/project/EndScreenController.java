@@ -9,7 +9,7 @@ public class EndScreenController {
     @FXML
     private Label lblISResult;
 	
-	public void displayResult(){
+	public void initialize(){
 		if(Game.isIGCorrect) {
 			lblIGResult.setText("Horray! You have all ingredients correct!");
 		}else {

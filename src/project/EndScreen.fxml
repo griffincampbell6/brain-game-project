@@ -58,6 +58,20 @@
                   </VBox>
                </children>
             </HBox>
+            <VBox layoutX="795.0" layoutY="439.0" prefHeight="200.0" prefWidth="280.0">
+               <children>
+                  <Label fx:id="lblPlayAgain" alignment="CENTER" prefHeight="100.0" prefWidth="280.0" text="Play Again" textFill="#f0ae95fc">
+                     <font>
+                        <Font name="Sitka Small" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblExit" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="280.0" text="Exit" textFill="#9b3d3dfc">
+                     <font>
+                        <Font name="Sitka Small" size="45.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
          </children>
       </Pane>
    </children>
