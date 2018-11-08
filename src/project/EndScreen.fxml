@@ -44,28 +44,28 @@
                   </VBox>
                   <VBox prefHeight="360.0" prefWidth="580.0">
                      <children>
-                        <Label fx:id="lblIGResult" alignment="CENTER" prefHeight="130.0" prefWidth="590.0" textFill="#f5f5f2">
+                        <Label fx:id="lblIGResult" alignment="CENTER" prefHeight="130.0" prefWidth="590.0" textAlignment="CENTER" textFill="#f5f5f2">
                            <font>
-                              <Font name="Tw Cen MT" size="50.0" />
+                              <Font name="Tw Cen MT" size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lblISResult" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="590.0" textFill="#f5f5f2">
+                        <Label fx:id="lblISResult" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="590.0" textAlignment="CENTER" textFill="#f5f5f2">
                            <font>
-                              <Font name="Tw Cen MT" size="50.0" />
+                              <Font name="Tw Cen MT" size="20.0" />
                            </font>
                         </Label>
                      </children>
                   </VBox>
                </children>
             </HBox>
-            <VBox layoutX="795.0" layoutY="439.0" prefHeight="200.0" prefWidth="280.0">
+            <VBox layoutX="695.0" layoutY="439.0" prefHeight="200.0" prefWidth="380.0">
                <children>
-                  <Label fx:id="lblPlayAgain" alignment="CENTER" onMouseEntered="#increaseSize" onMouseExited="#originalSize" onMousePressed="#playAgain" prefHeight="100.0" prefWidth="280.0" text="Play Again" textFill="#d34917fc">
+                  <Label fx:id="lblPlayAgain" alignment="CENTER" onMouseEntered="#increaseSize" onMouseExited="#originalSize" onMousePressed="#playAgain" prefHeight="100.0" prefWidth="380.0" text="Play Again" textFill="#d34917fc">
                      <font>
                         <Font name="Sitka Small" size="45.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblExit" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseEntered="#increaseSize" onMouseExited="#originalSize" onMousePressed="#endGame" prefHeight="100.0" prefWidth="280.0" text="Exit" textFill="#9b3d3dfc">
+                  <Label fx:id="lblExit" alignment="CENTER" onMouseEntered="#increaseSize" onMouseExited="#originalSize" onMousePressed="#endGame" prefHeight="100.0" prefWidth="380.0" text="Exit" textFill="#9b3d3dfc">
                      <font>
                         <Font name="Sitka Small" size="45.0" />
                      </font>
