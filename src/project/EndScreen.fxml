@@ -18,7 +18,7 @@
                   <Font name="Berlin Sans FB" size="96.0" />
                </font>
                <textFill>
-                  <LinearGradient endX="0.8476190476190476" endY="1.0" proportional="false" startX="0.7333333333333333" startY="0.11904761904761907">
+                  <LinearGradient endX="0.8333333333333334" endY="0.8333333333333334" proportional="false" startX="0.7523809523809524" startY="0.22380952380952385">
                      <stops>
                         <Stop color="#9e6759" />
                         <Stop color="#9b3d3d" offset="1.0" />

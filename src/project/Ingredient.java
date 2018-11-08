@@ -38,7 +38,7 @@ public class Ingredient {
 	
 	/**
 	 * set an amount for this ingredient
-	 * @param amount the measurement for the ingredient (100, 2, 3)
+	 * @param amount the measurement for the ingredient
 	 */
 	public void setAmount(int amount) {
 		this.amount = amount;

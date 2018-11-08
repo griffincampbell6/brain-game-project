@@ -2,7 +2,6 @@ package project;
 
 /**
  *  Testing generic on Linked List
- *  this is the node class for  
  *  
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  * @param <T> any type of object that will be stored in this linked list

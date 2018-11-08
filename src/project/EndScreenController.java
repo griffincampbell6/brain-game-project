@@ -9,6 +9,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+/**
+ * The end screen to display the result for the game
+ * 
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
+ */
 public class EndScreenController {
 	@FXML
 	private Label lblIGResult;
@@ -24,6 +29,7 @@ public class EndScreenController {
 	 * telling the player whether or not they are correct
 	 */
 	public void initialize(){
+		// setting up the label boxes's font and allow to go on a new line
 		lblIGResult.setFont(new Font("Tw Cen Mt", 50));
 		lblIGResult.setMaxWidth(560);
 		lblIGResult.setWrapText(true);
@@ -47,7 +53,7 @@ public class EndScreenController {
 	
 	/**
 	 * When the player wants to end the game, click here
-	 * @param event when the user released a mouse press on the text box
+	 * @param event when the user click a mouse press on the text box
 	 */
 	@FXML
 	public void endGame(MouseEvent event) {
@@ -56,6 +62,10 @@ public class EndScreenController {
 		});
 	}
 	
+	/**
+	 * Go back to the difficulty menu
+	 * @param event when the user click a mouse press on the text box
+	 */
 	@FXML
 	public void playAgain(MouseEvent event) {
 		lblPlayAgain.setOnMouseClicked(e -> {
@@ -71,6 +81,10 @@ public class EndScreenController {
 
 	}
 
+	/**
+	 * Make the text bigger when the mouse enters ite premise
+	 * @param event when the mouse hovers over the text
+	 */
 	@FXML
 	public void increaseSize(MouseEvent event) {
 		if(((Label)event.getSource()).getText().equals(lblPlayAgain.getText())){
@@ -82,6 +96,10 @@ public class EndScreenController {
 		}
 	}
 
+	/**
+	 * Revert the size of the text when the mouse leaves the space
+	 * @param event when the mouse is away from the text
+	 */
 	@FXML
 	public void originalSize(MouseEvent event) {
 		if(((Label)event.getSource()).getText().equals(lblPlayAgain.getText())){

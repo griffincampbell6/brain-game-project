@@ -29,7 +29,7 @@ public class Game {
 	protected static boolean isIGCorrect = false;
 	protected static boolean isISCorrect = false;
 	/**
-	 * Create the InGredients for a sugar cookies
+	 * Create the InGredients for a sugar cookie
 	 * @return the linked list of the ingredients
 	 */
 	private static myLinkedList<Ingredient> sugarCookiesIG(){
@@ -44,7 +44,7 @@ public class Game {
 	}
 
 	/**
-	 * Create the InStruction for a sugar cookies
+	 * Create the InStruction for a sugar cookie
 	 * @return the queue of instructions 
 	 */
 	private static myQueue<String> sugarCookiesIS(){
@@ -59,7 +59,7 @@ public class Game {
 	}
 
 	/**
-	 * Create the InGredients for a chocolate chip cookies
+	 * Create the InGredients for a chocolate chip cookie
 	 * @return the linked list of the ingredients
 	 */
 	private static myLinkedList<Ingredient> chocolateCakeIG(){
@@ -75,7 +75,7 @@ public class Game {
 	}
 
 	/**
-	 * Create the InStruction for a chocolate chip cookies
+	 * Create the InStruction for a chocolate chip cookie
 	 * @return the queue of instructions
 	 */
 	private static myQueue<String> chocolateCakeIS(){
