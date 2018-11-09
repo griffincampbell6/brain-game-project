@@ -1,7 +1,7 @@
 package project;
 
 /**
- * Testing generics on a queue
+ * Testing generic on a queue
  * User define queue, not Java defined
  * 
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski

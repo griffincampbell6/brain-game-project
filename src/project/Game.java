@@ -26,8 +26,10 @@ public class Game {
 	private static final String COCO = "Chocolate Chips";
 	private static final String SPRINKLES = "Sprinkles";
 
+	protected static boolean isIGCorrect = false;
+	protected static boolean isISCorrect = false;
 	/**
-	 * Create the InGredients for a sugar cookies
+	 * Create the InGredients for a sugar cookie
 	 * @return the linked list of the ingredients
 	 */
 	private static myLinkedList<Ingredient> sugarCookiesIG(){
@@ -42,7 +44,7 @@ public class Game {
 	}
 
 	/**
-	 * Create the InStruction for a sugar cookies
+	 * Create the InStruction for a sugar cookie
 	 * @return the queue of instructions 
 	 */
 	private static myQueue<String> sugarCookiesIS(){
@@ -57,7 +59,7 @@ public class Game {
 	}
 
 	/**
-	 * Create the InGredients for a chocolate chip cookies
+	 * Create the InGredients for a chocolate chip cookie
 	 * @return the linked list of the ingredients
 	 */
 	private static myLinkedList<Ingredient> chocolateCakeIG(){
@@ -73,7 +75,7 @@ public class Game {
 	}
 
 	/**
-	 * Create the InStruction for a chocolate chip cookies
+	 * Create the InStruction for a chocolate chip cookie
 	 * @return the queue of instructions
 	 */
 	private static myQueue<String> chocolateCakeIS(){
@@ -195,27 +197,27 @@ public class Game {
 	 * @param userIG an ArrayList of the users ingredient selection
 	 * @return if the user list and the recipe list are the same
 	 */
-	public static boolean checkIngredients(myLinkedList<Ingredient> definedIG , Map<String, Integer> userIG) {
+	public static void checkIngredients(myLinkedList<Ingredient> definedIG , Map<String, Integer> userIG) {
 		/*
 		 * if the two lists are not the same size,
 		 * then it is obvious that it is false
 		 */
 		if(definedIG.getSize() != userIG.size()) {
-			return false;
+			isIGCorrect = false;
 		}else {
 			// a set for the ingredient names that the user inputed
 			Set<String> name = userIG.keySet();
 
 			for(myLinkedList<Ingredient> curNode = definedIG.head; curNode != null; curNode = curNode.getNext()) {
 				if(!(name.contains(curNode.getInfo().getName()))){ // check if the defined ingredient exist in the user's set
-					return false;
+					isIGCorrect = false;
 				}else if(userIG.get(curNode.getInfo().getName()) != curNode.getInfo().getAmount()) { // check if the amounts are the same
-					return false;
+					isIGCorrect = false;
 				}else {
 					continue;
 				}
 			}
-			return true; // true if everything are the same
+			isIGCorrect = true; // true if everything are the same
 		}
 	}
 
@@ -226,13 +228,13 @@ public class Game {
 	 * @param userIS the queue of the users instruction selection
 	 * @return if the both queue are the same
 	 */
-	public static boolean checkInstruction(myQueue<String> definedIS, myQueue<String> userIS) {
+	public static void checkInstruction(myQueue<String> definedIS, myQueue<String> userIS) {
 		/*
 		 * if the two lists are not the same size,
 		 * then it is obvious that it is false
 		 */
 		if(definedIS.size() != userIS.size()) {
-			return false;
+			isISCorrect = false;
 		}else {
 			/*
 			 * looping through the queue, does not use iterator 
@@ -240,7 +242,7 @@ public class Game {
 			int size = definedIS.size();
 			for(int i = 0; i < size; i++) {
 				if(!(definedIS.peek().toString().equals(userIS.peek().toString()))) {
-					return false;
+					isISCorrect = false;
 				}
 
 				/*
@@ -252,7 +254,7 @@ public class Game {
 				temp = userIS.remove().toString();
 				userIS.add(temp);
 			}
-			return true;
+			isISCorrect = true;
 		}
 	}
 }
