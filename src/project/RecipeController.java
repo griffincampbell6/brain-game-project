@@ -1,9 +1,9 @@
 package project;
 
-import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -30,14 +30,58 @@ public class RecipeController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+
+		/*
+		 * SUGAR COOKIE BUTTON EVENT
+		 */
 		sugarCookiesBtn.setOnMouseEntered((event -> {
 			sugarCookiesPane.setStyle("-fx-background-color: #00FFFF");
-			
+			try {
+				FileInputStream input = new FileInputStream("resources/images/sugarcookies.jpeg");
+				Image image = new Image(input);
+				recipeImage.setImage(image);
+				
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}));
+		
+		/*
+		 * SUGAR COOKKIE BUTTON EVENT
+		 */
 		sugarCookiesBtn.setOnMouseExited((event -> {
 			sugarCookiesPane.setStyle("-fx-backgroun-color: #ffffff");
+			recipeImage.setImage(null);
 		}));
+		
+		/*
+		 * CHOCHOLATE CAKE BUTTON EVENT
+		 */
+		chocolateCakeBtn.setOnMouseEntered((event -> {
+			
+		}));
+		
+		/*
+		 * CHOCHOLATE CAKE BUTTON EVENT
+		 */
+		chocolateCakeBtn.setOnMouseExited((event -> {
+			
+		}));
+		
+		/*
+		 * CHOCOLATE CHIP COOKIES BUTTON EVENT
+		 */
+		chocolateCookiesBtn.setOnMouseEntered((event -> {
+			
+		}));
+		
+		/*
+		 * CHOCOLATE CHIP COOKIE BUTTON EVENT
+		 */
+		chocolateCookiesBtn.setOnMouseExited((event -> {
+			
+		}));
+		
 		
 	}
 
