@@ -84,5 +84,6 @@
             <ImageView fx:id="recipeImage" fitHeight="350.0" fitWidth="350.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
+      <Button fx:id="backBtn" layoutX="14.0" layoutY="665.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="87.0" text="Back" />
    </children>
 </Pane>

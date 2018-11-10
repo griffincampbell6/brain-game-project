@@ -2,16 +2,25 @@ package project;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class RecipeController implements Initializable {
+	
+	private static String DIFF_MENU = "DifficultyMenu.fxml";
+	
+	@FXML private Button backBtn;
 	@FXML private Button sugarCookiesBtn;
 	@FXML private Button chocolateCakeBtn;
 	@FXML private Button chocolateCookiesBtn;
@@ -30,6 +39,20 @@ public class RecipeController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		backBtn.setOnAction((event -> {
+			try {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource(DIFF_MENU));
+				Parent root;
+				root = loader.load();
+				Scene scene = new Scene(root);
+				Stage stage = (Stage) backBtn.getScene().getWindow();
+				stage.setScene(scene);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}));
 
 		/*
 		 * SUGAR COOKIE BUTTON EVENTS
