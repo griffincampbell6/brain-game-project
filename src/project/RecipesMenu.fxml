@@ -9,10 +9,9 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.RecipeController">
    <children>
-      <Pane prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: GRAY;" />
-      <VBox layoutX="349.0" layoutY="100.0" prefHeight="600.0" prefWidth="582.0" style="-fx-border-color: BLACK;">
+      <VBox layoutX="640.0" layoutY="60.0" prefHeight="600.0" prefWidth="582.0" style="-fx-border-color: BLACK;">
          <children>
-            <Pane fx:id="sugarCookiesPane" prefHeight="100.0" prefWidth="582.0" style="-fx-border-color: BLACK;">
+            <Pane fx:id="sugarCookiesPane" prefHeight="100.0" prefWidth="582.0">
                <children>
                   <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sugar Cookies" wrappingWidth="280.13671875">
                      <font>
@@ -22,7 +21,7 @@
                   <Button fx:id="sugarCookiesBtn" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
                </children>
             </Pane>
-            <Pane fx:id="chocolateCakePane" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="582.0" style="-fx-border-color: BLACK;">
+            <Pane fx:id="chocolateCakePane" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="582.0">
                <children>
                   <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chocolate Cake" wrappingWidth="301.13671875">
                      <font>
@@ -32,7 +31,7 @@
                   <Button fx:id="chocolateCakeBtn" layoutX="-1.0" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
                </children>
             </Pane>
-            <Pane fx:id="chocolateCookiesPane" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="582.0" style="-fx-border-color: BLACK;">
+            <Pane fx:id="chocolateCookiesPane" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="582.0">
                <children>
                   <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chocolate Chip Cookies" wrappingWidth="484.13671875">
                      <font>
@@ -42,7 +41,7 @@
                   <Button fx:id="chocolateCookiesBtn" layoutX="-1.0" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
                </children>
             </Pane>
-            <Pane fx:id="bananaBreadPane" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="582.0" style="-fx-border-color: BLACK;">
+            <Pane fx:id="bananaBreadPane" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="582.0">
                <children>
                   <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banana Bread" wrappingWidth="280.1367226243019">
                      <font>
@@ -52,17 +51,17 @@
                   <Button fx:id="bananaBreadBtn" layoutX="-1.0" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
                </children>
             </Pane>
-            <Pane fx:id="breadWhitePane" layoutX="10.0" layoutY="310.0" prefHeight="100.0" prefWidth="582.0" style="-fx-border-color: BLACK;">
+            <Pane fx:id="whiteBreadPane" layoutX="10.0" layoutY="310.0" prefHeight="100.0" prefWidth="582.0">
                <children>
-                  <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bread (White)" wrappingWidth="280.1367226243019">
+                  <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="White Bread" wrappingWidth="280.1367226243019">
                      <font>
                         <Font size="43.0" />
                      </font>
                   </Text>
-                  <Button fx:id="breadWhiteBtn" layoutX="-1.0" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
+                  <Button fx:id="whiteBreadBtn" layoutX="-1.0" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
                </children>
             </Pane>
-            <Pane fx:id="fancyCakePane" layoutX="10.0" layoutY="410.0" prefHeight="100.0" prefWidth="582.0" style="-fx-border-color: BLACK;">
+            <Pane fx:id="fancyCakePane" layoutX="10.0" layoutY="410.0" prefHeight="100.0" prefWidth="582.0">
                <children>
                   <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fancy Cake" wrappingWidth="241.13671875">
                      <font>
@@ -70,11 +69,20 @@
                      </font>
                   </Text>
                   <Button fx:id="FancyCakeBtn" layoutX="-1.0" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
-                  <Button fx:id="fancyCakeBtn" layoutX="9.0" layoutY="10.0" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
+                  <Button fx:id="fancyCakeBtn" layoutX="-1.0" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
                </children>
             </Pane>
          </children>
       </VBox>
-      <ImageView fx:id="recipeImage" fitHeight="223.0" fitWidth="355.0" layoutX="-1.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="126.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a Recipe">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Text>
+      <Pane layoutX="131.0" layoutY="167.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: GRAY; -fx-background-radius: 15;">
+         <children>
+            <ImageView fx:id="recipeImage" fitHeight="350.0" fitWidth="350.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
    </children>
 </Pane>
