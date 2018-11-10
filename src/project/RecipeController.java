@@ -40,6 +40,10 @@ public class RecipeController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
+		/*
+		 * BACK BUTTON EVENT
+		 * loads previous screen
+		 */
 		backBtn.setOnAction((event -> {
 			try {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource(DIFF_MENU));
@@ -56,6 +60,8 @@ public class RecipeController implements Initializable {
 
 		/*
 		 * SUGAR COOKIE BUTTON EVENTS
+		 * changes recipe pane background color
+		 * TODO add recipe images
 		 */
 		sugarCookiesBtn.setOnMouseEntered((event -> {
 			sugarCookiesPane.setStyle("-fx-background-color: #00FFFF");
@@ -78,6 +84,8 @@ public class RecipeController implements Initializable {
 		
 		/*
 		 * CHOCHOLATE CAKE BUTTON EVENTS
+		 * changes recipe pane background color
+		 * TODO add recipe images
 		 */
 		chocolateCakeBtn.setOnMouseEntered((event -> {
 			chocolateCakePane.setStyle("-fx-background-color: #00FFFF");
@@ -91,6 +99,8 @@ public class RecipeController implements Initializable {
 		
 		/*
 		 * CHOCOLATE CHIP COOKIES BUTTON EVENTS
+		 * changes recipe pane background color
+		 * TODO add recipe images
 		 */
 		chocolateCookiesBtn.setOnMouseEntered((event -> {
 			chocolateCookiesPane.setStyle("-fx-background-color: #00FFFF");
@@ -104,6 +114,8 @@ public class RecipeController implements Initializable {
 		
 		/*
 		 * BANANA BREAD BUTTON EVENTS
+		 * changes recipe pane background color
+		 * TODO add recipe images
 		 */
 		bananaBreadBtn.setOnMouseEntered((event -> {
 			bananaBreadPane.setStyle("-fx-background-color: #00FFFF");
@@ -117,6 +129,8 @@ public class RecipeController implements Initializable {
 		
 		/*
 		 * WHITE BREAD BUTTON EVENTS
+		 * changes recipe pane background color
+		 * TODO add recipe images
 		 */
 		whiteBreadBtn.setOnMouseEntered((event -> {
 			whiteBreadPane.setStyle("-fx-background-color: #00FFFF");
@@ -130,6 +144,8 @@ public class RecipeController implements Initializable {
 		
 		/*
 		 * FANCY CAKE BUTTON EVENTS
+		 * changes recipe pane background color
+		 * TODO add recipe images
 		 */
 		fancyCakeBtn.setOnMouseEntered((event -> {
 			fancyCakePane.setStyle("-fx-background-color: #00FFFF");
