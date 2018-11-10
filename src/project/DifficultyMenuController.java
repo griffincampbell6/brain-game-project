@@ -27,7 +27,11 @@ public class DifficultyMenuController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+		
+		/*
+		 * BACK BUTTON EVENT
+		 * loads previous start screen
+		 */
 		backBtn.setOnAction((event -> {
 			try {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource(START_MENU));
@@ -42,18 +46,51 @@ public class DifficultyMenuController implements Initializable {
 			}
 		}));
 		
+		/*
+		 * EASY BUTTON EVENT
+		 * loads recipes menu
+		 * TODO add functionality to time given
+		 */
 		easyBtn.setOnAction((event -> {
-			try {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource(RECIPES_MENU));
-				Parent root;
-				root = loader.load();
-				Scene scene = new Scene(root, 1280, 720);
-				Stage stage = (Stage) easyBtn.getScene().getWindow();
-				stage.setScene(scene);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			loadNext();
 		}));
+		
+		/*
+		 * MEDIUM BUTTON EVENT
+		 * loads recipes menu
+		 * TODO add functionality to time given
+		 */
+		mediumBtn.setOnAction((event -> {
+			loadNext();
+		}));
+		
+		/*
+		 * HARD BUTTON EVENT
+		 * loads recipes menu
+		 * TODO add functionality to time given
+		 */
+		hardBtn.setOnAction((event -> {
+			loadNext();
+		}));
+	
+	}
+	
+	/**
+	 * method made to load recipes menu 
+	 * to avoid rewriting code for every button
+	 * @param none
+	 */
+	private void loadNext() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource(RECIPES_MENU));
+			Parent root;
+			root = loader.load();
+			Scene scene = new Scene(root, 1280, 720);
+			Stage stage = (Stage) easyBtn.getScene().getWindow();
+			stage.setScene(scene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
