@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 public class RecipeController implements Initializable {
 	
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
+	private static String RECIPE_DISPLAY = "ingredientDisplay.fxml";
 	
 	@FXML private Button backBtn;
 	@FXML private Button sugarCookiesBtn;
@@ -36,6 +37,25 @@ public class RecipeController implements Initializable {
 	@FXML private Pane fancyCakePane;
 	
 	@FXML private ImageView recipeImage;
+	
+	/**
+	 * method to load recipe based on button
+	 * needs implementaion
+	 * @param button
+	 */
+	private void loadRecipe(Button button) {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource(RECIPE_DISPLAY));
+			Parent root;
+			root = loader.load();
+			Scene scene = new Scene(root, 1280, 720);
+			Stage stage = (Stage) button.getScene().getWindow();
+			stage.setScene(scene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -79,7 +99,7 @@ public class RecipeController implements Initializable {
 			recipeImage.setImage(null);
 		}));
 		sugarCookiesBtn.setOnAction((event -> {
-			//TODO
+			loadRecipe(sugarCookiesBtn);
 		}));
 		
 		/*
@@ -94,7 +114,7 @@ public class RecipeController implements Initializable {
 			chocolateCakePane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
-			//TODO
+			loadRecipe(chocolateCakeBtn);
 		}));
 		
 		/*
@@ -109,7 +129,7 @@ public class RecipeController implements Initializable {
 			chocolateCookiesPane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
-			//TODO
+			loadRecipe(chocolateCookiesBtn);
 		}));
 		
 		/*
@@ -124,7 +144,7 @@ public class RecipeController implements Initializable {
 			bananaBreadPane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		bananaBreadBtn.setOnAction((event -> {
-			//TODO
+			loadRecipe(bananaBreadBtn);
 		}));
 		
 		/*
@@ -139,7 +159,7 @@ public class RecipeController implements Initializable {
 			whiteBreadPane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		whiteBreadBtn.setOnAction((event -> {
-			//TODO
+			loadRecipe(whiteBreadBtn);
 		}));
 		
 		/*
@@ -154,9 +174,8 @@ public class RecipeController implements Initializable {
 			fancyCakePane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		fancyCakeBtn.setOnAction((event -> {
-			//TODO
+			loadRecipe(fancyCakeBtn);
 		}));
 	}
-
 }
  
