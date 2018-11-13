@@ -81,6 +81,7 @@ public class RecipeController implements Initializable {
 		/*
 		 * SUGAR COOKIE BUTTON EVENTS
 		 * changes recipe pane background color
+		 * action event to load recipe
 		 * TODO add recipe images
 		 */
 		sugarCookiesBtn.setOnMouseEntered((event -> {
@@ -95,7 +96,7 @@ public class RecipeController implements Initializable {
 			}
 		}));
 		sugarCookiesBtn.setOnMouseExited((event -> {
-			sugarCookiesPane.setStyle("-fx-backgroun-color: #ffffff");
+			sugarCookiesPane.setStyle("-fx-background-color: #ffffff");
 			recipeImage.setImage(null);
 		}));
 		sugarCookiesBtn.setOnAction((event -> {
@@ -105,13 +106,14 @@ public class RecipeController implements Initializable {
 		/*
 		 * CHOCHOLATE CAKE BUTTON EVENTS
 		 * changes recipe pane background color
+		 * action event load recipe 
 		 * TODO add recipe images
 		 */
 		chocolateCakeBtn.setOnMouseEntered((event -> {
 			chocolateCakePane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		chocolateCakeBtn.setOnMouseExited((event -> {
-			chocolateCakePane.setStyle("-fx-backgroun-color: #ffffff");
+			chocolateCakePane.setStyle("-fx-background-color: #ffffff");
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
 			loadRecipe(chocolateCakeBtn);
@@ -120,13 +122,14 @@ public class RecipeController implements Initializable {
 		/*
 		 * CHOCOLATE CHIP COOKIES BUTTON EVENTS
 		 * changes recipe pane background color
+		 * action event to load recipe
 		 * TODO add recipe images
 		 */
 		chocolateCookiesBtn.setOnMouseEntered((event -> {
 			chocolateCookiesPane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		chocolateCookiesBtn.setOnMouseExited((event -> {
-			chocolateCookiesPane.setStyle("-fx-backgroun-color: #ffffff");
+			chocolateCookiesPane.setStyle("-fx-background-color: #ffffff");
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
 			loadRecipe(chocolateCookiesBtn);
@@ -135,13 +138,14 @@ public class RecipeController implements Initializable {
 		/*
 		 * BANANA BREAD BUTTON EVENTS
 		 * changes recipe pane background color
+		 * action event to load recipe
 		 * TODO add recipe images
 		 */
 		bananaBreadBtn.setOnMouseEntered((event -> {
 			bananaBreadPane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		bananaBreadBtn.setOnMouseExited((event -> {
-			bananaBreadPane.setStyle("-fx-backgroun-color: #ffffff");
+			bananaBreadPane.setStyle("-fx-background-color: #ffffff");
 		}));
 		bananaBreadBtn.setOnAction((event -> {
 			loadRecipe(bananaBreadBtn);
@@ -150,6 +154,7 @@ public class RecipeController implements Initializable {
 		/*
 		 * WHITE BREAD BUTTON EVENTS
 		 * changes recipe pane background color
+		 * action event to load recipe
 		 * TODO add recipe images
 		 */
 		whiteBreadBtn.setOnMouseEntered((event -> {
@@ -165,6 +170,7 @@ public class RecipeController implements Initializable {
 		/*
 		 * FANCY CAKE BUTTON EVENTS
 		 * changes recipe pane background color
+		 * action event to load recipe
 		 * TODO add recipe images
 		 */
 		fancyCakeBtn.setOnMouseEntered((event -> {
