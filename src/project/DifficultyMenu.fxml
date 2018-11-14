@@ -36,7 +36,7 @@
                         <Font name="System Italic" size="25.0" />
                      </font>
                   </Text>
-                  <Text fx:id="easyDetails" layoutY="32.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player is given x time to remember ingrediants, and x time during trials." textAlignment="CENTER" wrappingWidth="491.9999885559082">
+                  <Text fx:id="easyDetails" layoutY="32.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player is given x time to remember ingredients, and x time during trials." textAlignment="CENTER" wrappingWidth="491.9999885559082">
                      <font>
                         <Font size="25.0" />
                      </font>
@@ -68,7 +68,7 @@
                         <Font name="System Italic" size="25.0" />
                      </font>
                   </Text>
-                  <Text fx:id="mediumDetails" layoutY="31.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player is given x time to remember ingrediants, and x time during trials." textAlignment="CENTER" wrappingWidth="491.9999885559082">
+                  <Text fx:id="mediumDetails" layoutY="31.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player is given x time to remember ingredients, and x time during trials." textAlignment="CENTER" wrappingWidth="491.9999885559082">
                      <font>
                         <Font size="25.0" />
                      </font>
@@ -100,7 +100,7 @@
                         <Font name="System Italic" size="25.0" />
                      </font>
                   </Text>
-                  <Text fx:id="hardDetails" layoutY="31.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player is given x time to remember ingrediants, and x time during trials." textAlignment="CENTER" wrappingWidth="491.9999885559082">
+                  <Text fx:id="hardDetails" layoutY="31.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player is given x time to remember ingredients, and x time during trials." textAlignment="CENTER" wrappingWidth="491.9999885559082">
                      <font>
                         <Font size="25.0" />
                      </font>
