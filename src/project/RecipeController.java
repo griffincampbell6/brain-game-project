@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -45,6 +46,7 @@ public class RecipeController implements Initializable {
 	
 	@FXML private ImageView recipeImage;
 	
+	
 	/**
 	 * method to load recipe based on button
 	 * needs implementaion
@@ -58,6 +60,9 @@ public class RecipeController implements Initializable {
 			Scene scene = new Scene(root, 1280, 720);
 			Stage stage = (Stage) button.getScene().getWindow();
 			stage.setScene(scene);
+			Label Ing1 = (Label)loader.getNamespace().get("Ing1");
+			Ing1.setText("Testing");
+			stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

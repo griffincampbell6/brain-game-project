@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text layoutX="74.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text1">
+      <Label fx:id="Ing1" layoutX="83.0" layoutY="71.0" prefHeight="52.0" prefWidth="112.0" text="Ingredient1">
          <font>
-            <Font name="Comic Sans MS" size="20.0" />
+            <Font size="20.0" />
          </font>
-      </Text>
-      <Text layoutX="74.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text3">
+      </Label>
+      <Label fx:id="Ing3" layoutX="83.0" layoutY="174.0" prefHeight="52.0" prefWidth="112.0" text="Ingredient3">
          <font>
-            <Font name="Comic Sans MS" size="20.0" />
+            <Font size="20.0" />
          </font>
-      </Text>
-      <Text layoutX="74.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text5">
+      </Label>
+      <Label fx:id="Ing5" layoutX="83.0" layoutY="286.0" prefHeight="52.0" prefWidth="112.0" text="Ingredient5">
          <font>
-            <Font name="Comic Sans MS" size="20.0" />
+            <Font size="20.0" />
          </font>
-      </Text>
-      <Text layoutX="289.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text2">
+      </Label>
+      <Label fx:id="Ing2" layoutX="348.0" layoutY="71.0" prefHeight="52.0" prefWidth="112.0" text="Ingredient2">
          <font>
-            <Font name="Comic Sans MS" size="20.0" />
+            <Font size="20.0" />
          </font>
-      </Text>
-      <Text layoutX="289.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text4">
+      </Label>
+      <Label fx:id="Ing4" layoutX="348.0" layoutY="174.0" prefHeight="52.0" prefWidth="112.0" text="Ingredient4">
          <font>
-            <Font name="Comic Sans MS" size="20.0" />
+            <Font size="20.0" />
          </font>
-      </Text>
-      <Text layoutX="289.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text6">
+      </Label>
+      <Label fx:id="Ing6" layoutX="348.0" layoutY="286.0" prefHeight="52.0" prefWidth="112.0" text="Ingredient6">
          <font>
-            <Font name="Comic Sans MS" size="20.0" />
+            <Font size="20.0" />
          </font>
-      </Text>
+      </Label>
    </children>
 </Pane>
