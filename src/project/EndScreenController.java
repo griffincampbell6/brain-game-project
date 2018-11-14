@@ -70,7 +70,7 @@ public class EndScreenController {
 	public void playAgain(MouseEvent event) {
 		lblPlayAgain.setOnMouseClicked(e -> {
 			try {
-				Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("DifficultyMenu.fmxl"));
+				Parent root =  FXMLLoader.load(getClass().getResource("DifficultyMenu.fxml"));
 				Scene scene = new Scene(root);
 				Stage stage = (Stage) lblPlayAgain.getScene().getWindow();
 				stage.setScene(scene);
