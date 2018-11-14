@@ -32,7 +32,7 @@ public class Game {
 	 * Create the InGredients for a sugar cookie
 	 * @return the linked list of the ingredients
 	 */
-	private static myLinkedList<Ingredient> sugarCookiesIG(){
+	protected static myLinkedList<Ingredient> sugarCookiesIG(){
 		myLinkedList<Ingredient> sugarCookiesIG = new myLinkedList<>(); // Instantiate a linked list for ingredients 
 
 		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", "cup", 1))); // add the ingredients IG
@@ -47,7 +47,7 @@ public class Game {
 	 * Create the InStruction for a sugar cookie
 	 * @return the queue of instructions 
 	 */
-	private static myQueue<String> sugarCookiesIS(){
+	protected static myQueue<String> sugarCookiesIS(){
 		myQueue<String> sugarCookiesIS = new myQueue<>();	// Instantiate a queue for instruction
 
 		sugarCookiesIS.add(CREAM); // add the instructions IS
@@ -62,7 +62,7 @@ public class Game {
 	 * Create the InGredients for a chocolate chip cookie
 	 * @return the linked list of the ingredients
 	 */
-	private static myLinkedList<Ingredient> chocolateCakeIG(){
+	protected static myLinkedList<Ingredient> chocolateCakeIG(){
 		myLinkedList<Ingredient> chocolateCakeIG = new myLinkedList<>();
 
 		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", "cup", 1)));
@@ -78,7 +78,7 @@ public class Game {
 	 * Create the InStruction for a chocolate chip cookie
 	 * @return the queue of instructions
 	 */
-	private static myQueue<String> chocolateCakeIS(){
+	protected static myQueue<String> chocolateCakeIS(){
 		myQueue<String> chocolateCakeIS = new myQueue<>();
 
 		chocolateCakeIS.add(CREAM);
@@ -94,7 +94,7 @@ public class Game {
 	 * Create the InGredients for a banana bread
 	 * @return the linked list of the ingredients
 	 */
-	private static myLinkedList<Ingredient> bananaBreadIG(){
+	protected static myLinkedList<Ingredient> bananaBreadIG(){
 		myLinkedList<Ingredient> bananaBreadIG = new myLinkedList<>();
 
 		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Banana", "bananas", 3)));
@@ -110,7 +110,7 @@ public class Game {
 	 * Create the InStruction for a banana bread
 	 * @return the queue of instructions
 	 */
-	private static myQueue<String> bananaBreadIS(){
+	protected static myQueue<String> bananaBreadIS(){
 		myQueue<String> bananaBreadIS = new myQueue<>();
 
 		bananaBreadIS.add(MASH);
@@ -126,7 +126,7 @@ public class Game {
 	 * Create the InGredients for a white bread
 	 * @return the linked list of the ingredients
 	 */
-	private static myLinkedList<Ingredient> whiteBreadIG(){
+	protected static myLinkedList<Ingredient> whiteBreadIG(){
 		myLinkedList<Ingredient> whiteBreadIG = new myLinkedList<>();
 
 		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Yeast", "package", 1)));
@@ -143,7 +143,7 @@ public class Game {
 	 * Create the InStruction for a white bread
 	 * @return the queue of instructions
 	 */
-	private static myQueue<String> whiteBreadIS(){
+	protected static myQueue<String> whiteBreadIS(){
 		myQueue<String> whiteBreadIS = new myQueue<>();
 
 		whiteBreadIS.add(YEAST);
@@ -160,7 +160,7 @@ public class Game {
 	 * Create the InGredients for a fancy cake
 	 * @return the linked list of the ingredients
 	 */
-	private static myLinkedList<Ingredient> fancyCakeIG(){
+	protected static myLinkedList<Ingredient> fancyCakeIG(){
 		myLinkedList<Ingredient> fancyCakeIG = new myLinkedList<>();
 
 		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", "cups", 2)));
@@ -177,7 +177,7 @@ public class Game {
 	 * Create the InStruction for a fancy cake
 	 * @return the queue of instructions
 	 */
-	private static myQueue<String> fancyCakeIS(){
+	protected static myQueue<String> fancyCakeIS(){
 		myQueue<String> fancyCakeIS = new myQueue<>();
 
 		fancyCakeIS.add(CREAM);
@@ -197,7 +197,7 @@ public class Game {
 	 * @param userIG an ArrayList of the users ingredient selection
 	 * @return if the user list and the recipe list are the same
 	 */
-	private static void checkIngredients(myLinkedList<Ingredient> definedIG , Map<String, Integer> userIG) {
+	protected static void checkIngredients(myLinkedList<Ingredient> definedIG , Map<String, Integer> userIG) {
 		/*
 		 * if the two lists are not the same size,
 		 * then it is obvious that it is false
@@ -232,7 +232,7 @@ public class Game {
 	 * @param userIS the queue of the users instruction selection
 	 * @return if the both queue are the same
 	 */
-	public static void checkInstruction(myQueue<String> definedIS, myQueue<String> userIS) {
+	protected static void checkInstruction(myQueue<String> definedIS, myQueue<String> userIS) {
 		/*
 		 * if the two lists are not the same size,
 		 * then it is obvious that it is false
