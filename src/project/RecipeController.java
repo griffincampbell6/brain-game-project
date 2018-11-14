@@ -21,6 +21,13 @@ public class RecipeController implements Initializable {
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
 	private static String RECIPE_DISPLAY = "ingredientDisplay.fxml";
 	
+	private static String[] sugarCookiesIngr = {"flour", "eggs"};
+	private static String[] chocolateCakeIngr = {};
+	private static String[] chocolateCookiesIngr = {};
+	private static String[] bananaBreadIngr = {};
+	private static String[] whiteBreadIngr = {};
+	private static String[] fancyCakeIngr = {};
+	
 	@FXML private Button backBtn;
 	@FXML private Button sugarCookiesBtn;
 	@FXML private Button chocolateCakeBtn;
@@ -43,7 +50,7 @@ public class RecipeController implements Initializable {
 	 * needs implementaion
 	 * @param button
 	 */
-	private void loadRecipe(Button button) {
+	private void loadRecipe(Button button, String[] ingredients) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(RECIPE_DISPLAY));
 			Parent root;
@@ -100,7 +107,7 @@ public class RecipeController implements Initializable {
 			recipeImage.setImage(null);
 		}));
 		sugarCookiesBtn.setOnAction((event -> {
-			loadRecipe(sugarCookiesBtn);
+			loadRecipe(sugarCookiesBtn, sugarCookiesIngr);
 		}));
 		
 		/*
@@ -116,7 +123,7 @@ public class RecipeController implements Initializable {
 			chocolateCakePane.setStyle("-fx-background-color: #ffffff");
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
-			loadRecipe(chocolateCakeBtn);
+			loadRecipe(chocolateCakeBtn, chocolateCakeIngr);
 		}));
 		
 		/*
@@ -132,7 +139,7 @@ public class RecipeController implements Initializable {
 			chocolateCookiesPane.setStyle("-fx-background-color: #ffffff");
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
-			loadRecipe(chocolateCookiesBtn);
+			loadRecipe(chocolateCookiesBtn, chocolateCookiesIngr);
 		}));
 		
 		/*
@@ -148,7 +155,7 @@ public class RecipeController implements Initializable {
 			bananaBreadPane.setStyle("-fx-background-color: #ffffff");
 		}));
 		bananaBreadBtn.setOnAction((event -> {
-			loadRecipe(bananaBreadBtn);
+			loadRecipe(bananaBreadBtn, bananaBreadIngr);
 		}));
 		
 		/*
@@ -164,7 +171,7 @@ public class RecipeController implements Initializable {
 			whiteBreadPane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		whiteBreadBtn.setOnAction((event -> {
-			loadRecipe(whiteBreadBtn);
+			loadRecipe(whiteBreadBtn, whiteBreadIngr);
 		}));
 		
 		/*
@@ -180,7 +187,7 @@ public class RecipeController implements Initializable {
 			fancyCakePane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		fancyCakeBtn.setOnAction((event -> {
-			loadRecipe(fancyCakeBtn);
+			loadRecipe(fancyCakeBtn, fancyCakeIngr);
 		}));
 	}
 }
