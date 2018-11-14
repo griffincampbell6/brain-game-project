@@ -83,7 +83,7 @@
       <Pane layoutX="181.0" layoutY="142.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #FFFFE0;">
          <children>
             <Text layoutX="87.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="images will pop up here" />
-            <ImageView fx:id="recipeImage" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="recipeImage" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" />
          </children>
       </Pane>
       <HBox fx:id="starBox" alignment="CENTER" layoutX="181.0" layoutY="442.0" prefHeight="100.0" prefWidth="300.0" style="-fx-spacing: 5;" />

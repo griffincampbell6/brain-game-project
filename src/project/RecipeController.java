@@ -25,6 +25,8 @@ public class RecipeController implements Initializable {
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
 	private static String RECIPE_DISPLAY = "ingredientDisplay.fxml";
 	
+	private static String SC_IMG = "resources/images/sugarcookies.jpeg";
+	
 	private static String[] sugarCookiesIngr = {"Flour", "Sugar", "Butter", "Water"};
 	private static String[] chocolateCakeIngr = {""};
 	private static String[] chocolateCookiesIngr = {};
@@ -71,6 +73,26 @@ public class RecipeController implements Initializable {
 		}
 		else {
 			starBox.getChildren().clear();
+		}
+	}
+	
+	/**
+	 * method to load recipe image
+	 * null used for mouse exit events, removes image
+	 * @param file name
+	 */
+	private void loadRecipeImage(String file) {
+		if (file != null) {
+			try {
+				FileInputStream input = new FileInputStream(file);
+				Image image = new Image(input);
+				recipeImage.setImage(image);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+		else {
+			recipeImage.setImage(null);
 		}
 	}
 	
@@ -124,19 +146,12 @@ public class RecipeController implements Initializable {
 		sugarCookiesBtn.setOnMouseEntered((event -> {
 			sugarCookiesPane.setStyle("-fx-background-color: #00FFFF");
 			starDisplay("Sugar Cookies");
-			try {
-				FileInputStream input = new FileInputStream("resources/images/sugarcookies.jpeg");
-				Image image = new Image(input);
-				recipeImage.setImage(image);
-				
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
+			loadRecipeImage(SC_IMG);
 		}));
 		sugarCookiesBtn.setOnMouseExited((event -> {
-			starDisplay(null);
 			sugarCookiesPane.setStyle("-fx-background-color: #ffffff");
-			recipeImage.setImage(null);
+			starDisplay(null);
+			loadRecipeImage(null);
 		}));
 		sugarCookiesBtn.setOnAction((event -> {
 			loadRecipe(sugarCookiesBtn, sugarCookiesIngr);
