@@ -11,9 +11,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class RecipeController implements Initializable {
@@ -21,8 +25,8 @@ public class RecipeController implements Initializable {
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
 	private static String RECIPE_DISPLAY = "ingredientDisplay.fxml";
 	
-	private static String[] sugarCookiesIngr = {"flour", "eggs"};
-	private static String[] chocolateCakeIngr = {};
+	private static String[] sugarCookiesIngr = {"Flour", "Sugar", "Butter", "Water"};
+	private static String[] chocolateCakeIngr = {""};
 	private static String[] chocolateCookiesIngr = {};
 	private static String[] bananaBreadIngr = {};
 	private static String[] whiteBreadIngr = {};
@@ -45,6 +49,31 @@ public class RecipeController implements Initializable {
 	
 	@FXML private ImageView recipeImage;
 	
+	@FXML private HBox starBox;
+	
+	/**
+	 * method to display stars in recipe menu under recipe image
+	 * calls StarRating class for amount of stars
+	 * if this method is called with null, it removes stars, using that with mouse exit events
+	 * "stars" are circles for now
+	 * @param name
+	 */
+	private void starDisplay(String name) {
+		if (name != null) {
+			int starAmount = StarRatings.getRatings(name);
+			for(int i = 0; i < starAmount; i++) {
+				Circle circle = new Circle();
+				circle.setRadius(45);
+				circle.setFill(Color.YELLOW);
+				circle.setStroke(Color.BLACK);
+				starBox.getChildren().add(circle);
+			}
+		}
+		else {
+			starBox.getChildren().clear();
+		}
+	}
+	
 	/**
 	 * method to load recipe based on button
 	 * needs implementaion
@@ -55,6 +84,7 @@ public class RecipeController implements Initializable {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(RECIPE_DISPLAY));
 			Parent root;
 			root = loader.load();
+			
 			Scene scene = new Scene(root, 1280, 720);
 			Stage stage = (Stage) button.getScene().getWindow();
 			stage.setScene(scene);
@@ -93,6 +123,7 @@ public class RecipeController implements Initializable {
 		 */
 		sugarCookiesBtn.setOnMouseEntered((event -> {
 			sugarCookiesPane.setStyle("-fx-background-color: #00FFFF");
+			starDisplay("Sugar Cookies");
 			try {
 				FileInputStream input = new FileInputStream("resources/images/sugarcookies.jpeg");
 				Image image = new Image(input);
@@ -103,6 +134,7 @@ public class RecipeController implements Initializable {
 			}
 		}));
 		sugarCookiesBtn.setOnMouseExited((event -> {
+			starDisplay(null);
 			sugarCookiesPane.setStyle("-fx-background-color: #ffffff");
 			recipeImage.setImage(null);
 		}));
@@ -117,9 +149,11 @@ public class RecipeController implements Initializable {
 		 * TODO add recipe images
 		 */
 		chocolateCakeBtn.setOnMouseEntered((event -> {
+			starDisplay("Chocolate Cake");
 			chocolateCakePane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		chocolateCakeBtn.setOnMouseExited((event -> {
+			starDisplay(null);
 			chocolateCakePane.setStyle("-fx-background-color: #ffffff");
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
@@ -133,9 +167,11 @@ public class RecipeController implements Initializable {
 		 * TODO add recipe images
 		 */
 		chocolateCookiesBtn.setOnMouseEntered((event -> {
+			starDisplay("Chocolate Chip Cookies");
 			chocolateCookiesPane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		chocolateCookiesBtn.setOnMouseExited((event -> {
+			starDisplay(null);
 			chocolateCookiesPane.setStyle("-fx-background-color: #ffffff");
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
@@ -149,9 +185,11 @@ public class RecipeController implements Initializable {
 		 * TODO add recipe images
 		 */
 		bananaBreadBtn.setOnMouseEntered((event -> {
+			starDisplay("Banana Bread");
 			bananaBreadPane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		bananaBreadBtn.setOnMouseExited((event -> {
+			starDisplay(null);
 			bananaBreadPane.setStyle("-fx-background-color: #ffffff");
 		}));
 		bananaBreadBtn.setOnAction((event -> {
@@ -165,9 +203,11 @@ public class RecipeController implements Initializable {
 		 * TODO add recipe images
 		 */
 		whiteBreadBtn.setOnMouseEntered((event -> {
+			starDisplay("White Bread");
 			whiteBreadPane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		whiteBreadBtn.setOnMouseExited((event -> {
+			starDisplay(null);
 			whiteBreadPane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		whiteBreadBtn.setOnAction((event -> {
@@ -181,9 +221,11 @@ public class RecipeController implements Initializable {
 		 * TODO add recipe images
 		 */
 		fancyCakeBtn.setOnMouseEntered((event -> {
+			starDisplay("Fancy Cake");
 			fancyCakePane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		fancyCakeBtn.setOnMouseExited((event -> {
+			starDisplay(null);
 			fancyCakePane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		fancyCakeBtn.setOnAction((event -> {
