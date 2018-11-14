@@ -189,7 +189,7 @@ public class Game {
 
 		return fancyCakeIS;
 	}
-
+	
 	/**
 	 * checking to see if the ingredients the player picked match 
 	 * the one created by the developer
@@ -197,13 +197,14 @@ public class Game {
 	 * @param userIG an ArrayList of the users ingredient selection
 	 * @return if the user list and the recipe list are the same
 	 */
-	public static void checkIngredients(myLinkedList<Ingredient> definedIG , Map<String, Integer> userIG) {
+	private static void checkIngredients(myLinkedList<Ingredient> definedIG , Map<String, Integer> userIG) {
 		/*
 		 * if the two lists are not the same size,
 		 * then it is obvious that it is false
 		 */
 		if(definedIG.getSize() != userIG.size()) {
 			isIGCorrect = false;
+			return;
 		}else {
 			// a set for the ingredient names that the user inputed
 			Set<String> name = userIG.keySet();
@@ -211,13 +212,16 @@ public class Game {
 			for(myLinkedList<Ingredient> curNode = definedIG.head; curNode != null; curNode = curNode.getNext()) {
 				if(!(name.contains(curNode.getInfo().getName()))){ // check if the defined ingredient exist in the user's set
 					isIGCorrect = false;
+					return;
 				}else if(userIG.get(curNode.getInfo().getName()) != curNode.getInfo().getAmount()) { // check if the amounts are the same
 					isIGCorrect = false;
+					return;
 				}else {
 					continue;
 				}
 			}
 			isIGCorrect = true; // true if everything are the same
+			return;
 		}
 	}
 
@@ -235,6 +239,7 @@ public class Game {
 		 */
 		if(definedIS.size() != userIS.size()) {
 			isISCorrect = false;
+			return;
 		}else {
 			/*
 			 * looping through the queue, does not use iterator 
@@ -243,6 +248,7 @@ public class Game {
 			for(int i = 0; i < size; i++) {
 				if(!(definedIS.peek().toString().equals(userIS.peek().toString()))) {
 					isISCorrect = false;
+					return;
 				}
 
 				/*
@@ -255,6 +261,7 @@ public class Game {
 				userIS.add(temp);
 			}
 			isISCorrect = true;
+			return;
 		}
 	}
 }
