@@ -28,6 +28,7 @@ public class Game {
 
 	protected static boolean isIGCorrect = false;
 	protected static boolean isISCorrect = false;
+	
 	/**
 	 * Create the InGredients for a sugar cookie
 	 * @return the linked list of the ingredients
