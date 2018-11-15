@@ -18,6 +18,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
 public class RecipeController implements Initializable {
@@ -68,11 +69,30 @@ public class RecipeController implements Initializable {
 		if (name != null) {
 			int starAmount = StarRatings.getRatings(name);
 			for(int i = 0; i < starAmount; i++) {
-				Circle circle = new Circle();
-				circle.setRadius(45);
-				circle.setFill(Color.YELLOW);
-				circle.setStroke(Color.BLACK);
-				starBox.getChildren().add(circle);
+				
+				/*
+				 * created polygon using online graphing calculator 
+				 * https://www.desmos.com/calculator/kevy2m9ikh
+				 * initially made it right side up since i forgot how
+				 * the x and y were ordered
+				 */
+				Polygon star = new Polygon();
+				star.getPoints().addAll(new Double[] {
+						15.0, 80.0,
+						25.0, 50.0,
+						0.0, 30.0,
+						30.0, 30.0,
+						40.0, 0.0,
+						50.0, 30.0,
+						80.0, 30.0,
+						55.0, 50.0,
+						65.0, 80.0,
+						40.0, 60.0,
+						15.0, 80.0
+				});
+				star.setFill(Color.YELLOW);
+				star.setStroke(Color.BLACK);
+				starBox.getChildren().add(star);
 			}
 		}
 		else {
