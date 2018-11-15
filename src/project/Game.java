@@ -3,7 +3,8 @@ package project;
 import java.util.*;
 
 /**
- * This is the recipe book that the user can pick to create their game
+ * This class manages recipes that are allowed in the game,
+ * it also includes a checker to see if the user is correct.
  * 
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  */
