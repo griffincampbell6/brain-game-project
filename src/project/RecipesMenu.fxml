@@ -80,9 +80,8 @@
          </font>
       </Text>
       <Button fx:id="backBtn" layoutX="14.0" layoutY="654.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="77.0" text="BACK" />
-      <Pane layoutX="181.0" layoutY="142.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #FFFFE0;">
+      <Pane layoutX="181.0" layoutY="142.0" prefHeight="300.0" prefWidth="300.0">
          <children>
-            <Text layoutX="87.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="images will pop up here" />
             <ImageView fx:id="recipeImage" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" />
          </children>
       </Pane>

@@ -22,18 +22,19 @@ import javafx.stage.Stage;
 
 public class RecipeController implements Initializable {
 	
+	// strings for fxml file names
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
 	private static String RECIPE_DISPLAY = "ingredientDisplay.fxml";
 	
-	private static String SC_IMG = "resources/images/sugarcookies.jpeg";
+	// strings for image file paths
+	private static String SC_IMG = "resources/images/products/sugarcookies.jpeg";
+	private static String CC_IMG = "resources/images/products/chocolatecake.jpg";
+	private static String CCC_IMG = "resources/images/products/chocolatechipcookies.jpg";
+	private static String BB_IMG = "resources/images/products/bananabread.jpg";
+	private static String WB_IMG = "resources/images/products/whitebread.jpg";
+	private static String FC_IMG = "resources/images/products/fancycake.jpg";
 	
-	private static String[] sugarCookiesIngr = {"Flour", "Sugar", "Butter", "Water"};
-	private static String[] chocolateCakeIngr = {""};
-	private static String[] chocolateCookiesIngr = {};
-	private static String[] bananaBreadIngr = {};
-	private static String[] whiteBreadIngr = {};
-	private static String[] fancyCakeIngr = {};
-	
+	// fxml buttons for interaction
 	@FXML private Button backBtn;
 	@FXML private Button sugarCookiesBtn;
 	@FXML private Button chocolateCakeBtn;
@@ -42,6 +43,7 @@ public class RecipeController implements Initializable {
 	@FXML private Button whiteBreadBtn;
 	@FXML private Button fancyCakeBtn;
 	
+	// fxml panes for interaction
 	@FXML private Pane sugarCookiesPane;
 	@FXML private Pane chocolateCakePane;
 	@FXML private Pane chocolateCookiesPane;
@@ -49,8 +51,10 @@ public class RecipeController implements Initializable {
 	@FXML private Pane whiteBreadPane;
 	@FXML private Pane fancyCakePane;
 	
+	// fxml imageview that holds recipe image
 	@FXML private ImageView recipeImage;
 	
+	// fxml hbox that holds stars
 	@FXML private HBox starBox;
 	
 	/**
@@ -101,7 +105,7 @@ public class RecipeController implements Initializable {
 	 * needs implementaion
 	 * @param button
 	 */
-	private void loadRecipe(Button button, String[] ingredients) {
+	private void loadRecipe(Button button) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(RECIPE_DISPLAY));
 			Parent root;
@@ -154,7 +158,7 @@ public class RecipeController implements Initializable {
 			loadRecipeImage(null);
 		}));
 		sugarCookiesBtn.setOnAction((event -> {
-			loadRecipe(sugarCookiesBtn, sugarCookiesIngr);
+			loadRecipe(sugarCookiesBtn);
 		}));
 		
 		/*
@@ -165,14 +169,16 @@ public class RecipeController implements Initializable {
 		 */
 		chocolateCakeBtn.setOnMouseEntered((event -> {
 			starDisplay("Chocolate Cake");
+			loadRecipeImage(CC_IMG);
 			chocolateCakePane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		chocolateCakeBtn.setOnMouseExited((event -> {
 			starDisplay(null);
+			loadRecipeImage(null);
 			chocolateCakePane.setStyle("-fx-background-color: #ffffff");
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
-			loadRecipe(chocolateCakeBtn, chocolateCakeIngr);
+			loadRecipe(chocolateCakeBtn);
 		}));
 		
 		/*
@@ -183,14 +189,16 @@ public class RecipeController implements Initializable {
 		 */
 		chocolateCookiesBtn.setOnMouseEntered((event -> {
 			starDisplay("Chocolate Chip Cookies");
+			loadRecipeImage(CCC_IMG);
 			chocolateCookiesPane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		chocolateCookiesBtn.setOnMouseExited((event -> {
 			starDisplay(null);
+			loadRecipeImage(null);
 			chocolateCookiesPane.setStyle("-fx-background-color: #ffffff");
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
-			loadRecipe(chocolateCookiesBtn, chocolateCookiesIngr);
+			loadRecipe(chocolateCookiesBtn);
 		}));
 		
 		/*
@@ -201,14 +209,16 @@ public class RecipeController implements Initializable {
 		 */
 		bananaBreadBtn.setOnMouseEntered((event -> {
 			starDisplay("Banana Bread");
+			loadRecipeImage(BB_IMG);
 			bananaBreadPane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		bananaBreadBtn.setOnMouseExited((event -> {
 			starDisplay(null);
+			loadRecipeImage(null);
 			bananaBreadPane.setStyle("-fx-background-color: #ffffff");
 		}));
 		bananaBreadBtn.setOnAction((event -> {
-			loadRecipe(bananaBreadBtn, bananaBreadIngr);
+			loadRecipe(bananaBreadBtn);
 		}));
 		
 		/*
@@ -219,14 +229,16 @@ public class RecipeController implements Initializable {
 		 */
 		whiteBreadBtn.setOnMouseEntered((event -> {
 			starDisplay("White Bread");
+			loadRecipeImage(WB_IMG);
 			whiteBreadPane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		whiteBreadBtn.setOnMouseExited((event -> {
 			starDisplay(null);
+			loadRecipeImage(null);
 			whiteBreadPane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		whiteBreadBtn.setOnAction((event -> {
-			loadRecipe(whiteBreadBtn, whiteBreadIngr);
+			loadRecipe(whiteBreadBtn);
 		}));
 		
 		/*
@@ -237,14 +249,16 @@ public class RecipeController implements Initializable {
 		 */
 		fancyCakeBtn.setOnMouseEntered((event -> {
 			starDisplay("Fancy Cake");
+			loadRecipeImage(FC_IMG);
 			fancyCakePane.setStyle("-fx-background-color: #00FFFF");
 		}));
 		fancyCakeBtn.setOnMouseExited((event -> {
 			starDisplay(null);
+			loadRecipeImage(null);
 			fancyCakePane.setStyle("-fx-backgroun-color: #ffffff");
 		}));
 		fancyCakeBtn.setOnAction((event -> {
-			loadRecipe(fancyCakeBtn, fancyCakeIngr);
+			loadRecipe(fancyCakeBtn);
 		}));
 	}
 }
