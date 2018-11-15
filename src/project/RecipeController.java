@@ -177,12 +177,12 @@ public class RecipeController implements Initializable {
 		 * TODO add recipe images
 		 */
 		sugarCookiesBtn.setOnMouseEntered((event -> {
-			sugarCookiesPane.setStyle("-fx-background-color: #e38d9c");
+			sugarCookiesPane.setStyle("-fx-background-color: #e38d9c; -fx-background-radius: 10 10 0 0;");
 			starDisplay("Sugar Cookies");
 			loadRecipeImage(SC_IMG);
 		}));
 		sugarCookiesBtn.setOnMouseExited((event -> {
-			sugarCookiesPane.setStyle("-fx-background-color:  #f5d7dc");
+			sugarCookiesPane.setStyle("-fx-background-color: #f5d7dc; -fx-background-radius: 10 10 0 0;");
 			starDisplay(null);
 			loadRecipeImage(null);
 		}));
@@ -279,12 +279,12 @@ public class RecipeController implements Initializable {
 		fancyCakeBtn.setOnMouseEntered((event -> {
 			starDisplay("Fancy Cake");
 			loadRecipeImage(FC_IMG);
-			fancyCakePane.setStyle("-fx-background-color: #e38d9c");
+			fancyCakePane.setStyle("-fx-background-color: #e38d9c; -fx-background-radius: 0 0 10 10;");
 		}));
 		fancyCakeBtn.setOnMouseExited((event -> {
 			starDisplay(null);
 			loadRecipeImage(null);
-			fancyCakePane.setStyle("-fx-background-color: #f5d7dc");
+			fancyCakePane.setStyle("-fx-background-color: #f5d7dc; -fx-background-radius: 0 0 10 10;");
 		}));
 		fancyCakeBtn.setOnAction((event -> {
 			loadRecipe(fancyCakeBtn);

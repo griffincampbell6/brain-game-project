@@ -12,9 +12,9 @@
             <Font size="58.0" />
          </font>
       </Text>
-      <Pane fx:id="easyPane" layoutX="294.0" layoutY="250.0" prefHeight="77.0" prefWidth="692.0" style="-fx-border-color: BLACK; -fx-border-width: 2;">
+      <Pane fx:id="easyPane" layoutX="294.0" layoutY="250.0" prefHeight="77.0" prefWidth="692.0" style="-fx-border-radius: 10;">
          <children>
-            <Pane fx:id="easyBtnPane" prefHeight="77.0" prefWidth="200.0" style="-fx-border-color: BLACK; -fx-background-color: #f5d7dc; -fx-border-width: 2 1 2 2;">
+            <Pane fx:id="easyBtnPane" prefHeight="77.0" prefWidth="200.0" style="-fx-border-color: BLACK; -fx-background-color: #f5d7dc; -fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10; -fx-background-radius: 10 0 0 10;">
                <children>
                   <Text layoutX="55.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EASY">
                      <font>
@@ -28,7 +28,7 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutX="200.0" prefHeight="77.0" prefWidth="492.0" style="-fx-background-color: #f5d7dc; -fx-border-color: #000000; -fx-border-width: 2 2 2 1;">
+            <Pane layoutX="200.0" prefHeight="77.0" prefWidth="492.0" style="-fx-background-color: #f5d7dc; -fx-border-color: #000000; -fx-border-width: 2 2 2 1; -fx-border-radius: 0 10 10 0; -fx-background-radius: 0 10 10 0;">
                <children>
                   <Text fx:id="easyHover" fill="#a4a3a3" layoutX="136.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hover to view details" textAlignment="CENTER">
                      <font>
@@ -44,9 +44,9 @@
             </Pane>
          </children>
       </Pane>
-      <Pane fx:id="mediumPane" layoutX="294.0" layoutY="375.0" prefHeight="77.0" prefWidth="692.0" style="-fx-border-color: Black; -fx-border-width: 2;">
+      <Pane fx:id="mediumPane" layoutX="294.0" layoutY="375.0" prefHeight="77.0" prefWidth="692.0" style="-fx-border-radius: 10;">
          <children>
-            <Pane fx:id="mediumBtnPane" prefHeight="77.0" prefWidth="200.0" style="-fx-border-color: BLACK; -fx-background-color: #f5d7dc; -fx-border-width: 2 1 2 2;">
+            <Pane fx:id="mediumBtnPane" prefHeight="77.0" prefWidth="200.0" style="-fx-border-color: BLACK; -fx-background-color: #f5d7dc; -fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10; -fx-background-radius: 10 0 0 10;">
                <children>
                   <Text layoutX="21.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEDIUM">
                      <font>
@@ -60,7 +60,7 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutX="200.0" prefHeight="77.0" prefWidth="492.0" style="-fx-background-color: #f5d7dc; -fx-border-color: #000000; -fx-border-width: 2 2 2 1;">
+            <Pane layoutX="200.0" prefHeight="77.0" prefWidth="492.0" style="-fx-background-color: #f5d7dc; -fx-border-color: #000000; -fx-border-width: 2 2 2 1; -fx-border-radius: 0 10 10 0; -fx-background-radius: 0 10 10 0;">
                <children>
                   <Text fx:id="mediumHover" fill="#a4a3a3" layoutX="136.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hover to view details" textAlignment="CENTER">
                      <font>
@@ -76,9 +76,9 @@
             </Pane>
          </children>
       </Pane>
-      <Pane fx:id="hardPane" layoutX="294.0" layoutY="500.0" prefHeight="77.0" prefWidth="692.0" style="-fx-border-color: Black; -fx-border-width: 2;">
+      <Pane fx:id="hardPane" layoutX="294.0" layoutY="500.0" prefHeight="77.0" prefWidth="692.0" style="-fx-background-radius: 10;">
          <children>
-            <Pane fx:id="hardBtnPane" prefHeight="77.0" prefWidth="200.0" style="-fx-border-color: BLACK; -fx-background-color: #f5d7dc; -fx-border-width: 2 1 2 2;">
+            <Pane fx:id="hardBtnPane" prefHeight="77.0" prefWidth="200.0" style="-fx-border-color: BLACK; -fx-background-color: #f5d7dc; -fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10; -fx-background-radius: 10 0 0 10;">
                <children>
                   <Text layoutX="47.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HARD">
                      <font>
@@ -92,7 +92,7 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutX="200.0" prefHeight="77.0" prefWidth="492.0" style="-fx-background-color: #f5d7dc; -fx-border-color: #000000; -fx-border-width: 2 2 2 1;">
+            <Pane layoutX="200.0" prefHeight="77.0" prefWidth="492.0" style="-fx-background-color: #f5d7dc; -fx-border-color: #000000; -fx-border-width: 2 2 2 1; -fx-border-radius: 0 10 10 0; -fx-background-radius: 0 10 10 0;">
                <children>
                   <Text fx:id="hardHover" fill="#a4a3a3" layoutX="136.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hover to view details" textAlignment="CENTER">
                      <font>

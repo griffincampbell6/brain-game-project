@@ -150,8 +150,9 @@ public class DifficultyMenuController implements Initializable {
 	 * @param pane of button
 	 */
 	private void ButtonPaneEnter(Pane pane) {
-		pane.setStyle("-fx-background-color: #e38d9c;"
-				+ "-fx-border-color: #000000; -fx-border-width: 2 1 2 2");
+		pane.setStyle("-fx-background-color: #e38d9c; -fx-border-color: #000000;"
+				+ " -fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10;"
+				+ "-fx-background-radius: 10 0 0 10");
 	}
 	
 	/**method to styke pabes with
@@ -161,7 +162,9 @@ public class DifficultyMenuController implements Initializable {
 	 */
 	private void buttonPaneExit(Pane pane) {
 		pane.setStyle("-fx-background-color: #f5d7dc;"
-				+ "-fx-border-color: #000000; -fx-border-width: 2 1 2 2");
+				+ "-fx-border-color: #000000; -fx-border-width: 2 1 2 2; "
+				+ "-fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10; "
+				+ "-fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10;");
 	}
 	
 	/**
