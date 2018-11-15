@@ -15,6 +15,11 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
+/**
+ * This is the main menu screen of our game
+ * 
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
+ */
 public class StartMenuController implements Initializable {
 	
 	@FXML private Button startBtn;

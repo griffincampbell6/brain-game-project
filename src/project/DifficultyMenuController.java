@@ -14,6 +14,12 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * This scene allows the user to choose 3 difficulty level; 
+ * each difficulty allocates separate amount of time for each game.
+ * 
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
+ */
 public class DifficultyMenuController implements Initializable {
 	@FXML private Button easyBtn;
 	@FXML private Button mediumBtn;

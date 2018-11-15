@@ -1,8 +1,8 @@
 package project;
 
 /**
- * Testing generic on a queue
- * User define queue, not Java defined
+ * Uses to store all the instructions in a queue;
+ * also testing generic of a Queue 
  * 
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  * @param <E> any element that can be placed in the linked list
