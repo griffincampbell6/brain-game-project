@@ -92,7 +92,6 @@ public class RecipeController implements Initializable {
 						15.0, 80.0
 				});
 				star.setFill(Color.YELLOW);
-				star.setStroke(Color.BLACK);
 				starBox.getChildren().add(star);
 			}
 		}
