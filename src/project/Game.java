@@ -26,8 +26,8 @@ public class Game {
 	private static final String COCO = "Chocolate Chips";
 	private static final String SPRINKLES = "Sprinkles";
 
-	protected static boolean isIGCorrect = false;
-	protected static boolean isISCorrect = false;
+	protected static boolean isIGCorrect;
+	protected static boolean isISCorrect;
 	
 	/**
 	 * Create the InGredients for a sugar cookie
