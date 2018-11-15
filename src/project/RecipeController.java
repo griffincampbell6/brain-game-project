@@ -72,7 +72,7 @@ public class RecipeController implements Initializable {
 				
 				/*
 				 * created polygon using online graphing calculator 
-				 * https://www.desmos.com/calculator/kevy2m9ikh
+				 * https://www.desmos.com/calculator/pur7kmpeso
 				 * initially made it right side up since i forgot how
 				 * the x and y were ordered
 				 */
@@ -168,12 +168,12 @@ public class RecipeController implements Initializable {
 		 * TODO add recipe images
 		 */
 		sugarCookiesBtn.setOnMouseEntered((event -> {
-			sugarCookiesPane.setStyle("-fx-background-color: #00FFFF");
+			sugarCookiesPane.setStyle("-fx-background-color: #e38d9c");
 			starDisplay("Sugar Cookies");
 			loadRecipeImage(SC_IMG);
 		}));
 		sugarCookiesBtn.setOnMouseExited((event -> {
-			sugarCookiesPane.setStyle("-fx-background-color: #ffffff");
+			sugarCookiesPane.setStyle("-fx-background-color:  #f5d7dc");
 			starDisplay(null);
 			loadRecipeImage(null);
 		}));
@@ -190,12 +190,12 @@ public class RecipeController implements Initializable {
 		chocolateCakeBtn.setOnMouseEntered((event -> {
 			starDisplay("Chocolate Cake");
 			loadRecipeImage(CC_IMG);
-			chocolateCakePane.setStyle("-fx-background-color: #00FFFF");
+			chocolateCakePane.setStyle("-fx-background-color: #e38d9c");
 		}));
 		chocolateCakeBtn.setOnMouseExited((event -> {
 			starDisplay(null);
 			loadRecipeImage(null);
-			chocolateCakePane.setStyle("-fx-background-color: #ffffff");
+			chocolateCakePane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
 			loadRecipe(chocolateCakeBtn);
@@ -210,12 +210,12 @@ public class RecipeController implements Initializable {
 		chocolateCookiesBtn.setOnMouseEntered((event -> {
 			starDisplay("Chocolate Chip Cookies");
 			loadRecipeImage(CCC_IMG);
-			chocolateCookiesPane.setStyle("-fx-background-color: #00FFFF");
+			chocolateCookiesPane.setStyle("-fx-background-color: #e38d9c");
 		}));
 		chocolateCookiesBtn.setOnMouseExited((event -> {
 			starDisplay(null);
 			loadRecipeImage(null);
-			chocolateCookiesPane.setStyle("-fx-background-color: #ffffff");
+			chocolateCookiesPane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
 			loadRecipe(chocolateCookiesBtn);
@@ -230,12 +230,12 @@ public class RecipeController implements Initializable {
 		bananaBreadBtn.setOnMouseEntered((event -> {
 			starDisplay("Banana Bread");
 			loadRecipeImage(BB_IMG);
-			bananaBreadPane.setStyle("-fx-background-color: #00FFFF");
+			bananaBreadPane.setStyle("-fx-background-color: #e38d9c");
 		}));
 		bananaBreadBtn.setOnMouseExited((event -> {
 			starDisplay(null);
 			loadRecipeImage(null);
-			bananaBreadPane.setStyle("-fx-background-color: #ffffff");
+			bananaBreadPane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		bananaBreadBtn.setOnAction((event -> {
 			loadRecipe(bananaBreadBtn);
@@ -250,12 +250,12 @@ public class RecipeController implements Initializable {
 		whiteBreadBtn.setOnMouseEntered((event -> {
 			starDisplay("White Bread");
 			loadRecipeImage(WB_IMG);
-			whiteBreadPane.setStyle("-fx-background-color: #00FFFF");
+			whiteBreadPane.setStyle("-fx-background-color: #e38d9c");
 		}));
 		whiteBreadBtn.setOnMouseExited((event -> {
 			starDisplay(null);
 			loadRecipeImage(null);
-			whiteBreadPane.setStyle("-fx-backgroun-color: #ffffff");
+			whiteBreadPane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		whiteBreadBtn.setOnAction((event -> {
 			loadRecipe(whiteBreadBtn);
@@ -270,12 +270,12 @@ public class RecipeController implements Initializable {
 		fancyCakeBtn.setOnMouseEntered((event -> {
 			starDisplay("Fancy Cake");
 			loadRecipeImage(FC_IMG);
-			fancyCakePane.setStyle("-fx-background-color: #00FFFF");
+			fancyCakePane.setStyle("-fx-background-color: #e38d9c");
 		}));
 		fancyCakeBtn.setOnMouseExited((event -> {
 			starDisplay(null);
 			loadRecipeImage(null);
-			fancyCakePane.setStyle("-fx-backgroun-color: #ffffff");
+			fancyCakePane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		fancyCakeBtn.setOnAction((event -> {
 			loadRecipe(fancyCakeBtn);
