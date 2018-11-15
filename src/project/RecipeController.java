@@ -51,6 +51,7 @@ public class RecipeController implements Initializable {
 	@FXML private Pane bananaBreadPane;
 	@FXML private Pane whiteBreadPane;
 	@FXML private Pane fancyCakePane;
+	@FXML private Pane backBtnPane;
 	
 	// fxml imageview that holds recipe image
 	@FXML private ImageView recipeImage;
@@ -147,6 +148,14 @@ public class RecipeController implements Initializable {
 		 * BACK BUTTON EVENT
 		 * loads previous screen
 		 */
+		backBtn.setOnMouseEntered((event -> {
+			backBtnPane.setStyle("-fx-background-color: #e38d9c; -fx-border-color: #000000;"
+					+ " -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 2;");
+		}));
+		backBtn.setOnMouseExited((event -> {
+			backBtnPane.setStyle("-fx-background-color:  #f5d7dc; -fx-border-color: #000000;"
+					+ " -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 2;");
+		}));
 		backBtn.setOnAction((event -> {
 			try {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource(DIFF_MENU));

@@ -23,6 +23,7 @@ public class DifficultyMenuController implements Initializable {
 	@FXML private Pane easyBtnPane;
 	@FXML private Pane mediumBtnPane;
 	@FXML private Pane hardBtnPane;
+	@FXML private Pane backBtnPane;
 	
 	@FXML private Pane easyPane;
 	@FXML private Pane mediumPane;
@@ -47,6 +48,14 @@ public class DifficultyMenuController implements Initializable {
 		 * BACK BUTTON EVENT
 		 * loads previous start screen
 		 */
+		backBtn.setOnMouseEntered((event -> {
+			backBtnPane.setStyle("-fx-background-color: #e38d9c; -fx-border-color: #000000;"
+					+ " -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 2;");
+		}));
+		backBtn.setOnMouseExited((event -> {
+			backBtnPane.setStyle("-fx-background-color:  #f5d7dc; -fx-border-color: #000000;"
+					+ " -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 2;");
+		}));
 		backBtn.setOnAction((event -> {
 			try {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource(START_MENU));
@@ -135,8 +144,8 @@ public class DifficultyMenuController implements Initializable {
 	 * @param pane of button
 	 */
 	private void ButtonPaneEnter(Pane pane) {
-		pane.setStyle("-fx-background-color: #00FFFF;"
-				+ "-fx-border-color: #000000");
+		pane.setStyle("-fx-background-color: #e38d9c;"
+				+ "-fx-border-color: #000000; -fx-border-width: 2 1 2 2");
 	}
 	
 	/**method to styke pabes with
@@ -145,8 +154,8 @@ public class DifficultyMenuController implements Initializable {
 	 * @param pane of button
 	 */
 	private void buttonPaneExit(Pane pane) {
-		pane.setStyle("-fx-background-color: #ffffff;"
-				+ "-fx-border-color: #000000");
+		pane.setStyle("-fx-background-color: #f5d7dc;"
+				+ "-fx-border-color: #000000; -fx-border-width: 2 1 2 2");
 	}
 	
 	/**

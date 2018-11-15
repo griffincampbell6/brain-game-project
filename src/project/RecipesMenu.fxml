@@ -79,12 +79,21 @@
             <Font size="50.0" />
          </font>
       </Text>
-      <Button fx:id="backBtn" layoutX="14.0" layoutY="654.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="77.0" text="BACK" />
       <Pane layoutX="181.0" layoutY="142.0" prefHeight="300.0" prefWidth="300.0">
          <children>
             <ImageView fx:id="recipeImage" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" />
          </children>
       </Pane>
       <HBox fx:id="starBox" alignment="CENTER" layoutX="181.0" layoutY="442.0" prefHeight="100.0" prefWidth="300.0" style="-fx-spacing: 5;" />
+      <Pane fx:id="backBtnPane" layoutX="14.0" layoutY="654.0" prefHeight="52.0" prefWidth="142.0" style="-fx-background-color: #f5d7dc; -fx-border-color: #000000; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 2;">
+         <children>
+            <Text layoutX="41.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Button fx:id="backBtn" mnemonicParsing="false" opacity="0.0" prefHeight="52.0" prefWidth="142.0" text="BACK" />
+         </children>
+      </Pane>
    </children>
 </Pane>
