@@ -8,6 +8,7 @@ import java.util.*;
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  */
 public class Game {	
+	// instruction names
 	private static final String BAKE = "Bake";
 	private static final String MIX = "Mix";
 	private static final String COOL = "Cool";
@@ -25,6 +26,14 @@ public class Game {
 	private static final String PAN = "Place in Pan";
 	private static final String COCO = "Chocolate Chips";
 	private static final String SPRINKLES = "Sprinkles";
+	
+	// unit names
+	private static final String CUP = "c";
+	private static final String EGG = "egg(s)";
+	private static final String TBSP = "tbsp";
+	private static final String PKG = "package(s)";
+	private static final String BAN = "banana(s)";
+
 
 	protected static boolean isIGCorrect;
 	protected static boolean isISCorrect;
@@ -36,10 +45,10 @@ public class Game {
 	protected static myLinkedList<Ingredient> sugarCookiesIG(){
 		myLinkedList<Ingredient> sugarCookiesIG = new myLinkedList<>(); // Instantiate a linked list for ingredients 
 
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", "cup", 1))); // add the ingredients IG
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", "cups", 3)));
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", "cups", 3)));
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", "egg", 1)));
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1))); // add the ingredients IG
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 3)));
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 3)));
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 1)));
 
 		return sugarCookiesIG;
 	}
@@ -66,11 +75,11 @@ public class Game {
 	protected static myLinkedList<Ingredient> chocolateCakeIG(){
 		myLinkedList<Ingredient> chocolateCakeIG = new myLinkedList<>();
 
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", "cup", 1)));
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", "cups", 2)));
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", "cups", 2)));
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", "eggs", 2)));
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Chocolate Chips", "cup", 1)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 2)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 2)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 2)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Chocolate Chips", CUP, 1)));
 
 		return chocolateCakeIG;
 	}
@@ -98,11 +107,11 @@ public class Game {
 	protected static myLinkedList<Ingredient> bananaBreadIG(){
 		myLinkedList<Ingredient> bananaBreadIG = new myLinkedList<>();
 
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Banana", "bananas", 3)));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", "cups", 2)));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", "cup", 1)));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", "egg", 1)));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Cinnamon", "tbsp", 2)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Banana", BAN, 3)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 2)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 1)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 1)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Cinnamon", TBSP, 2)));
 
 		return bananaBreadIG;
 	}
@@ -130,12 +139,12 @@ public class Game {
 	protected static myLinkedList<Ingredient> whiteBreadIG(){
 		myLinkedList<Ingredient> whiteBreadIG = new myLinkedList<>();
 
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Yeast", "package", 1)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", "cups", 6)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", "tbsp", 3)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Water", "cups", 2)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Salt", "tbsp", 1)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", "cup", 1)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Yeast", PKG, 1)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 6)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", TBSP, 3)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Water", CUP, 2)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Salt", TBSP, 1)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1)));
 
 		return whiteBreadIG;
 	}
@@ -164,12 +173,12 @@ public class Game {
 	protected static myLinkedList<Ingredient> fancyCakeIG(){
 		myLinkedList<Ingredient> fancyCakeIG = new myLinkedList<>();
 
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", "cups", 2)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", "cup", 1)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", "cup", 1)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", "eggs", 2)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Frosting", "cups", 2)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sprinkles", "cup", 1)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 2)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 1)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 2)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Frosting", CUP, 2)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sprinkles", CUP, 1)));
 
 		return fancyCakeIG;
 	}
