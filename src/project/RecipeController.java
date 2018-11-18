@@ -30,11 +30,11 @@ public class RecipeController implements Initializable {
 	
 	//ingredient arrays
 	private String[] sugarCookiesIngr = {"Butter", "Sugar", "Flour", "Eggs", "", ""};
- 	private static String[] chocolateCakeIngr = {};
- 	private static String[] chocolateCookiesIngr = {};
- 	private static String[] bananaBreadIngr = {};
- 	private static String[] whiteBreadIngr = {};
- 	private static String[] fancyCakeIngr = {};
+ 	private String[] chocolateCakeIngr = {"Butter", "Sugar", "Flour", "Chocolate Chips", "", ""};
+ 	private String[] chocolateCookiesIngr = {"Butter", "Sugar", "Flour", "Eggs", "Chocolate Chips", ""};
+ 	private String[] bananaBreadIngr = {"Banana", "Sugar", "Flour", "Eggs", "Cinnamon", ""};
+ 	private String[] whiteBreadIngr = {"Yeast", "Sugar", "Water", "Flour", "Salt", "Butter"};
+ 	private String[] fancyCakeIngr = {"Flour", "Sugar", "Butter", "Eggs", "Frosting", "Sprinkles"};
 	
 	// strings for image file paths
 	private static String SC_IMG = "resources/images/products/sugarcookies.jpeg";
