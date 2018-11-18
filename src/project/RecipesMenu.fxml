@@ -10,9 +10,9 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #D2DAED;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.RecipeController">
    <children>
-      <VBox layoutX="640.0" layoutY="60.0" prefHeight="600.0" prefWidth="582.0" style="-fx-border-color: BLACK; -fx-border-width: 2;">
+      <VBox layoutX="640.0" layoutY="60.0" prefHeight="600.0" prefWidth="582.0" style="-fx-border-color: BLACK; -fx-border-width: 2; -fx-border-radius: 10;">
          <children>
-            <Pane fx:id="sugarCookiesPane" prefHeight="100.0" prefWidth="582.0" style="-fx-background-color: #f5d7dc;">
+            <Pane fx:id="sugarCookiesPane" prefHeight="100.0" prefWidth="582.0" style="-fx-background-color: #f5d7dc; -fx-background-radius: 10 10 0 0;">
                <children>
                   <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sugar Cookies" wrappingWidth="280.13671875">
                      <font>
@@ -62,7 +62,7 @@
                   <Button fx:id="whiteBreadBtn" layoutX="-1.0" mnemonicParsing="false" opacity="0.0" prefHeight="99.0" prefWidth="582.0" text="Button" />
                </children>
             </Pane>
-            <Pane fx:id="fancyCakePane" layoutX="10.0" layoutY="410.0" prefHeight="100.0" prefWidth="582.0" style="-fx-background-color: #f5d7dc;">
+            <Pane fx:id="fancyCakePane" layoutX="10.0" layoutY="410.0" prefHeight="100.0" prefWidth="582.0" style="-fx-background-color: #f5d7dc; -fx-background-radius: 0 0 10 10;">
                <children>
                   <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fancy Cake" wrappingWidth="241.13671875">
                      <font>
@@ -79,12 +79,21 @@
             <Font size="50.0" />
          </font>
       </Text>
-      <Button fx:id="backBtn" layoutX="14.0" layoutY="654.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="77.0" text="BACK" />
       <Pane layoutX="181.0" layoutY="142.0" prefHeight="300.0" prefWidth="300.0">
          <children>
             <ImageView fx:id="recipeImage" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" />
          </children>
       </Pane>
       <HBox fx:id="starBox" alignment="CENTER" layoutX="181.0" layoutY="442.0" prefHeight="100.0" prefWidth="300.0" style="-fx-spacing: 5;" />
+      <Pane fx:id="backBtnPane" layoutX="14.0" layoutY="654.0" prefHeight="52.0" prefWidth="142.0" style="-fx-background-color: #f5d7dc; -fx-border-color: #000000; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 2;">
+         <children>
+            <Text layoutX="41.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Button fx:id="backBtn" mnemonicParsing="false" opacity="0.0" prefHeight="52.0" prefWidth="142.0" text="BACK" />
+         </children>
+      </Pane>
    </children>
 </Pane>

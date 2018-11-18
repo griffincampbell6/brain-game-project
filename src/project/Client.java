@@ -4,13 +4,17 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-
+/**
+ * The class runs the game files
+ * 
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski 
+ */
 public class Client extends Application  {
 
 	private static String START_MENU = "StartMenu.fxml";
-
 
 	public static void main(String[] args) {
 		launch(args);

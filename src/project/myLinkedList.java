@@ -1,7 +1,8 @@
 package project;
 
 /**
- *  Testing generic on Linked List
+ * Uses to store all the ingredients in a linked list;
+ * also testing generic of a Linked List
  *  
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  * @param <T> any type of object that will be stored in this linked list

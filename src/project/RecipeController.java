@@ -60,6 +60,7 @@ public class RecipeController implements Initializable {
 	@FXML private Pane bananaBreadPane;
 	@FXML private Pane whiteBreadPane;
 	@FXML private Pane fancyCakePane;
+	@FXML private Pane backBtnPane;
 	
 	// fxml imageview that holds recipe image
 	@FXML private ImageView recipeImage;
@@ -100,7 +101,6 @@ public class RecipeController implements Initializable {
 						15.0, 80.0
 				});
 				star.setFill(Color.YELLOW);
-				star.setStroke(Color.BLACK);
 				starBox.getChildren().add(star);
 			}
 		}
@@ -169,6 +169,14 @@ public class RecipeController implements Initializable {
 		 * BACK BUTTON EVENT
 		 * loads previous screen
 		 */
+		backBtn.setOnMouseEntered((event -> {
+			backBtnPane.setStyle("-fx-background-color: #e38d9c; -fx-border-color: #000000;"
+					+ " -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 2;");
+		}));
+		backBtn.setOnMouseExited((event -> {
+			backBtnPane.setStyle("-fx-background-color:  #f5d7dc; -fx-border-color: #000000;"
+					+ " -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 2;");
+		}));
 		backBtn.setOnAction((event -> {
 			try {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource(DIFF_MENU));
@@ -190,12 +198,12 @@ public class RecipeController implements Initializable {
 		 * TODO add recipe images
 		 */
 		sugarCookiesBtn.setOnMouseEntered((event -> {
-			sugarCookiesPane.setStyle("-fx-background-color: #e38d9c");
+			sugarCookiesPane.setStyle("-fx-background-color: #e38d9c; -fx-background-radius: 10 10 0 0;");
 			starDisplay("Sugar Cookies");
 			loadRecipeImage(SC_IMG);
 		}));
 		sugarCookiesBtn.setOnMouseExited((event -> {
-			sugarCookiesPane.setStyle("-fx-background-color:  #f5d7dc");
+			sugarCookiesPane.setStyle("-fx-background-color: #f5d7dc; -fx-background-radius: 10 10 0 0;");
 			starDisplay(null);
 			loadRecipeImage(null);
 		}));
@@ -292,12 +300,12 @@ public class RecipeController implements Initializable {
 		fancyCakeBtn.setOnMouseEntered((event -> {
 			starDisplay("Fancy Cake");
 			loadRecipeImage(FC_IMG);
-			fancyCakePane.setStyle("-fx-background-color: #e38d9c");
+			fancyCakePane.setStyle("-fx-background-color: #e38d9c; -fx-background-radius: 0 0 10 10;");
 		}));
 		fancyCakeBtn.setOnMouseExited((event -> {
 			starDisplay(null);
 			loadRecipeImage(null);
-			fancyCakePane.setStyle("-fx-background-color: #f5d7dc");
+			fancyCakePane.setStyle("-fx-background-color: #f5d7dc; -fx-background-radius: 0 0 10 10;");
 		}));
 		fancyCakeBtn.setOnAction((event -> {
 			loadRecipe(fancyCakeBtn, fancyCakeIngr);
