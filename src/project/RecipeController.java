@@ -156,6 +156,16 @@ public class RecipeController implements Initializable {
 			Ing5.setText(ingredients[4]);
 			Ing6.setText(ingredients[5]);
 			stage.show();
+			
+			long mTime = System.currentTimeMillis();
+			long end = mTime + 5000; // 5 seconds 
+
+			while (mTime < end) 
+			{
+			    mTime = System.currentTimeMillis();
+			} 
+			stage.close(); //code to close window after certain number of seconds
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
