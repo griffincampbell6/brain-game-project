@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="ingBut1" layoutX="38.0" layoutY="42.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="102.0" text="Button" />
+      <Button fx:id="ingBut2" layoutX="38.0" layoutY="166.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="102.0" text="Button" />
+      <Button fx:id="ingBut3" layoutX="38.0" layoutY="289.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="102.0" text="Button" />
+      <Button fx:id="ingBut4" layoutX="249.0" layoutY="42.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="102.0" text="Button" />
+      <Button fx:id="ingBut5" layoutX="249.0" layoutY="166.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="102.0" text="Button" />
+      <Button fx:id="ingBut6" layoutX="249.0" layoutY="289.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="102.0" text="Button" />
+      <Button fx:id="ingBut7" layoutX="455.0" layoutY="42.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="102.0" text="Button" />
+      <Button fx:id="ingBut8" layoutX="455.0" layoutY="166.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="102.0" text="Button" />
+      <Button fx:id="ingBut9" layoutX="455.0" layoutY="289.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="102.0" text="Button" />
+   </children>
+</Pane>
