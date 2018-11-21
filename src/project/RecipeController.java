@@ -156,7 +156,7 @@ public class RecipeController implements Initializable {
 			Ing4.setText(ingredients[3]);
 			Ing5.setText(ingredients[4]);
 			Ing6.setText(ingredients[5]);
-			stage.show();
+			stage.showAndWait();
 			
 			long mTime = System.currentTimeMillis();
 			long end = mTime + 5000; // 5 seconds 
@@ -166,25 +166,25 @@ public class RecipeController implements Initializable {
 			    mTime = System.currentTimeMillis();
 			}
 			
-//			FXMLLoader loader2 = new FXMLLoader(getClass().getResource(BUTTON_STRING));
-//			Parent root2;
-//			root2 = loader2.load();
-//			Scene scene2 = new Scene(root2, 1280, 720);
-//			//Stage stage2 = (Stage) button.getScene.getWindow();
-//			stage.setScene(scene2);
-//			Button But1 = (Button)loader.getNamespace().get("ingBut1");
-//			Button But2 = (Button)loader.getNamespace().get("ingBut2");
-//			Button But3 = (Button)loader.getNamespace().get("ingBut3");
-//			Button But4 = (Button)loader.getNamespace().get("ingBut4");
-//			Button But5 = (Button)loader.getNamespace().get("ingBut5");
-//			Button But6 = (Button)loader.getNamespace().get("ingBut6");
-//			But1.setText(ingredients[0]);
-//			But2.setText(ingredients[1]);
-//			But3.setText(ingredients[2]);
-//			But4.setText(ingredients[3]);
-//			But5.setText(ingredients[4]);
-//			But6.setText(ingredients[5]);
-//			stage.show();
+			FXMLLoader loader2 = new FXMLLoader(getClass().getResource(BUTTON_STRING));
+			Parent root2;
+			root2 = loader2.load();
+			Scene scene2 = new Scene(root2, 1280, 720);
+			//Stage stage2 = (Stage) button.getScene.getWindow();
+			stage.setScene(scene2);
+			Button But1 = (Button)loader.getNamespace().get("ingBut1");
+			Button But2 = (Button)loader.getNamespace().get("ingBut2");
+			Button But3 = (Button)loader.getNamespace().get("ingBut3");
+			Button But4 = (Button)loader.getNamespace().get("ingBut4");
+			Button But5 = (Button)loader.getNamespace().get("ingBut5");
+			Button But6 = (Button)loader.getNamespace().get("ingBut6");
+			But1.setText(ingredients[0]);
+			But2.setText(ingredients[1]);
+			But3.setText(ingredients[2]);
+			But4.setText(ingredients[3]);
+			But5.setText(ingredients[4]);
+			But6.setText(ingredients[5]);
+			stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
