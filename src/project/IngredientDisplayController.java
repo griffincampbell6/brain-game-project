@@ -30,8 +30,7 @@ public class IngredientDisplayController {
 		 * setting each lbl box to a string of ingredient 
 		 */
 		String[] a = RecipeController.curArray;
-System.out.println(DifficultyMenuController.duration);
-
+		
 		Ing1.setText(a[0]);
 		Ing2.setText(a[1]);
 		Ing3.setText(a[2]);
