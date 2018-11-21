@@ -30,6 +30,7 @@ public class IngredientDisplayController {
 		 * setting each lbl box to a string of ingredient 
 		 */
 		String[] a = RecipeController.curArray;
+System.out.println(DifficultyMenuController.duration);
 
 		Ing1.setText(a[0]);
 		Ing2.setText(a[1]);
@@ -55,7 +56,7 @@ public class IngredientDisplayController {
 		 * timer detail
 		 */
 		Timer timer = new Timer();
-		long delay = 5000; // thhis should be a variable based on difficulty level
+		long delay = DifficultyMenuController.duration; 
 
 		timer.schedule(task, delay);	
 

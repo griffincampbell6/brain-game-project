@@ -46,6 +46,8 @@ public class DifficultyMenuController implements Initializable {
 	
 	private static String START_MENU = "StartMenu.fxml";
 	private static String RECIPES_MENU = "RecipesMenu.fxml";
+	
+	protected static long duration;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -96,6 +98,7 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		easyBtn.setOnAction((event -> {
 			loadNext();
+			duration = 5000;
 		}));
 		
 		/*
@@ -118,6 +121,7 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		mediumBtn.setOnAction((event -> {
 			loadNext();
+			duration = 10000;
 		}));
 		
 		/*
@@ -140,6 +144,7 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		hardBtn.setOnAction((event -> {
 			loadNext();
+			duration = 15000;
 		}));
 	
 	}
