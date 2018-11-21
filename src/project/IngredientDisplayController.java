@@ -26,22 +26,18 @@ public class IngredientDisplayController {
 	private Label Ing6;
 
 	public void initialize() {
+		String[] a = RecipeController.curArray;
+
+		Ing1.setText(a[0]);
+		Ing2.setText(a[1]);
+		Ing3.setText(a[2]);
+		Ing4.setText(a[3]);
+		Ing5.setText(a[4]);
+		Ing6.setText(a[5]);
+		
 		TimerTask task = new TimerTask() {
 			@Override
 			public void run() {
-				String[] a = RecipeController.curArray;
-
-				for(int i = 0; i < a.length; i++) {
-					System.out.println(a[i]);
-				}
-
-				Ing1.setText(a[0]);
-				Ing2.setText(a[1]);
-				Ing3.setText(a[2]);
-				Ing4.setText(a[3]);
-				Ing5.setText(a[4]);
-				Ing6.setText(a[5]);
-
 				System.exit(0); // will change to other function
 			}
 		};
