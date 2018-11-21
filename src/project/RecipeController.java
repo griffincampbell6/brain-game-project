@@ -27,6 +27,7 @@ public class RecipeController implements Initializable {
 	// strings for fxml file names
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
 	private static String RECIPE_DISPLAY = "ingredientDisplay.fxml";
+	private static String BUTTON_STRING = "buttonsDisplay.fxml";
 	
 	//ingredient arrays
 	private String[] sugarCookiesIngr = {"Butter", "Sugar", "Flour", "Eggs", "", ""};
@@ -163,9 +164,27 @@ public class RecipeController implements Initializable {
 			while (mTime < end) 
 			{
 			    mTime = System.currentTimeMillis();
-			} 
-			stage.close(); //code to close window after certain number of seconds
+			}
 			
+//			FXMLLoader loader2 = new FXMLLoader(getClass().getResource(BUTTON_STRING));
+//			Parent root2;
+//			root2 = loader2.load();
+//			Scene scene2 = new Scene(root2, 1280, 720);
+//			//Stage stage2 = (Stage) button.getScene.getWindow();
+//			stage.setScene(scene2);
+//			Button But1 = (Button)loader.getNamespace().get("ingBut1");
+//			Button But2 = (Button)loader.getNamespace().get("ingBut2");
+//			Button But3 = (Button)loader.getNamespace().get("ingBut3");
+//			Button But4 = (Button)loader.getNamespace().get("ingBut4");
+//			Button But5 = (Button)loader.getNamespace().get("ingBut5");
+//			Button But6 = (Button)loader.getNamespace().get("ingBut6");
+//			But1.setText(ingredients[0]);
+//			But2.setText(ingredients[1]);
+//			But3.setText(ingredients[2]);
+//			But4.setText(ingredients[3]);
+//			But5.setText(ingredients[4]);
+//			But6.setText(ingredients[5]);
+//			stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
