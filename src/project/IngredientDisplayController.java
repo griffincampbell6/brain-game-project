@@ -26,6 +26,9 @@ public class IngredientDisplayController {
 	private Label Ing6;
 
 	public void initialize() {
+		/*
+		 * setting each lbl box to a string of ingredient 
+		 */
 		String[] a = RecipeController.curArray;
 
 		Ing1.setText(a[0]);
@@ -35,16 +38,24 @@ public class IngredientDisplayController {
 		Ing5.setText(a[4]);
 		Ing6.setText(a[5]);
 		
+		/*
+		 * running a timer to go on to next scene
+		 */
 		TimerTask task = new TimerTask() {
 			@Override
 			public void run() {
-				System.exit(0); // will change to other function
+				System.exit(0); 
+				/*
+				 * this will become the transition to the next slide
+				 */
 			}
 		};
 
-
+		/*
+		 * timer detail
+		 */
 		Timer timer = new Timer();
-		long delay = 5000;
+		long delay = 5000; // thhis should be a variable based on difficulty level
 
 		timer.schedule(task, delay);	
 
