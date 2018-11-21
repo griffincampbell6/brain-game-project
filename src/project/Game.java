@@ -27,7 +27,7 @@ public class Game {
 	private static final String PAN = "Place in Pan";
 	private static final String COCO = "Chocolate Chips";
 	private static final String SPRINKLES = "Sprinkles";
-	
+
 	// unit names
 	private static final String CUP = "c";
 	private static final String EGG = "egg(s)";
@@ -38,7 +38,7 @@ public class Game {
 
 	protected static boolean isIGCorrect;
 	protected static boolean isISCorrect;
-	
+
 	/**
 	 * Create the InGredients for a sugar cookie
 	 * @return the linked list of the ingredients
@@ -76,31 +76,61 @@ public class Game {
 	protected static myLinkedList<Ingredient> chocolateCakeIG(){
 		myLinkedList<Ingredient> chocolateCakeIG = new myLinkedList<>();
 
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1)));
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 2)));
 		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 2)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Oil", TBSP, 2)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Frosting", CUP, 2)));
 		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 2)));
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Chocolate Chips", CUP, 1)));
 
 		return chocolateCakeIG;
+	}
+
+	/**
+	 * Create the InStruction for a chocolate cake
+	 * @return the queue of instructions
+	 */
+	protected static myQueue<String> chocolateCakeIS(){
+		myQueue<String> chocolateCakeIS = new myQueue<>();
+
+		chocolateCakeIS.add(MIX);
+		chocolateCakeIS.add(BAKE);
+		chocolateCakeIS.add(COOL);
+		chocolateCakeIS.add(FROST);
+
+		return chocolateCakeIS;
+	}
+
+	/**
+	 * Create the InGredients for a chocolate chip cookie
+	 * @return the linked list of the ingredients
+	 */
+	protected static myLinkedList<Ingredient> chocolateChipCookieIG(){
+		myLinkedList<Ingredient> chocolateChipCookieIG = new myLinkedList<>();
+
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1)));
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 2)));
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 1)));
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 1)));
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Chocolate", CUP, 1)));
+
+		return chocolateChipCookieIG;
 	}
 
 	/**
 	 * Create the InStruction for a chocolate chip cookie
 	 * @return the queue of instructions
 	 */
-	protected static myQueue<String> chocolateCakeIS(){
-		myQueue<String> chocolateCakeIS = new myQueue<>();
+	protected static myQueue<String> chocolateChipCookieIS(){
+		myQueue<String> chocolateChipCookieIS = new myQueue<>();
 
-		chocolateCakeIS.add(CREAM);
-		chocolateCakeIS.add(STIR);
-		chocolateCakeIS.add(ADD + " " + COCO);
-		chocolateCakeIS.add(SHAPE);
-		chocolateCakeIS.add(BAKE);
+		chocolateChipCookieIS.add(CREAM);
+		chocolateChipCookieIS.add(STIR);
+		chocolateChipCookieIS.add(ADD + " " + COCO);
+		chocolateChipCookieIS.add(SHAPE);
+		chocolateChipCookieIS.add(BAKE);
 
-		return chocolateCakeIS;
+		return chocolateChipCookieIS;
 	}
-
+	
 	/**
 	 * Create the InGredients for a banana bread
 	 * @return the linked list of the ingredients
@@ -200,7 +230,7 @@ public class Game {
 
 		return fancyCakeIS;
 	}
-	
+
 	/**
 	 * checking to see if the ingredients the player picked match 
 	 * the one created by the developer
@@ -274,5 +304,36 @@ public class Game {
 			isISCorrect = true;
 			return;
 		}
+	}
+
+	/**
+	 * Getting just the ingredient name from the linked list
+	 * @param s the printList of the linked list of the ingredient
+	 * @return an array of just the ingredient name
+	 */
+	protected static String[] split(String s) {
+		if(s.length() <= 0) {
+			throw new IllegalArgumentException();
+		}
+
+		String[] arrayIG = new String[6];
+		String[] tempArray = s.split(" ");
+
+		for(int i = 0; i < arrayIG.length; i++) {
+			if((3*i) < tempArray.length) {
+				arrayIG[i] = tempArray[3*i];
+			}else {
+				break;
+			}
+		}
+
+		for(int i = arrayIG.length-1; i >= 0; i--) {
+			if(arrayIG[i] == null) {
+				arrayIG[i] = "";
+			}else {
+				break;
+			}
+		}
+		return arrayIG;
 	}
 }

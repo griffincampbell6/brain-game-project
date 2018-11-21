@@ -30,12 +30,12 @@ public class RecipeController implements Initializable {
 	private static String BUTTON_STRING = "buttonsDisplay.fxml";
 	
 	//ingredient arrays
-	private String[] sugarCookiesIngr = {"Butter", "Sugar", "Flour", "Eggs", "", ""};
- 	private String[] chocolateCakeIngr = {"Butter", "Sugar", "Flour", "Chocolate Chips", "", ""};
- 	private String[] chocolateCookiesIngr = {"Butter", "Sugar", "Flour", "Eggs", "Chocolate Chips", ""};
- 	private String[] bananaBreadIngr = {"Banana", "Sugar", "Flour", "Eggs", "Cinnamon", ""};
- 	private String[] whiteBreadIngr = {"Yeast", "Sugar", "Water", "Flour", "Salt", "Butter"};
- 	private String[] fancyCakeIngr = {"Flour", "Sugar", "Butter", "Eggs", "Frosting", "Sprinkles"};
+	private String[] sugarCookiesIngr = Game.split(Game.sugarCookiesIG().printList());
+ 	private String[] chocolateCakeIngr = Game.split(Game.chocolateCakeIG().printList());
+ 	private String[] chocolateCookiesIngr = Game.split(Game.chocolateChipCookieIG().printList());
+ 	private String[] bananaBreadIngr = Game.split(Game.bananaBreadIG().printList());
+ 	private String[] whiteBreadIngr = Game.split(Game.whiteBreadIG().printList());
+ 	private String[] fancyCakeIngr = Game.split(Game.fancyCakeIG().printList());
 	
 	// strings for image file paths
 	private static String SC_IMG = "resources/images/products/sugarcookies.jpeg";
