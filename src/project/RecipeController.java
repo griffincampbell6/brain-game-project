@@ -26,18 +26,12 @@ public class RecipeController implements Initializable {
 	
 	// strings for fxml file names
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
-	private static String RECIPE_DISPLAY = "ingredientDisplay.fxml";
+	private static String RECIPE_DISPLAY = "itemDisplay.fxml";
 	private static String BUTTON_STRING = "buttonsDisplay.fxml";
-	
-	//ingredient arrays
-	private String[] sugarCookiesIngr = Game.split(Game.sugarCookiesIG().printList());
- 	private String[] chocolateCakeIngr = Game.split(Game.chocolateCakeIG().printList());
- 	private String[] chocolateCookiesIngr = Game.split(Game.chocolateChipCookieIG().printList());
- 	private String[] bananaBreadIngr = Game.split(Game.bananaBreadIG().printList());
- 	private String[] whiteBreadIngr = Game.split(Game.whiteBreadIG().printList());
- 	private String[] fancyCakeIngr = Game.split(Game.fancyCakeIG().printList());
  	
- 	protected static String[] curArray;
+	// naive way of passing data
+ 	protected static myLinkedList<Ingredient> curIG;
+ 	protected static myQueue<String> curIS;
 	
 	// strings for image file paths
 	private static String SC_IMG = "resources/images/products/sugarcookies.jpeg";
@@ -137,8 +131,7 @@ public class RecipeController implements Initializable {
 	 * needs implementaion
 	 * @param button
 	 */
-	private void loadRecipe(Button button, String[] ingredients) {		
-		curArray = ingredients;
+	private void loadRecipe(Button button) {
 			try {
 				Parent root =  FXMLLoader.load(getClass().getResource(RECIPE_DISPLAY));
 				Scene scene = new Scene(root);
@@ -196,7 +189,9 @@ public class RecipeController implements Initializable {
 			loadRecipeImage(null);
 		}));
 		sugarCookiesBtn.setOnAction((event -> {
-			loadRecipe(sugarCookiesBtn, sugarCookiesIngr);
+			curIG = Game.sugarCookiesIG();
+			curIS = Game.sugarCookiesIS();
+			loadRecipe(sugarCookiesBtn);
 		}));
 		
 		/*
@@ -216,7 +211,9 @@ public class RecipeController implements Initializable {
 			chocolateCakePane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
-			loadRecipe(chocolateCakeBtn, chocolateCakeIngr);
+			curIG = Game.chocolateCakeIG();
+			curIS = Game.chocolateCakeIS();
+			loadRecipe(chocolateCakeBtn);
 		}));
 		
 		/*
@@ -236,7 +233,9 @@ public class RecipeController implements Initializable {
 			chocolateCookiesPane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
-			loadRecipe(chocolateCookiesBtn, chocolateCookiesIngr);
+			curIG = Game.chocolateChipCookieIG();
+			curIS = Game.chocolateChipCookieIS();
+			loadRecipe(chocolateCookiesBtn);
 		}));
 		
 		/*
@@ -256,7 +255,9 @@ public class RecipeController implements Initializable {
 			bananaBreadPane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		bananaBreadBtn.setOnAction((event -> {
-			loadRecipe(bananaBreadBtn, bananaBreadIngr);
+			curIG = Game.bananaBreadIG();
+			curIS = Game.bananaBreadIS();
+			loadRecipe(bananaBreadBtn);
 		}));
 		
 		/*
@@ -276,7 +277,9 @@ public class RecipeController implements Initializable {
 			whiteBreadPane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		whiteBreadBtn.setOnAction((event -> {
-			loadRecipe(whiteBreadBtn, whiteBreadIngr);
+			curIG = Game.whiteBreadIG();
+			curIS = Game.whiteBreadIS();
+			loadRecipe(whiteBreadBtn);
 		}));
 		
 		/*
@@ -296,7 +299,9 @@ public class RecipeController implements Initializable {
 			fancyCakePane.setStyle("-fx-background-color: #f5d7dc; -fx-background-radius: 0 0 10 10;");
 		}));
 		fancyCakeBtn.setOnAction((event -> {
-			loadRecipe(fancyCakeBtn, fancyCakeIngr);
+			curIG = Game.fancyCakeIG();
+			curIS = Game.fancyCakeIS();
+			loadRecipe(fancyCakeBtn);
 		}));
 	}
 }

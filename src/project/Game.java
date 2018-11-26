@@ -311,7 +311,7 @@ public class Game {
 	 * @param s the printList of the linked list of the ingredient
 	 * @return an array of just the ingredient name
 	 */
-	protected static String[] split(String s) {
+	protected static String[] splitName(String s) {
 		if(s.length() <= 0) {
 			throw new IllegalArgumentException();
 		}
@@ -319,6 +319,7 @@ public class Game {
 		String[] arrayIG = new String[6];
 		String[] tempArray = s.split(" ");
 
+		//pos: 0, 3, 6...
 		for(int i = 0; i < arrayIG.length; i++) {
 			if((3*i) < tempArray.length) {
 				arrayIG[i] = tempArray[3*i];
@@ -335,5 +336,64 @@ public class Game {
 			}
 		}
 		return arrayIG;
+	}
+	
+	/**
+	 * Getting just the number of ingredients from the linked list
+	 * @param s the printList of the linked list of the ingredient
+	 * @return an array of just the ingredient amount
+	 */
+	protected static String[] splitNumber(String s) {
+		if(s.length() <= 0) {
+			throw new IllegalArgumentException();
+		}
+
+		String[] arrayIG = new String[6];
+		String[] tempArray = s.split(" ");
+		
+		// pos: 1, 4, 7...
+		for(int i = 0; i < arrayIG.length; i++) {
+			if((3*i+1) < tempArray.length) {
+				arrayIG[i] = tempArray[3*i+1];
+			}else {
+				break;
+			}
+		}
+
+		for(int i = arrayIG.length-1; i >= 0; i--) {
+			if(arrayIG[i] == null) {
+				arrayIG[i] = "";
+			}else {
+				break;
+			}
+		}
+		return arrayIG;
+	}
+	
+	/**
+	 * Convert a queue into an array with its steps
+	 * @param q a queue of instruction for this game
+	 * @return an array of string of instruction
+	 */
+	protected static String[] steps(myQueue<String> q) {
+		if(q == null) {
+			throw new IllegalArgumentException();
+		}
+		
+		String[] s = new String[6];
+		int i = 0;
+		
+		while(q.peek() != null) {
+			s[i] = q.remove().toString();
+			i += 1;
+		}
+		
+		for(int n = s.length-1; n >= 0; n--) {
+			if(s[n] == null) {
+				s[n] = "";
+			}
+		}
+		
+		return s;
 	}
 }
