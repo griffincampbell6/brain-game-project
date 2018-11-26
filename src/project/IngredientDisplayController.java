@@ -1,5 +1,6 @@
 package project;
 
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.Executors;
@@ -7,8 +8,12 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
 public class IngredientDisplayController {
 
@@ -45,9 +50,18 @@ public class IngredientDisplayController {
 			@Override
 			public void run() {
 				System.exit(0); 
-				/*
-				 * this will become the transition to the next slide
-				 */
+				try {
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("buttonsDisplay.fxml"));
+					Parent root;
+					root = loader.load();
+					Scene scene = new Scene(root);
+					Stage stage = new Stage();
+					stage.setScene(scene);
+					stage.show();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		};
 
