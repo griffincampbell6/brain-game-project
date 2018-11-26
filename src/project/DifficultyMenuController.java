@@ -47,70 +47,8 @@ public class DifficultyMenuController implements Initializable {
 	private static String START_MENU = "StartMenu.fxml";
 	private static String RECIPES_MENU = "RecipesMenu.fxml";
 	
-	/**
-	 * method made to load recipes menu 
-	 * to avoid rewriting code for every button
-	 * @param none
-	 */
-	private void loadNext() {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource(RECIPES_MENU));
-			Parent root;
-			root = loader.load();
-			Scene scene = new Scene(root, 1280, 720);
-			Stage stage = (Stage) easyBtn.getScene().getWindow();
-			stage.setScene(scene);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	protected static long duration;
 	
-	/**
-	 * method to style panes with
-	 * mouse enter
-	 * @param pane of button
-	 */
-	private void ButtonPaneEnter(Pane pane) {
-		pane.setStyle("-fx-background-color: #e38d9c; -fx-border-color: #000000;"
-				+ " -fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10;"
-				+ "-fx-background-radius: 10 0 0 10");
-	}
-	
-	/**method to styke pabes with
-	 * mouse exit
-	 * 
-	 * @param pane of button
-	 */
-	private void buttonPaneExit(Pane pane) {
-		pane.setStyle("-fx-background-color: #f5d7dc;"
-				+ "-fx-border-color: #000000; -fx-border-width: 2 1 2 2; "
-				+ "-fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10; "
-				+ "-fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10;");
-	}
-	
-	/**
-	 * method to reveal difficulty detail text box
-	 * and hid "hover here" text box
-	 * @param hover
-	 * @param details
-	 */
-	private void fullPaneEnter(Text hover, Text details) {
-		hover.setStyle("-fx-opacity: 0");
-		details.setStyle("-fx-opacity: 1");
-	}
-	
-	/**
-	 * method to reveal "hover here" text box 
-	 * and hive difficulty detail text box
-	 * @param hover
-	 * @param details
-	 */
-	private void fullPaneExit(Text hover, Text details){
-		hover.setStyle("-fx-opacity: 1");
-		details.setStyle("-fx-opacity: 0");
-	}
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
@@ -160,6 +98,7 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		easyBtn.setOnAction((event -> {
 			loadNext();
+			duration = 5000;
 		}));
 		
 		/*
@@ -182,6 +121,7 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		mediumBtn.setOnAction((event -> {
 			loadNext();
+			duration = 10000;
 		}));
 		
 		/*
@@ -204,6 +144,72 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		hardBtn.setOnAction((event -> {
 			loadNext();
+			duration = 15000;
 		}));
 	}
+	
+	/**
+	 * method to style panes with
+	 * mouse enter
+	 * @param pane of button
+	 */
+	private void ButtonPaneEnter(Pane pane) {
+		pane.setStyle("-fx-background-color: #e38d9c; -fx-border-color: #000000;"
+				+ " -fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10;"
+				+ "-fx-background-radius: 10 0 0 10");
+	}
+	
+	/**method to styke pabes with
+	 * mouse exit
+	 * 
+	 * @param pane of button
+	 */
+	private void buttonPaneExit(Pane pane) {
+		pane.setStyle("-fx-background-color: #f5d7dc;"
+				+ "-fx-border-color: #000000; -fx-border-width: 2 1 2 2; "
+				+ "-fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10; "
+				+ "-fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10;");
+	}
+	
+	/**
+	 * method to reveal difficulty detail text box
+	 * and hid "hover here" text box
+	 * @param hover
+	 * @param details
+	 */
+	private void fullPaneEnter(Text hover, Text details) {
+		hover.setStyle("-fx-opacity: 0");
+		details.setStyle("-fx-opacity: 1");
+	}
+	
+	/**
+	 * method to reveal "hover here" text box 
+	 * and hive difficulty detail text box
+	 * @param hover
+	 * @param details
+	 */
+	private void fullPaneExit(Text hover, Text details){
+		hover.setStyle("-fx-opacity: 1");
+		details.setStyle("-fx-opacity: 0");
+	}
+
+	/**
+	 * method made to load recipes menu 
+	 * to avoid rewriting code for every button
+	 * @param none
+	 */
+	private void loadNext() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource(RECIPES_MENU));
+			Parent root;
+			root = loader.load();
+			Scene scene = new Scene(root, 1280, 720);
+			Stage stage = (Stage) easyBtn.getScene().getWindow();
+			stage.setScene(scene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 }

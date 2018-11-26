@@ -27,14 +27,17 @@ public class RecipeController implements Initializable {
 	// strings for fxml file names
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
 	private static String RECIPE_DISPLAY = "ingredientDisplay.fxml";
+	private static String BUTTON_STRING = "buttonsDisplay.fxml";
 	
 	//ingredient arrays
-	private String[] sugarCookiesIngr = {"Butter", "Sugar", "Flour", "Eggs", "", ""};
- 	private String[] chocolateCakeIngr = {"Butter", "Sugar", "Flour", "Chocolate Chips", "", ""};
- 	private String[] chocolateCookiesIngr = {"Butter", "Sugar", "Flour", "Eggs", "Chocolate Chips", ""};
- 	private String[] bananaBreadIngr = {"Banana", "Sugar", "Flour", "Eggs", "Cinnamon", ""};
- 	private String[] whiteBreadIngr = {"Yeast", "Sugar", "Water", "Flour", "Salt", "Butter"};
- 	private String[] fancyCakeIngr = {"Flour", "Sugar", "Butter", "Eggs", "Frosting", "Sprinkles"};
+	private String[] sugarCookiesIngr = Game.split(Game.sugarCookiesIG().printList());
+ 	private String[] chocolateCakeIngr = Game.split(Game.chocolateCakeIG().printList());
+ 	private String[] chocolateCookiesIngr = Game.split(Game.chocolateChipCookieIG().printList());
+ 	private String[] bananaBreadIngr = Game.split(Game.bananaBreadIG().printList());
+ 	private String[] whiteBreadIngr = Game.split(Game.whiteBreadIG().printList());
+ 	private String[] fancyCakeIngr = Game.split(Game.fancyCakeIG().printList());
+ 	
+ 	protected static String[] curArray;
 	
 	// strings for image file paths
 	private static String SC_IMG = "resources/images/products/sugarcookies.jpeg";
@@ -134,44 +137,19 @@ public class RecipeController implements Initializable {
 	 * needs implementaion
 	 * @param button
 	 */
-	private void loadRecipe(Button button, String[] ingredients) {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource(RECIPE_DISPLAY));
-			Parent root;
-			root = loader.load();
-			
-			Scene scene = new Scene(root, 1280, 720);
-			Stage stage = (Stage) button.getScene().getWindow();
-			stage.setScene(scene);
-			Label Ing1 = (Label)loader.getNamespace().get("Ing1");
-			Label Ing2 = (Label)loader.getNamespace().get("Ing2");
-			Label Ing3 = (Label)loader.getNamespace().get("Ing3");
-			Label Ing4 = (Label)loader.getNamespace().get("Ing4");
-			Label Ing5 = (Label)loader.getNamespace().get("Ing5");
-			Label Ing6 = (Label)loader.getNamespace().get("Ing6");
-			Ing1.setText(ingredients[0]);
-			Ing2.setText(ingredients[1]);
-			Ing3.setText(ingredients[2]);
-			Ing4.setText(ingredients[3]);
-			Ing5.setText(ingredients[4]);
-			Ing6.setText(ingredients[5]);
-			stage.show();
-			
-			long mTime = System.currentTimeMillis();
-			long end = mTime + 5000; // 5 seconds 
-
-			while (mTime < end) 
-			{
-			    mTime = System.currentTimeMillis();
-			} 
-			stage.close(); //code to close window after certain number of seconds
-			
+	private void loadRecipe(Button button, String[] ingredients) {		
+		curArray = ingredients;
+			try {
+				Parent root =  FXMLLoader.load(getClass().getResource(RECIPE_DISPLAY));
+				Scene scene = new Scene(root);
+				Stage stage = (Stage) button.getScene().getWindow();
+				stage.setScene(scene);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
