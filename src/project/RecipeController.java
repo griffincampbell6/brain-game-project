@@ -1,7 +1,6 @@
 package project;
 
 import java.io.FileInputStream;
-import java.util.Arrays;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -25,11 +24,11 @@ public class RecipeController implements Initializable {
 	// strings for fxml file names
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
 	private static String RECIPE_DISPLAY = "itemDisplay.fxml";
-	private static String BUTTON_STRING = "buttonsDisplay.fxml";
  	
 	// naive way of passing data
  	protected static myLinkedList<Ingredient> curIG;
  	protected static myQueue<String> curIS;
+ 	protected static int curDis;
 	
 	// strings for image file paths
 	private static String SC_IMG = "resources/images/products/sugarcookies.jpeg";
@@ -187,6 +186,7 @@ public class RecipeController implements Initializable {
 			loadRecipeImage(null);
 		}));
 		sugarCookiesBtn.setOnAction((event -> {
+			curDis = 0;
 			curIG = Game.sugarCookiesIG();
 			curIS = Game.sugarCookiesIS();
 			loadRecipe(sugarCookiesBtn);
@@ -209,6 +209,7 @@ public class RecipeController implements Initializable {
 			chocolateCakePane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
+			curDis = 0;
 			curIG = Game.chocolateCakeIG();
 			curIS = Game.chocolateCakeIS();
 			loadRecipe(chocolateCakeBtn);
@@ -231,6 +232,7 @@ public class RecipeController implements Initializable {
 			chocolateCookiesPane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
+			curDis = 0;
 			curIG = Game.chocolateChipCookieIG();
 			curIS = Game.chocolateChipCookieIS();
 			loadRecipe(chocolateCookiesBtn);
@@ -253,6 +255,7 @@ public class RecipeController implements Initializable {
 			bananaBreadPane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		bananaBreadBtn.setOnAction((event -> {
+			curDis = 0;
 			curIG = Game.bananaBreadIG();
 			curIS = Game.bananaBreadIS();
 			loadRecipe(bananaBreadBtn);
@@ -275,6 +278,7 @@ public class RecipeController implements Initializable {
 			whiteBreadPane.setStyle("-fx-background-color: #f5d7dc");
 		}));
 		whiteBreadBtn.setOnAction((event -> {
+			curDis = 0;
 			curIG = Game.whiteBreadIG();
 			curIS = Game.whiteBreadIS();
 			loadRecipe(whiteBreadBtn);
@@ -297,6 +301,7 @@ public class RecipeController implements Initializable {
 			fancyCakePane.setStyle("-fx-background-color: #f5d7dc; -fx-background-radius: 0 0 10 10;");
 		}));
 		fancyCakeBtn.setOnAction((event -> {
+			curDis = 0;
 			curIG = Game.fancyCakeIG();
 			curIS = Game.fancyCakeIS();
 			loadRecipe(fancyCakeBtn);

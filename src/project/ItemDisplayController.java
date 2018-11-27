@@ -35,15 +35,8 @@ public class ItemDisplayController {
 	// Step number or amount
 	@FXML private Label num;
 
-	/*
-	 * think as alternating turns
-	 * 0 is ingredients
-	 * 1 is instructions
-	 */
-	private int n = 0;
-
 	public void initialize() {
-		if(n == 0) { // ingredients
+		if(RecipeController.curDis == 0) { // ingredients
 			String[] name = Game.splitName(RecipeController.curIG.printList());
 			String[] amt = Game.splitNumber(RecipeController.curIG.printList());
 
@@ -64,8 +57,8 @@ public class ItemDisplayController {
 			num5.setText(amt[4]);
 			num6.setText(amt[5]);
 
-			n = 1;
-		}else if(n == 1) {
+			RecipeController.curDis = 1;
+		}else if(RecipeController.curDis == 1) {
 			String[] s = Game.steps(RecipeController.curIS);
 
 			nam1.setText(s[0]);
@@ -90,7 +83,7 @@ public class ItemDisplayController {
 				num6.setText("6");
 			}
 			
-			n = 0;
+			RecipeController.curDis = 0;
 		}else {
 
 		}
