@@ -1,10 +1,15 @@
 package project;
 
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class ItemDisplayController {
 
@@ -97,9 +102,18 @@ public class ItemDisplayController {
 			@Override
 			public void run() {
 				System.exit(0); 
-				/*
-				 * this will become the transition to the next slide
-				 */
+				try {
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("buttonsDisplay.fxml"));
+					Parent root;
+					root = loader.load();
+					Scene scene = new Scene(root);
+					Stage stage = new Stage();
+					stage.setScene(scene);
+					stage.show();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		};
 
