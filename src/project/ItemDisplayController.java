@@ -103,7 +103,7 @@ public class ItemDisplayController {
 		 */
 		delay(DifficultyMenuController.duration, () -> {
 			try {
-				Parent root =  FXMLLoader.load(getClass().getResource("selectionDisplay.fxml"));
+				Parent root =  FXMLLoader.load(getClass().getResource("buttonsDisplay.fxml"));
 				Scene scene = new Scene(root);
 				Stage stage = (Stage) ap.getScene().getWindow();
 				stage.setScene(scene);
