@@ -41,7 +41,9 @@ public class myQueue<E> {
 			}else {
 				queue.head = queue.head.getNext();
 			}
-
+			queue.size--;
+			
+			tempNode.next = null;
 			return tempNode;
 		}
 	}

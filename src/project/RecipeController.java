@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,7 +19,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 /**
  * Allowing the player to select a recipe to play
@@ -29,16 +27,17 @@ import javafx.util.Duration;
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  */
 public class RecipeController implements Initializable {
-	
+
 	// strings for fxml file names
 	private static String DIFF_MENU = "DifficultyMenu.fxml";
 	private static String RECIPE_DISPLAY = "itemDisplay.fxml";
- 	
+
 	// naive way of passing data
- 	protected static myLinkedList<Ingredient> curIG;
- 	protected static myQueue<String> curIS;
- 	protected static int curDis;
-	
+	protected static myLinkedList<Ingredient> curIG;
+	protected static myQueue<String> curIS;
+	protected static myQueue<String> curImg;
+	protected static int curDis;
+
 	// strings for image file paths
 	private static String SC_IMG = "resources/images/products/sugarcookies.jpeg";
 	private static String CC_IMG = "resources/images/products/chocolatecake.jpg";
@@ -46,7 +45,7 @@ public class RecipeController implements Initializable {
 	private static String BB_IMG = "resources/images/products/bananabread.jpg";
 	private static String WB_IMG = "resources/images/products/whitebread.jpg";
 	private static String FC_IMG = "resources/images/products/fancycake.jpg";
-	
+
 	// fxml buttons for interaction
 	@FXML private Button backBtn;
 	@FXML private Button sugarCookiesBtn;
@@ -55,7 +54,7 @@ public class RecipeController implements Initializable {
 	@FXML private Button bananaBreadBtn;
 	@FXML private Button whiteBreadBtn;
 	@FXML private Button fancyCakeBtn;
-	
+
 	// fxml panes for interaction
 	@FXML private Pane sugarCookiesPane;
 	@FXML private Pane chocolateCakePane;
@@ -64,13 +63,13 @@ public class RecipeController implements Initializable {
 	@FXML private Pane whiteBreadPane;
 	@FXML private Pane fancyCakePane;
 	@FXML private Pane backBtnPane;
-	
+
 	// fxml imageview that holds recipe image
 	@FXML private ImageView recipeImage;
 
 	// fxml hbox that holds stars
 	@FXML private HBox starBox;
-	
+
 	/**
 	 * method to display stars in recipe menu under recipe image
 	 * calls StarRating class for amount of stars
@@ -82,7 +81,7 @@ public class RecipeController implements Initializable {
 		if (name != null) {
 			int starAmount = StarRatings.getRatings(name);
 			for(int i = 0; i < starAmount; i++) {
-				
+
 				/*
 				 * created polygon using online graphing calculator 
 				 * https://www.desmos.com/calculator/pur7kmpeso
@@ -111,7 +110,7 @@ public class RecipeController implements Initializable {
 			starBox.getChildren().clear();
 		}
 	}
-	
+
 	/**
 	 * method to load recipe image
 	 * null used for mouse exit events, removes image
@@ -131,7 +130,7 @@ public class RecipeController implements Initializable {
 			recipeImage.setImage(null);
 		}
 	}
-	
+
 	/**
 	 * method to load recipe based on button
 	 * @param button
@@ -142,18 +141,18 @@ public class RecipeController implements Initializable {
 			Scene scene = new Scene(root);
 			Stage stage = (Stage) button.getScene().getWindow();
 			stage.setScene(scene);
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	}
-	
+
 	/**
 	 * Things to do on initialize
 	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+
 		/*
 		 * BACK BUTTON EVENT
 		 * loads previous screen
@@ -198,11 +197,12 @@ public class RecipeController implements Initializable {
 		}));
 		sugarCookiesBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.sugarCookiesImg();
 			curIG = Game.sugarCookiesIG();
 			curIS = Game.sugarCookiesIS();
 			loadRecipe(sugarCookiesBtn);
 		}));
-		
+
 		/*
 		 * CHOCHOLATE CAKE BUTTON EVENTS
 		 * changes recipe pane background color
@@ -221,11 +221,12 @@ public class RecipeController implements Initializable {
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.chocolateCakeImg();
 			curIG = Game.chocolateCakeIG();
 			curIS = Game.chocolateCakeIS();
 			loadRecipe(chocolateCakeBtn);
 		}));
-		
+
 		/*
 		 * CHOCOLATE CHIP COOKIES BUTTON EVENTS
 		 * changes recipe pane background color
@@ -244,11 +245,12 @@ public class RecipeController implements Initializable {
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.chocolateChipCookieImg();
 			curIG = Game.chocolateChipCookieIG();
 			curIS = Game.chocolateChipCookieIS();
 			loadRecipe(chocolateCookiesBtn);
 		}));
-		
+
 		/*
 		 * BANANA BREAD BUTTON EVENTS
 		 * changes recipe pane background color
@@ -267,11 +269,12 @@ public class RecipeController implements Initializable {
 		}));
 		bananaBreadBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.bananaBreadImg();
 			curIG = Game.bananaBreadIG();
 			curIS = Game.bananaBreadIS();
 			loadRecipe(bananaBreadBtn);
 		}));
-		
+
 		/*
 		 * WHITE BREAD BUTTON EVENTS
 		 * changes recipe pane background color
@@ -290,11 +293,12 @@ public class RecipeController implements Initializable {
 		}));
 		whiteBreadBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.whiteBreadImg();
 			curIG = Game.whiteBreadIG();
 			curIS = Game.whiteBreadIS();
 			loadRecipe(whiteBreadBtn);
 		}));
-		
+
 		/*
 		 * FANCY CAKE BUTTON EVENTS
 		 * changes recipe pane background color
@@ -313,6 +317,7 @@ public class RecipeController implements Initializable {
 		}));
 		fancyCakeBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.fancyCakeImg();
 			curIG = Game.fancyCakeIG();
 			curIS = Game.fancyCakeIS();
 			loadRecipe(fancyCakeBtn);

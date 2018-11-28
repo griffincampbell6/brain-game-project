@@ -15,14 +15,10 @@ import javafx.stage.Stage;
  * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
  */
 public class EndScreenController {
-	@FXML
-	private Label lblIGResult;
-	@FXML
-	private Label lblISResult;
-	@FXML
-	private Label lblPlayAgain;
-	@FXML
-	private Label lblExit;
+	@FXML private Label lblIGResult;
+	@FXML private Label lblISResult;
+	@FXML private Label lblPlayAgain;
+	@FXML private Label lblExit;
 	
 	/**
 	 * once the scene begins, display the following message
@@ -38,13 +34,13 @@ public class EndScreenController {
 		lblISResult.setMaxWidth(560);
 		lblISResult.setWrapText(true);
 		
-		if(Game.isIGCorrect) {
+		if(Game.checkIngredients(RecipeController.curIG, SelectionDisplayController.userIG)) {
 			lblIGResult.setText("Horray! You remember them all!");
 		}else {
 			lblIGResult.setText("Oops! You are incorrect.");
 		}
 
-		if(Game.isISCorrect) {
+		if(Game.checkInstruction(RecipeController.curIS, SelectionDisplayController.userIS)) {
 			lblISResult.setText("Horray! You remember them all!");
 		}else {
 			lblISResult.setText("Oops! You are incorrect.");;
@@ -56,7 +52,7 @@ public class EndScreenController {
 	 * @param event when the user click a mouse press on the text box
 	 */
 	@FXML
-	public void endGame(MouseEvent event) {
+	private void endGame(MouseEvent event) {
 		lblExit.setOnMouseClicked(e -> {
 			System.exit(0);
 		});
@@ -67,7 +63,7 @@ public class EndScreenController {
 	 * @param event when the user click a mouse press on the text box
 	 */
 	@FXML
-	public void playAgain(MouseEvent event) {
+	private void playAgain(MouseEvent event) {
 		lblPlayAgain.setOnMouseClicked(e -> {
 			try {
 				Parent root =  FXMLLoader.load(getClass().getResource("DifficultyMenu.fxml"));
@@ -86,7 +82,7 @@ public class EndScreenController {
 	 * @param event when the mouse hovers over the text
 	 */
 	@FXML
-	public void increaseSize(MouseEvent event) {
+	private void increaseSize(MouseEvent event) {
 		if(((Label)event.getSource()).getText().equals(lblPlayAgain.getText())){
 			lblPlayAgain.setFont(new Font("Sitka Small", 50));
 		}else if(((Label)event.getSource()).getText().equals(lblExit.getText())){
@@ -101,7 +97,7 @@ public class EndScreenController {
 	 * @param event when the mouse is away from the text
 	 */
 	@FXML
-	public void originalSize(MouseEvent event) {
+	private void originalSize(MouseEvent event) {
 		if(((Label)event.getSource()).getText().equals(lblPlayAgain.getText())){
 			lblPlayAgain.setFont(new Font("Sitka Small", 45));
 		}else if(((Label)event.getSource()).getText().equals(lblExit.getText())){

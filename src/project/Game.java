@@ -35,10 +35,6 @@ public class Game {
 	private static final String PKG = "package(s)";
 	private static final String BAN = "banana(s)";
 
-
-	protected static boolean isIGCorrect;
-	protected static boolean isISCorrect;
-
 	/**
 	 * Create the InGredients for a sugar cookie
 	 * @return the linked list of the ingredients
@@ -67,6 +63,28 @@ public class Game {
 		sugarCookiesIS.add(BAKE);
 
 		return sugarCookiesIS;
+	}
+
+	/**
+	 * Create a string of image file location for a sugar cookie recipe
+	 * @return the queue of each image file corresponding to the ingredient
+	 */
+	protected static myQueue<String> sugarCookiesImg(){
+		myQueue<String> sugarCookiesIGImg = new myQueue<>();
+		
+		// ingredient img
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		sugarCookiesIGImg.add("resources/images/sugar.PNG");
+		sugarCookiesIGImg.add("resources/images/flour.PNG");
+		sugarCookiesIGImg.add("resources/images/egg.PNG");
+		
+		//instruction img
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		
+		return sugarCookiesIGImg;
 	}
 
 	/**
@@ -100,6 +118,25 @@ public class Game {
 	}
 
 	/**
+	 * Create a string of image file location for a chocolate cake recipe
+	 * @return the queue of each image file corresponding to the ingredient
+	 */
+	protected static myQueue<String> chocolateCakeImg(){
+		myQueue<String> chocolateCakeImg = new myQueue<>();
+		
+		chocolateCakeImg.add("resources/images/flour.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");//oil
+		chocolateCakeImg.add("resources/images/frosting.PNG");
+		chocolateCakeImg.add("resources/images/egg.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");
+		
+		return chocolateCakeImg;
+	}
+	
+	/**
 	 * Create the InGredients for a chocolate chip cookie
 	 * @return the linked list of the ingredients
 	 */
@@ -113,7 +150,7 @@ public class Game {
 		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Chocolate", CUP, 1)));
 
 		return chocolateChipCookieIG;
-	}
+	}	
 
 	/**
 	 * Create the InStruction for a chocolate chip cookie
@@ -131,6 +168,27 @@ public class Game {
 		return chocolateChipCookieIS;
 	}
 	
+	/**
+	 * Create a string of image file location for a chocolate chips cookie recipe
+	 * @return the queue of each image file corresponding to the ingredient
+	 */
+	protected static myQueue<String> chocolateChipCookieImg(){
+		myQueue<String> chocolateChipCookieImg = new myQueue<>();
+		
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/flour.PNG");
+		chocolateChipCookieImg.add("resources/images/sugar.PNG");
+		chocolateChipCookieImg.add("resources/images/egg.PNG");
+		chocolateChipCookieImg.add("resources/images/chocholate-chips.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		
+		return chocolateChipCookieImg;
+	}
+
 	/**
 	 * Create the InGredients for a banana bread
 	 * @return the linked list of the ingredients
@@ -164,6 +222,27 @@ public class Game {
 	}
 
 	/**
+	 * Create a string of image file location for a banana bread recipe
+	 * @return the queue of each image file corresponding to the ingredient
+	 */
+	protected static myQueue<String> bananaBreadImg(){
+		myQueue<String> bananaBreadImg = new myQueue<>();
+		
+		bananaBreadImg.add("resources/images/butter.PNG"); // banana
+		bananaBreadImg.add("resources/images/flour.PNG");
+		bananaBreadImg.add("resources/images/sugar.PNG");
+		bananaBreadImg.add("resources/images/egg.PNG");
+		bananaBreadImg.add("resources/images/cinnamon.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
+		
+		return bananaBreadImg;
+	}
+	
+	/**
 	 * Create the InGredients for a white bread
 	 * @return the linked list of the ingredients
 	 */
@@ -195,6 +274,29 @@ public class Game {
 		whiteBreadIS.add(BAKE);
 
 		return whiteBreadIS;
+	}
+	
+	/**
+	 * Create a string of image file location for a white bread recipe
+	 * @return the queue of each image file corresponding to the ingredient
+	 */
+	protected static myQueue<String> whiteBreadImg(){
+		myQueue<String> whiteBreadImg = new myQueue<>();
+		
+		whiteBreadImg.add("resources/images/butter.PNG");// yeast
+		whiteBreadImg.add("resources/images/flour.PNG");
+		whiteBreadImg.add("resources/images/sugar.PNG");
+		whiteBreadImg.add("resources/images/water.PNG");
+		whiteBreadImg.add("resources/images/salt.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		
+		return whiteBreadImg;
 	}
 
 	/**
@@ -230,6 +332,29 @@ public class Game {
 
 		return fancyCakeIS;
 	}
+	
+	/**
+	 * Create a string of image file location for a white bread recipe
+	 * @return the queue of each image file corresponding to the ingredient
+	 */
+	protected static myQueue<String> fancyCakeImg(){
+		myQueue<String> fancyCakeImg = new myQueue<>();
+		
+		fancyCakeImg.add("resources/images/flour.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/sugar.PNG");
+		fancyCakeImg.add("resources/images/egg.PNG");
+		fancyCakeImg.add("resources/images/frosting.PNG");
+		fancyCakeImg.add("resources/images/sprinkles.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		
+		return fancyCakeImg;
+	}
 
 	/**
 	 * checking to see if the ingredients the player picked match 
@@ -238,31 +363,27 @@ public class Game {
 	 * @param userIG an ArrayList of the users ingredient selection
 	 * @return if the user list and the recipe list are the same
 	 */
-	protected static void checkIngredients(myLinkedList<Ingredient> definedIG , Map<String, Integer> userIG) {
+	protected static boolean checkIngredients(myLinkedList<Ingredient> definedIG , Map<String, Integer> userIG) {
 		/*
 		 * if the two lists are not the same size,
 		 * then it is obvious that it is false
 		 */
 		if(definedIG.getSize() != userIG.size()) {
-			isIGCorrect = false;
-			return;
+			return false;
 		}else {
 			// a set for the ingredient names that the user inputed
 			Set<String> name = userIG.keySet();
 
 			for(myLinkedList<Ingredient> curNode = definedIG.head; curNode != null; curNode = curNode.getNext()) {
 				if(!(name.contains(curNode.getInfo().getName()))){ // check if the defined ingredient exist in the user's set
-					isIGCorrect = false;
-					return;
+					return false;
 				}else if(userIG.get(curNode.getInfo().getName()) != curNode.getInfo().getAmount()) { // check if the amounts are the same
-					isIGCorrect = false;
-					return;
+					return false;
 				}else {
 					continue;
 				}
 			}
-			isIGCorrect = true; // true if everything are the same
-			return;
+			return true;
 		}
 	}
 
@@ -273,14 +394,13 @@ public class Game {
 	 * @param userIS the queue of the users instruction selection
 	 * @return if the both queue are the same
 	 */
-	protected static void checkInstruction(myQueue<String> definedIS, myQueue<String> userIS) {
+	protected static boolean checkInstruction(myQueue<String> definedIS, myQueue<String> userIS) {
 		/*
 		 * if the two lists are not the same size,
 		 * then it is obvious that it is false
 		 */
 		if(definedIS.size() != userIS.size()) {
-			isISCorrect = false;
-			return;
+			return false;
 		}else {
 			/*
 			 * looping through the queue, does not use iterator 
@@ -288,8 +408,7 @@ public class Game {
 			int size = definedIS.size();
 			for(int i = 0; i < size; i++) {
 				if(!(definedIS.peek().toString().equals(userIS.peek().toString()))) {
-					isISCorrect = false;
-					return;
+					return false;
 				}
 
 				/*
@@ -301,8 +420,7 @@ public class Game {
 				temp = userIS.remove().toString();
 				userIS.add(temp);
 			}
-			isISCorrect = true;
-			return;
+			return true;
 		}
 	}
 
@@ -337,7 +455,7 @@ public class Game {
 		}
 		return arrayIG;
 	}
-	
+
 	/**
 	 * Getting just the number of ingredients from the linked list
 	 * @param s the printList of the linked list of the ingredient
@@ -350,7 +468,7 @@ public class Game {
 
 		String[] arrayIG = new String[6];
 		String[] tempArray = s.split(" ");
-		
+
 		// pos: 1, 4, 7...
 		for(int i = 0; i < arrayIG.length; i++) {
 			if((3*i+1) < tempArray.length) {
@@ -369,29 +487,24 @@ public class Game {
 		}
 		return arrayIG;
 	}
-	
+
 	/**
 	 * Convert a queue into an array with its steps
 	 * @param q a queue of instruction for this game
 	 * @return an array of string of instruction
 	 */
-	protected static String[] steps(myQueue<String> q) {
+	protected static String[] queueToArray(myQueue<String> q) {
 		if(q == null) {
 			throw new IllegalArgumentException();
 		}
 		
-		String[] s = new String[6];
-		int i = 0;
+		String[] s = new String[q.size()];
+		int n = q.size();
 		
-		while(q.peek() != null) {
-			s[i] = q.remove().toString();
-			i += 1;
-		}
-		
-		for(int n = s.length-1; n >= 0; n--) {
-			if(s[n] == null) {
-				s[n] = "";
-			}
+		for(int i = 0; i < n; i++) {
+			String d  = q.remove().toString();
+			s[i] = d;
+			q.add(d);
 		}
 		
 		return s;
