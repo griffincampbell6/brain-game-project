@@ -37,6 +37,7 @@ public class RecipeController implements Initializable {
 	// naive way of passing data
  	protected static myLinkedList<Ingredient> curIG;
  	protected static myQueue<String> curIS;
+ 	protected static myQueue<String> curImg;
  	protected static int curDis;
 	
 	// strings for image file paths
@@ -198,6 +199,7 @@ public class RecipeController implements Initializable {
 		}));
 		sugarCookiesBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.sugarCookiesImg();
 			curIG = Game.sugarCookiesIG();
 			curIS = Game.sugarCookiesIS();
 			loadRecipe(sugarCookiesBtn);
@@ -221,6 +223,7 @@ public class RecipeController implements Initializable {
 		}));
 		chocolateCakeBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.chocolateCakeImg();
 			curIG = Game.chocolateCakeIG();
 			curIS = Game.chocolateCakeIS();
 			loadRecipe(chocolateCakeBtn);
@@ -244,6 +247,7 @@ public class RecipeController implements Initializable {
 		}));
 		chocolateCookiesBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.chocolateChipCookieImg();
 			curIG = Game.chocolateChipCookieIG();
 			curIS = Game.chocolateChipCookieIS();
 			loadRecipe(chocolateCookiesBtn);
@@ -267,6 +271,7 @@ public class RecipeController implements Initializable {
 		}));
 		bananaBreadBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.bananaBreadImg();
 			curIG = Game.bananaBreadIG();
 			curIS = Game.bananaBreadIS();
 			loadRecipe(bananaBreadBtn);
@@ -290,6 +295,7 @@ public class RecipeController implements Initializable {
 		}));
 		whiteBreadBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.whiteBreadImg();
 			curIG = Game.whiteBreadIG();
 			curIS = Game.whiteBreadIS();
 			loadRecipe(whiteBreadBtn);
@@ -313,6 +319,7 @@ public class RecipeController implements Initializable {
 		}));
 		fancyCakeBtn.setOnAction((event -> {
 			curDis = 0;
+			curImg = Game.fancyCakeImg();
 			curIG = Game.fancyCakeIG();
 			curIS = Game.fancyCakeIS();
 			loadRecipe(fancyCakeBtn);

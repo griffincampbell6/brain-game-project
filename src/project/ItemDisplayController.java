@@ -1,8 +1,6 @@
 package project;
 
 import java.io.IOException;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -53,7 +51,7 @@ public class ItemDisplayController {
 		if(RecipeController.curDis == 0) { // ingredients
 			String[] name = Game.splitName(RecipeController.curIG.printList());
 			String[] amt = Game.splitNumber(RecipeController.curIG.printList());
-
+			
 			title.setText("Ingredients");
 			num.setText("Amount");
 
@@ -71,15 +69,18 @@ public class ItemDisplayController {
 			num5.setText(amt[4]);
 			num6.setText(amt[5]);
 		}else if(RecipeController.curDis == 1) {
-			String[] s = Game.steps(RecipeController.curIS);
+			String[] s = Game.queueToArray(RecipeController.curIS);
+			
+			title.setText("Instructions");
+			num.setText("Steps");
 
 			nam1.setText(s[0]);
 			nam2.setText(s[1]);
 			nam3.setText(s[2]);
 			nam4.setText(s[3]);
-			nam5.setText(s[4]);
-			nam6.setText(s[5]);
-
+			nam5.setText("");
+			nam6.setText("");
+			
 			num1.setText("1");
 			num2.setText("2");
 			num3.setText("3");
@@ -87,15 +88,19 @@ public class ItemDisplayController {
 			num5.setText("");
 			num6.setText("");
 
-			if(s[4] != "") {
+			if(s.length == 5) {
+				nam5.setText(s[4]);
 				num5.setText("5");
 			}
 
-			if(s[5] != "") {
+			if(s.length == 6) {
+				nam5.setText(s[4]);
+				num5.setText("5");
+				nam6.setText(s[5]);
 				num6.setText("6");
 			}
 		}else {
-
+			//empty
 		}
 		
 		/*
@@ -108,7 +113,6 @@ public class ItemDisplayController {
 				Stage stage = (Stage) ap.getScene().getWindow();
 				stage.setScene(scene);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		});
