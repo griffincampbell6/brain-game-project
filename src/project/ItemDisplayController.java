@@ -59,12 +59,13 @@ public class ItemDisplayController {
 	private Button[] buttons = {but1, but2, but3, but4, but5, but6, but7, but8, but9};
 	
 	//method to randomly assign ingredients to buttons
-	public void labelButtons(String[] ingredients, Button[] buttons) {
+	//will use later if we have time to implement button randomization
+	/*public void labelButtons(String[] ingredients, Button[] buttons) {
 		Random rand = new Random(9);
 		for(String i:ingredients) {
 			int index = rand.nextInt(9);
 		}
-	}
+	}*/
 
 	/**
 	 * Once the scene is loaded, display:
