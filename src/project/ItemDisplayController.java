@@ -41,30 +41,6 @@ public class ItemDisplayController {
 	@FXML private Label num;
 
 	@FXML private Pane ap;
-<<<<<<< HEAD
-	
-	@FXML private Button but1;
-	@FXML private Button but2;
-	@FXML private Button but3;
-	@FXML private Button but4;
-	@FXML private Button but5;
-	@FXML private Button but6;
-	@FXML private Button but7;
-	@FXML private Button but8;
-	@FXML private Button but9;
-	
-	private Button[] buttons = {but1, but2, but3, but4, but5, but6, but7, but8, but9};
-	
-	//method to randomly assign ingredients to buttons
-	//will use later if we have time to implement button randomization
-	/*public void labelButtons(String[] ingredients, Button[] buttons) {
-		Random rand = new Random(9);
-		for(String i:ingredients) {
-			int index = rand.nextInt(9);
-		}
-	}*/
-=======
->>>>>>> branch 'master' of https://eagle.cs.wit.edu/campbellg4/brain-game-project.git
 
 	/**
 	 * Once the scene is loaded, display:
