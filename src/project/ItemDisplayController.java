@@ -4,13 +4,20 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+/**
+ * Display the ingredients or the instructions for the player to memorize
+ * 
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
+ */
 public class ItemDisplayController {
 
 	// Ingredient Name
@@ -35,13 +42,20 @@ public class ItemDisplayController {
 	// Step number or amount
 	@FXML private Label num;
 
+	@FXML private Pane ap;
+
+	/**
+	 * Once the scene is loaded, display:
+	 * the ingredients and its amount
+	 * or the steps and its ordering
+	 */
 	public void initialize() {
 		if(RecipeController.curDis == 0) { // ingredients
 			String[] name = Game.splitName(RecipeController.curIG.printList());
 			String[] amt = Game.splitNumber(RecipeController.curIG.printList());
 
 			title.setText("Ingredients");
-			num.setText("Amt");
+			num.setText("Amount");
 
 			nam1.setText(name[0]);
 			nam2.setText(name[1]);
@@ -56,8 +70,6 @@ public class ItemDisplayController {
 			num4.setText(amt[3]);
 			num5.setText(amt[4]);
 			num6.setText(amt[5]);
-
-			RecipeController.curDis = 1;
 		}else if(RecipeController.curDis == 1) {
 			String[] s = Game.steps(RecipeController.curIS);
 
@@ -67,56 +79,53 @@ public class ItemDisplayController {
 			nam4.setText(s[3]);
 			nam5.setText(s[4]);
 			nam6.setText(s[5]);
-			
+
 			num1.setText("1");
 			num2.setText("2");
 			num3.setText("3");
 			num4.setText("4");
 			num5.setText("");
 			num6.setText("");
-			
+
 			if(s[4] != "") {
 				num5.setText("5");
 			}
-			
+
 			if(s[5] != "") {
 				num6.setText("6");
 			}
-			
-			RecipeController.curDis = 0;
 		}else {
 
 		}
-
+		
 		/*
-		 * running a timer to go on to next scene
+		 * testing delay using threads
 		 */
-		TimerTask task = new TimerTask() {
-			@Override
-			public void run() {
-				System.exit(0); 
-				try {
-					FXMLLoader loader = new FXMLLoader(getClass().getResource("buttonsDisplay.fxml"));
-					Parent root;
-					root = loader.load();
-					Scene scene = new Scene(root);
-					Stage stage = new Stage();
-					stage.setScene(scene);
-					stage.show();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+		delay(DifficultyMenuController.duration, () -> {
+			try {
+				Parent root =  FXMLLoader.load(getClass().getResource("selectionDisplay.fxml"));
+				Scene scene = new Scene(root);
+				Stage stage = (Stage) ap.getScene().getWindow();
+				stage.setScene(scene);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		};
+		});
+	}
 
-		/*
-		 * timer detail
-		 */
-		Timer timer = new Timer();
-		long delay = DifficultyMenuController.duration; 
-
-		timer.schedule(task, delay);	
-
+	/**
+	 * Let the user to read the IG/IS for n seconds, then change FXML file
+	 * https://stackoverflow.com/questions/45130853/javafx-how-can-i-delay-the-display-of-a-new-line-in-my-textarea
+	 * @param delayMs the duration of the delay
+	 * @param toRun what to do after the delay is up
+	 */
+	private void delay(long delayMs, Runnable toRun){
+		Thread t = new Thread(() ->{
+			try { Thread.sleep(delayMs); }catch(InterruptedException ignored){}
+			Platform.runLater(toRun);
+		});
+		t.setDaemon(true);
+		t.start();
 	}
 }

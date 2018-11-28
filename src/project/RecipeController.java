@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,7 +20,14 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
+/**
+ * Allowing the player to select a recipe to play
+ * There will be stars to display the amount of words to memorize
+ * 
+ * @author Griffin Campbell, Martin Cheung, Sarah Kaczynski
+ */
 public class RecipeController implements Initializable {
 	
 	// strings for fxml file names
@@ -125,21 +134,23 @@ public class RecipeController implements Initializable {
 	
 	/**
 	 * method to load recipe based on button
-	 * needs implementaion
 	 * @param button
 	 */
 	private void loadRecipe(Button button) {
-			try {
-				Parent root =  FXMLLoader.load(getClass().getResource(RECIPE_DISPLAY));
-				Scene scene = new Scene(root);
-				Stage stage = (Stage) button.getScene().getWindow();
-				stage.setScene(scene);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		try {
+			Parent root =  FXMLLoader.load(getClass().getResource(RECIPE_DISPLAY));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage) button.getScene().getWindow();
+			stage.setScene(scene);
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	}
 	
+	/**
+	 * Things to do on initialize
+	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
