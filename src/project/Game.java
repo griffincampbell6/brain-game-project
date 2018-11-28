@@ -73,16 +73,16 @@ public class Game {
 		myQueue<String> sugarCookiesIGImg = new myQueue<>();
 		
 		// ingredient img
-		sugarCookiesIGImg.add("resources/images/IMG_0751.PNG");
-		sugarCookiesIGImg.add("resources/images/IMG_0751.PNG");
-		sugarCookiesIGImg.add("resources/images/IMG_0751.PNG");
-		sugarCookiesIGImg.add("resources/images/IMG_0751.PNG");
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		sugarCookiesIGImg.add("resources/images/sugar.PNG");
+		sugarCookiesIGImg.add("resources/images/flour.PNG");
+		sugarCookiesIGImg.add("resources/images/egg.PNG");
 		
 		//instruction img
-		sugarCookiesIGImg.add("resources/images/IMG_0751.PNG");
-		sugarCookiesIGImg.add("resources/images/IMG_0751.PNG");
-		sugarCookiesIGImg.add("resources/images/IMG_0751.PNG");
-		sugarCookiesIGImg.add("resources/images/IMG_0751.PNG");
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		sugarCookiesIGImg.add("resources/images/butter.PNG");
 		
 		return sugarCookiesIGImg;
 	}
@@ -124,14 +124,14 @@ public class Game {
 	protected static myQueue<String> chocolateCakeImg(){
 		myQueue<String> chocolateCakeImg = new myQueue<>();
 		
-		chocolateCakeImg.add("resources/images/IMG_0751.PNG");
-		chocolateCakeImg.add("resources/images/IMG_0751.PNG");
-		chocolateCakeImg.add("resources/images/IMG_0751.PNG");
-		chocolateCakeImg.add("resources/images/IMG_0751.PNG");
-		chocolateCakeImg.add("resources/images/IMG_0751.PNG");
-		chocolateCakeImg.add("resources/images/IMG_0751.PNG");
-		chocolateCakeImg.add("resources/images/IMG_0751.PNG");
-		chocolateCakeImg.add("resources/images/IMG_0751.PNG");
+		chocolateCakeImg.add("resources/images/flour.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");//oil
+		chocolateCakeImg.add("resources/images/frosting.PNG");
+		chocolateCakeImg.add("resources/images/egg.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");
+		chocolateCakeImg.add("resources/images/butter.PNG");
 		
 		return chocolateCakeImg;
 	}
@@ -175,16 +175,16 @@ public class Game {
 	protected static myQueue<String> chocolateChipCookieImg(){
 		myQueue<String> chocolateChipCookieImg = new myQueue<>();
 		
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
-		chocolateChipCookieImg.add("resources/images/IMG_0751.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/flour.PNG");
+		chocolateChipCookieImg.add("resources/images/sugar.PNG");
+		chocolateChipCookieImg.add("resources/images/egg.PNG");
+		chocolateChipCookieImg.add("resources/images/chocholate-chips.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.add("resources/images/butter.PNG");
 		
 		return chocolateChipCookieImg;
 	}
@@ -228,16 +228,16 @@ public class Game {
 	protected static myQueue<String> bananaBreadImg(){
 		myQueue<String> bananaBreadImg = new myQueue<>();
 		
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
-		bananaBreadImg.add("resources/images/IMG_0751.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG"); // banana
+		bananaBreadImg.add("resources/images/flour.PNG");
+		bananaBreadImg.add("resources/images/sugar.PNG");
+		bananaBreadImg.add("resources/images/egg.PNG");
+		bananaBreadImg.add("resources/images/cinnamon.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
+		bananaBreadImg.add("resources/images/butter.PNG");
 		
 		return bananaBreadImg;
 	}
@@ -283,18 +283,18 @@ public class Game {
 	protected static myQueue<String> whiteBreadImg(){
 		myQueue<String> whiteBreadImg = new myQueue<>();
 		
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
-		whiteBreadImg.add("resources/images/IMG_0751.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");// yeast
+		whiteBreadImg.add("resources/images/flour.PNG");
+		whiteBreadImg.add("resources/images/sugar.PNG");
+		whiteBreadImg.add("resources/images/water.PNG");
+		whiteBreadImg.add("resources/images/salt.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.add("resources/images/butter.PNG");
 		
 		return whiteBreadImg;
 	}
@@ -340,18 +340,18 @@ public class Game {
 	protected static myQueue<String> fancyCakeImg(){
 		myQueue<String> fancyCakeImg = new myQueue<>();
 		
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
-		fancyCakeImg.add("resources/images/IMG_0751.PNG");
+		fancyCakeImg.add("resources/images/flour.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/sugar.PNG");
+		fancyCakeImg.add("resources/images/egg.PNG");
+		fancyCakeImg.add("resources/images/frosting.PNG");
+		fancyCakeImg.add("resources/images/sprinkles.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.add("resources/images/butter.PNG");
 		
 		return fancyCakeImg;
 	}
