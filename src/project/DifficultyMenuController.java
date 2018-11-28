@@ -48,7 +48,7 @@ public class DifficultyMenuController implements Initializable {
 	private static String RECIPES_MENU = "RecipesMenu.fxml";
 
 	protected static long duration;
-
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
@@ -212,4 +212,5 @@ public class DifficultyMenuController implements Initializable {
 			e.printStackTrace();
 		}
 	}
+
 }

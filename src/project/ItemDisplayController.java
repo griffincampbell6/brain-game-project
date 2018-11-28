@@ -1,12 +1,19 @@
 package project;
 
 import java.io.IOException;
+<<<<<<< HEAD
+=======
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+>>>>>>> branch 'master' of https://eagle.cs.wit.edu/campbellg4/brain-game-project.git
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -41,6 +48,26 @@ public class ItemDisplayController {
 	@FXML private Label num;
 
 	@FXML private Pane ap;
+	
+	@FXML private Button but1;
+	@FXML private Button but2;
+	@FXML private Button but3;
+	@FXML private Button but4;
+	@FXML private Button but5;
+	@FXML private Button but6;
+	@FXML private Button but7;
+	@FXML private Button but8;
+	@FXML private Button but9;
+	
+	private Button[] buttons = {but1, but2, but3, but4, but5, but6, but7, but8, but9};
+	
+	//method to randomly assign ingredients to buttons
+	public void labelButtons(String[] ingredients, Button[] buttons) {
+		Random rand = new Random(9);
+		for(String i:ingredients) {
+			int index = rand.nextInt(9);
+		}
+	}
 
 	/**
 	 * Once the scene is loaded, display:
@@ -108,7 +135,7 @@ public class ItemDisplayController {
 		 */
 		delay(DifficultyMenuController.duration, () -> {
 			try {
-				Parent root =  FXMLLoader.load(getClass().getResource("selectionDisplay.fxml"));
+				Parent root =  FXMLLoader.load(getClass().getResource("buttonsDisplay.fxml"));
 				Scene scene = new Scene(root);
 				Stage stage = (Stage) ap.getScene().getWindow();
 				stage.setScene(scene);
