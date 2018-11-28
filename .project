@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>resources/images/products/IMG_0768.PNG</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/Downloads/IMG_0768.PNG</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
