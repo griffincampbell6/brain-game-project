@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ItemDisplayController">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="num" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #6E8D71;" text="Amount" textAlignment="CENTER" textFill="#f0dfbb">
+                     <font>
+                        <Font name="Bodoni MT" size="57.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="num1" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" text="Num 1" textAlignment="RIGHT" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="num2" alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="50.0" prefWidth="200.0" text="Num 2" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="num3" alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="50.0" prefWidth="200.0" text="Num 3" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="num4" alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="50.0" prefWidth="200.0" text="Num 4" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="num5" alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="50.0" prefWidth="200.0" text="Num 5" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="num6" alignment="CENTER" layoutX="200.0" layoutY="200.0" prefHeight="50.0" prefWidth="200.0" text="Num 6" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="400.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="title" alignment="CENTER" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #6E8D71;" text="Title" textAlignment="CENTER" textFill="#f0dfbb">
+                     <font>
+                        <Font name="Bodoni MT" size="57.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nam1" alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="Name 1" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nam2" alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="Name 2" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nam3" alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="Name 3" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nam4" alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="Name 4" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nam5" alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="Name 5" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nam6" alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="Name 6" textFill="#454642">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

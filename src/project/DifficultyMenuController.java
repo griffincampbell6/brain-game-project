@@ -25,33 +25,33 @@ public class DifficultyMenuController implements Initializable {
 	@FXML private Button mediumBtn;
 	@FXML private Button hardBtn;
 	@FXML private Button backBtn;
-	
+
 	@FXML private Pane easyBtnPane;
 	@FXML private Pane mediumBtnPane;
 	@FXML private Pane hardBtnPane;
 	@FXML private Pane backBtnPane;
-	
+
 	@FXML private Pane easyPane;
 	@FXML private Pane mediumPane;
 	@FXML private Pane hardPane;
-	
+
 	@FXML private Text easyHover;
 	@FXML private Text mediumHover;
 	@FXML private Text hardHover;
-	
+
 	@FXML private Text easyDetails;
 	@FXML private Text mediumDetails;
 	@FXML private Text hardDetails;
-	
-	
+
+
 	private static String START_MENU = "StartMenu.fxml";
 	private static String RECIPES_MENU = "RecipesMenu.fxml";
-	
+
 	protected static long duration;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
+
 		/*
 		 * BACK BUTTON EVENT
 		 * loads previous start screen
@@ -77,7 +77,7 @@ public class DifficultyMenuController implements Initializable {
 				e.printStackTrace();
 			}
 		}));
-		
+
 		/*
 		 * EASY BUTTON EVENTS
 		 * loads recipes menu
@@ -100,7 +100,7 @@ public class DifficultyMenuController implements Initializable {
 			loadNext();
 			duration = 5000;
 		}));
-		
+
 		/*
 		 * MEDIUM BUTTON EVENTS
 		 * loads recipes menu
@@ -123,7 +123,7 @@ public class DifficultyMenuController implements Initializable {
 			loadNext();
 			duration = 10000;
 		}));
-		
+
 		/*
 		 * HARD BUTTON EVENTS
 		 * loads recipes menu
@@ -146,8 +146,9 @@ public class DifficultyMenuController implements Initializable {
 			loadNext();
 			duration = 15000;
 		}));
+
 	}
-	
+
 	/**
 	 * method to style panes with
 	 * mouse enter
@@ -158,7 +159,7 @@ public class DifficultyMenuController implements Initializable {
 				+ " -fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10;"
 				+ "-fx-background-radius: 10 0 0 10");
 	}
-	
+
 	/**method to styke pabes with
 	 * mouse exit
 	 * 
@@ -170,7 +171,7 @@ public class DifficultyMenuController implements Initializable {
 				+ "-fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10; "
 				+ "-fx-border-width: 2 1 2 2; -fx-border-radius: 10 0 0 10;");
 	}
-	
+
 	/**
 	 * method to reveal difficulty detail text box
 	 * and hid "hover here" text box
@@ -181,7 +182,7 @@ public class DifficultyMenuController implements Initializable {
 		hover.setStyle("-fx-opacity: 0");
 		details.setStyle("-fx-opacity: 1");
 	}
-	
+
 	/**
 	 * method to reveal "hover here" text box 
 	 * and hive difficulty detail text box
