@@ -24,17 +24,17 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="loc11" fitHeight="150.0" fitWidth="256.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ImageView fx:id="loc31" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <ImageView fx:id="loc13" fitHeight="150.0" fitWidth="256.0" layoutX="778.0" layoutY="151.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ImageView fx:id="loc33" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <ImageView fx:id="loc22" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ImageView fx:id="loc10" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-            <ImageView fx:id="loc12" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="7.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ImageView fx:id="loc14" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <ImageView fx:id="loc30" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
-            <ImageView fx:id="loc32" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <ImageView fx:id="loc34" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <ImageView fx:id="loc11" fitHeight="150.0" fitWidth="256.0" onMouseClicked="#add11" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="loc31" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add31" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ImageView fx:id="loc13" fitHeight="150.0" fitWidth="256.0" layoutX="778.0" layoutY="151.0" onMouseClicked="#add13" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ImageView fx:id="loc33" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add33" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ImageView fx:id="loc22" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add22" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ImageView fx:id="loc10" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add10" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="loc12" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="7.0" onMouseClicked="#add12" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="loc14" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add14" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ImageView fx:id="loc30" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add30" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+            <ImageView fx:id="loc32" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add32" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ImageView fx:id="loc34" fitHeight="150.0" fitWidth="256.0" layoutX="266.0" layoutY="151.0" onMouseClicked="#add34" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </children>

@@ -67,26 +67,26 @@ public class Game {
 
 	/**
 	 * Create a string of image file location for a sugar cookie recipe
-	 * @return the queue of each image file corresponding to the ingredient
+	 * @return the map of each image file corresponding to the ingredient
 	 */
-	protected static myQueue<String> sugarCookiesImg(){
-		myQueue<String> sugarCookiesIGImg = new myQueue<>();
+	protected static Map<String, String> sugarCookiesImg(){
+		Map<String, String> sugarCookiesImg = new HashMap<>();
 
 		// ingredient img
-		sugarCookiesIGImg.add("resources/images/butter.PNG");
-		sugarCookiesIGImg.add("resources/images/sugar.PNG");
-		sugarCookiesIGImg.add("resources/images/flour.PNG");
-		sugarCookiesIGImg.add("resources/images/egg.PNG");
+		sugarCookiesImg.put("resources/images/butter.PNG", "Butter");
+		sugarCookiesImg.put("resources/images/sugar.PNG", "Sugar");
+		sugarCookiesImg.put("resources/images/flour.PNG", "Flour");
+		sugarCookiesImg.put("resources/images/egg.PNG", "Egg");
 
 		//instruction img
-		sugarCookiesIGImg.add("resources/images/butter.PNG");
-		sugarCookiesIGImg.add("resources/images/butter.PNG");
-		sugarCookiesIGImg.add("resources/images/butter.PNG");
-		sugarCookiesIGImg.add("resources/images/butter.PNG");
+		sugarCookiesImg.put("resources/images/butter.PNG", CREAM);
+		sugarCookiesImg.put("resources/images/butter.PNG", STIR);
+		sugarCookiesImg.put("resources/images/butter.PNG", ROLL);
+		sugarCookiesImg.put("resources/images/butter.PNG", BAKE);
 
-		return sugarCookiesIGImg;
+		return sugarCookiesImg;
 	}
-
+	
 	/**
 	 * Create the InGredients for a chocolate chip cookie
 	 * @return the linked list of the ingredients
@@ -121,17 +121,17 @@ public class Game {
 	 * Create a string of image file location for a chocolate cake recipe
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
-	protected static myQueue<String> chocolateCakeImg(){
-		myQueue<String> chocolateCakeImg = new myQueue<>();
+	protected static Map<String, String> chocolateCakeImg(){
+		Map<String, String> chocolateCakeImg = new HashMap<>();
 
-		chocolateCakeImg.add("resources/images/flour.PNG");
-		chocolateCakeImg.add("resources/images/butter.PNG");//oil
-		chocolateCakeImg.add("resources/images/frosting.PNG");
-		chocolateCakeImg.add("resources/images/egg.PNG");
-		chocolateCakeImg.add("resources/images/butter.PNG");
-		chocolateCakeImg.add("resources/images/butter.PNG");
-		chocolateCakeImg.add("resources/images/butter.PNG");
-		chocolateCakeImg.add("resources/images/butter.PNG");
+		chocolateCakeImg.put("resources/images/flour.PNG", "Flour");
+		chocolateCakeImg.put("resources/images/oil.PNG", "Oil");
+		chocolateCakeImg.put("resources/images/frosting.PNG", "Frosting");
+		chocolateCakeImg.put("resources/images/egg.PNG", "Egg");
+		chocolateCakeImg.put("resources/images/butter.PNG", MIX);
+		chocolateCakeImg.put("resources/images/butter.PNG", BAKE);
+		chocolateCakeImg.put("resources/images/butter.PNG", COOL);
+		chocolateCakeImg.put("resources/images/butter.PNG", FROST);
 
 		return chocolateCakeImg;
 	}
@@ -172,19 +172,19 @@ public class Game {
 	 * Create a string of image file location for a chocolate chips cookie recipe
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
-	protected static myQueue<String> chocolateChipCookieImg(){
-		myQueue<String> chocolateChipCookieImg = new myQueue<>();
+	protected static Map<String, String> chocolateChipCookieImg(){
+		Map<String, String> chocolateChipCookieImg = new HashMap<>();
 
-		chocolateChipCookieImg.add("resources/images/butter.PNG");
-		chocolateChipCookieImg.add("resources/images/flour.PNG");
-		chocolateChipCookieImg.add("resources/images/sugar.PNG");
-		chocolateChipCookieImg.add("resources/images/egg.PNG");
-		chocolateChipCookieImg.add("resources/images/chocholate-chips.PNG");
-		chocolateChipCookieImg.add("resources/images/butter.PNG");
-		chocolateChipCookieImg.add("resources/images/butter.PNG");
-		chocolateChipCookieImg.add("resources/images/butter.PNG");
-		chocolateChipCookieImg.add("resources/images/butter.PNG");
-		chocolateChipCookieImg.add("resources/images/butter.PNG");
+		chocolateChipCookieImg.put("resources/images/butter.PNG", "Butter");
+		chocolateChipCookieImg.put("resources/images/flour.PNG", "Flour");
+		chocolateChipCookieImg.put("resources/images/sugar.PNG", "Sugar");
+		chocolateChipCookieImg.put("resources/images/egg.PNG", "Egg");
+		chocolateChipCookieImg.put("resources/images/chocholate-chips.PNG", "Chocolate");
+		chocolateChipCookieImg.put("resources/images/butter.PNG", CREAM);
+		chocolateChipCookieImg.put("resources/images/butter.PNG", STIR);
+		chocolateChipCookieImg.put("resources/images/butter.PNG", ADD + " " + COCO);
+		chocolateChipCookieImg.put("resources/images/butter.PNG", SHAPE);
+		chocolateChipCookieImg.put("resources/images/butter.PNG", BAKE);
 
 		return chocolateChipCookieImg;
 	}
@@ -225,19 +225,19 @@ public class Game {
 	 * Create a string of image file location for a banana bread recipe
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
-	protected static myQueue<String> bananaBreadImg(){
-		myQueue<String> bananaBreadImg = new myQueue<>();
+	protected static Map<String, String> bananaBreadImg(){
+		Map<String, String> bananaBreadImg = new HashMap<>();
 
-		bananaBreadImg.add("resources/images/butter.PNG"); // banana
-		bananaBreadImg.add("resources/images/flour.PNG");
-		bananaBreadImg.add("resources/images/sugar.PNG");
-		bananaBreadImg.add("resources/images/egg.PNG");
-		bananaBreadImg.add("resources/images/cinnamon.PNG");
-		bananaBreadImg.add("resources/images/butter.PNG");
-		bananaBreadImg.add("resources/images/butter.PNG");
-		bananaBreadImg.add("resources/images/butter.PNG");
-		bananaBreadImg.add("resources/images/butter.PNG");
-		bananaBreadImg.add("resources/images/butter.PNG");
+		bananaBreadImg.put("resources/images/butter.PNG", "Banana"); // banana
+		bananaBreadImg.put("resources/images/flour.PNG", "Flour");
+		bananaBreadImg.put("resources/images/sugar.PNG", "Sugar");
+		bananaBreadImg.put("resources/images/egg.PNG", "Egg");
+		bananaBreadImg.put("resources/images/cinnamon.PNG", "Cinnamon");
+		bananaBreadImg.put("resources/images/butter.PNG", MASH);
+		bananaBreadImg.put("resources/images/butter.PNG", MIX);
+		bananaBreadImg.put("resources/images/butter.PNG", POUR);
+		bananaBreadImg.put("resources/images/butter.PNG", BAKE);
+		bananaBreadImg.put("resources/images/butter.PNG", COOL);
 
 		return bananaBreadImg;
 	}
@@ -280,21 +280,21 @@ public class Game {
 	 * Create a string of image file location for a white bread recipe
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
-	protected static myQueue<String> whiteBreadImg(){
-		myQueue<String> whiteBreadImg = new myQueue<>();
+	protected static Map<String, String> whiteBreadImg(){
+		Map<String, String> whiteBreadImg = new HashMap<>();
 
-		whiteBreadImg.add("resources/images/butter.PNG");// yeast
-		whiteBreadImg.add("resources/images/flour.PNG");
-		whiteBreadImg.add("resources/images/sugar.PNG");
-		whiteBreadImg.add("resources/images/water.PNG");
-		whiteBreadImg.add("resources/images/salt.PNG");
-		whiteBreadImg.add("resources/images/butter.PNG");
-		whiteBreadImg.add("resources/images/butter.PNG");
-		whiteBreadImg.add("resources/images/butter.PNG");
-		whiteBreadImg.add("resources/images/butter.PNG");
-		whiteBreadImg.add("resources/images/butter.PNG");
-		whiteBreadImg.add("resources/images/butter.PNG");
-		whiteBreadImg.add("resources/images/butter.PNG");
+		whiteBreadImg.put("resources/images/yeast.PNG", "Yeast");
+		whiteBreadImg.put("resources/images/flour.PNG", "Flour");
+		whiteBreadImg.put("resources/images/sugar.PNG", "Sugar");
+		whiteBreadImg.put("resources/images/water.PNG", "Water");
+		whiteBreadImg.put("resources/images/salt.PNG", "Salt");
+		whiteBreadImg.put("resources/images/butter.PNG", "Butter");
+		whiteBreadImg.put("resources/images/butter.PNG", YEAST);
+		whiteBreadImg.put("resources/images/butter.PNG", ADD + " " + MILK);
+		whiteBreadImg.put("resources/images/butter.PNG", RISE);
+		whiteBreadImg.put("resources/images/butter.PNG", PAN);
+		whiteBreadImg.put("resources/images/butter.PNG", RISE);
+		whiteBreadImg.put("resources/images/butter.PNG", BAKE);
 
 		return whiteBreadImg;
 	}
@@ -337,21 +337,21 @@ public class Game {
 	 * Create a string of image file location for a white bread recipe
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
-	protected static myQueue<String> fancyCakeImg(){
-		myQueue<String> fancyCakeImg = new myQueue<>();
+	protected static Map<String, String> fancyCakeImg(){
+		Map<String, String> fancyCakeImg = new HashMap<>();
 
-		fancyCakeImg.add("resources/images/flour.PNG");
-		fancyCakeImg.add("resources/images/butter.PNG");
-		fancyCakeImg.add("resources/images/sugar.PNG");
-		fancyCakeImg.add("resources/images/egg.PNG");
-		fancyCakeImg.add("resources/images/frosting.PNG");
-		fancyCakeImg.add("resources/images/sprinkles.PNG");
-		fancyCakeImg.add("resources/images/butter.PNG");
-		fancyCakeImg.add("resources/images/butter.PNG");
-		fancyCakeImg.add("resources/images/butter.PNG");
-		fancyCakeImg.add("resources/images/butter.PNG");
-		fancyCakeImg.add("resources/images/butter.PNG");
-		fancyCakeImg.add("resources/images/butter.PNG");
+		fancyCakeImg.put("resources/images/flour.PNG", "Flour");
+		fancyCakeImg.put("resources/images/butter.PNG", "Buutter");
+		fancyCakeImg.put("resources/images/sugar.PNG", "Sugar");
+		fancyCakeImg.put("resources/images/egg.PNG", "Egg");
+		fancyCakeImg.put("resources/images/frosting.PNG", "Frosting");
+		fancyCakeImg.put("resources/images/sprinkles.PNG", "Sprinkles");
+		fancyCakeImg.put("resources/images/butter.PNG", CREAM);
+		fancyCakeImg.put("resources/images/butter.PNG", STIR);
+		fancyCakeImg.put("resources/images/butter.PNG", BAKE);
+		fancyCakeImg.put("resources/images/butter.PNG", COOL);
+		fancyCakeImg.put("resources/images/butter.PNG", FROST);
+		fancyCakeImg.put("resources/images/butter.PNG", ADD + " " + SPRINKLES);
 
 		return fancyCakeImg;
 	}
