@@ -88,7 +88,7 @@ public class EndScreenController {
 		}else if(((Label)event.getSource()).getText().equals(lblExit.getText())){
 			lblExit.setFont(new Font("Sitka Small", 50));
 		}else {
-			
+			//empty 
 		}
 	}
 
@@ -103,7 +103,7 @@ public class EndScreenController {
 		}else if(((Label)event.getSource()).getText().equals(lblExit.getText())){
 			lblExit.setFont(new Font("Sitka Small", 45));
 		}else {
-			
+			//empty
 		}
 	}
 }

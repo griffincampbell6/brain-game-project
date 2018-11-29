@@ -40,21 +40,7 @@ public class ItemDisplayController {
 	// Step number or amount
 	@FXML private Label num;
 
-<<<<<<< HEAD
 	@FXML private Pane ap;
-=======
-	@FXML private Pane ap;
-	
-	
-	//method to randomly assign ingredients to buttons
-	//will use later if we have time to implement button randomization
-	/*public void labelButtons(String[] ingredients, Button[] buttons) {
-		Random rand = new Random(9);
-		for(String i:ingredients) {
-			int index = rand.nextInt(9);
-		}
-	}*/
->>>>>>> branch 'master' of https://eagle.cs.wit.edu/campbellg4/brain-game-project.git
 
 	/**
 	 * Once the scene is loaded, display:
@@ -63,8 +49,8 @@ public class ItemDisplayController {
 	 */
 	public void initialize() {
 		if(RecipeController.curDis == 0) { // ingredients
-			String[] name = Game.splitName(RecipeController.curIG.printList());
-			String[] amt = Game.splitNumber(RecipeController.curIG.printList());
+			String[] name = Game.split(RecipeController.curIG.printList(), 0);
+			String[] amt = Game.split(RecipeController.curIG.printList(), 1);
 			
 			title.setText("Ingredients");
 			num.setText("Amount");
@@ -147,3 +133,6 @@ public class ItemDisplayController {
 		t.start();
 	}
 }
+
+
+

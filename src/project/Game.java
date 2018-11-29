@@ -356,6 +356,7 @@ public class Game {
 		return fancyCakeImg;
 	}
 
+
 	/**
 	 * checking to see if the ingredients the player picked match 
 	 * the one created by the developer
@@ -373,13 +374,7 @@ public class Game {
 		}else {
 			// a set for the ingredient names that the user inputed
 			Set<String> name = userIG.keySet();
-
-			Iterator<String> itr = name.iterator();
-			while (itr.hasNext())
-			{
-				itr.set(itr.next().toLowerCase());
-			}
-
+			
 			for(myLinkedList<Ingredient> curNode = definedIG.head; curNode != null; curNode = curNode.getNext()) {
 				if(!(name.contains(curNode.getInfo().getName()))){ // check if the defined ingredient exist in the user's set
 					return false;
@@ -435,7 +430,7 @@ public class Game {
 	 * @param s the printList of the linked list of the ingredient
 	 * @return an array of just the ingredient name
 	 */
-	protected static String[] splitName(String s) {
+	protected static String[] split(String s, int n) {
 		if(s.length() <= 0) {
 			throw new IllegalArgumentException();
 		}
@@ -443,42 +438,9 @@ public class Game {
 		String[] arrayIG = new String[6];
 		String[] tempArray = s.split(" ");
 
-		//pos: 0, 3, 6...
 		for(int i = 0; i < arrayIG.length; i++) {
-			if((3*i) < tempArray.length) {
-				arrayIG[i] = tempArray[3*i];
-			}else {
-				break;
-			}
-		}
-
-		for(int i = arrayIG.length-1; i >= 0; i--) {
-			if(arrayIG[i] == null) {
-				arrayIG[i] = "";
-			}else {
-				break;
-			}
-		}
-		return arrayIG;
-	}
-
-	/**
-	 * Getting just the number of ingredients from the linked list
-	 * @param s the printList of the linked list of the ingredient
-	 * @return an array of just the ingredient amount
-	 */
-	protected static String[] splitNumber(String s) {
-		if(s.length() <= 0) {
-			throw new IllegalArgumentException();
-		}
-
-		String[] arrayIG = new String[6];
-		String[] tempArray = s.split(" ");
-
-		// pos: 1, 4, 7...
-		for(int i = 0; i < arrayIG.length; i++) {
-			if((3*i+1) < tempArray.length) {
-				arrayIG[i] = tempArray[3*i+1];
+			if((3*i + n) < tempArray.length) {
+				arrayIG[i] = tempArray[3*i+n];
 			}else {
 				break;
 			}
