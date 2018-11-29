@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -43,6 +44,20 @@ public class SelectionDisplayController {
 	@FXML private ImageView loc32; 
 	@FXML private ImageView loc34;
 
+	// Storing name of the image (naive way)
+	String[] s = setToArray(RecipeController.curImg.keySet());
+	private String name11;
+	private String name31;
+	private String name13;
+	private String name33;
+	private String name22;
+	private String name10;
+	private String name12;
+	private String name14;
+	private String name30;
+	private String name32;
+	private String name34;
+
 	// Storing choices
 	protected static Map<String, Integer> userIG = new HashMap<>();
 	protected static myQueue<String> userIS = new myQueue<>();
@@ -51,16 +66,20 @@ public class SelectionDisplayController {
 	 * Displaying the image based on the amount of the IG/IS
 	 */
 	public void initialize() {
-		String[] s = Game.queueToArray(RecipeController.curImg);
 		resetGrid();
-		
+
 		if(RecipeController.curDis == 0) {
-			if(s.length/2 == 4) {
+			if(s.length == 4) {
 				try {
 					loc11.setImage(new Image(new FileInputStream(s[0])));
 					loc31.setImage(new Image(new FileInputStream(s[1])));
 					loc13.setImage(new Image(new FileInputStream(s[2])));
 					loc33.setImage(new Image(new FileInputStream(s[3])));
+
+					name11 = RecipeController.curImg.get(s[0]);
+					name31 = RecipeController.curImg.get(s[1]);
+					name13 = RecipeController.curImg.get(s[2]);
+					name33 = RecipeController.curImg.get(s[3]);
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
@@ -71,6 +90,12 @@ public class SelectionDisplayController {
 					loc13.setImage(new Image(new FileInputStream(s[2])));
 					loc33.setImage(new Image(new FileInputStream(s[3])));
 					loc22.setImage(new Image(new FileInputStream(s[4])));
+
+					name11 = RecipeController.curImg.get(s[0]);
+					name31 = RecipeController.curImg.get(s[1]);
+					name13 = RecipeController.curImg.get(s[2]);
+					name33 = RecipeController.curImg.get(s[3]);
+					name22 = RecipeController.curImg.get(s[4]);
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
@@ -82,6 +107,14 @@ public class SelectionDisplayController {
 					loc32.setImage(new Image(new FileInputStream(s[3])));
 					loc30.setImage(new Image(new FileInputStream(s[4])));
 					loc34.setImage(new Image(new FileInputStream(s[5])));
+					
+					name10 = RecipeController.curImg.get(s[0]);
+					name12 = RecipeController.curImg.get(s[1]);
+					name14 = RecipeController.curImg.get(s[2]);
+					name30 = RecipeController.curImg.get(s[3]);
+					name32 = RecipeController.curImg.get(s[4]);
+					name34 = RecipeController.curImg.get(s[5]);
+					
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
@@ -111,6 +144,11 @@ public class SelectionDisplayController {
 					loc33.setImage(new Image(new FileInputStream(s[6])));
 					loc11.setImage(new Image(new FileInputStream(s[5])));
 					loc13.setImage(new Image(new FileInputStream(s[4])));
+
+					name31 = RecipeController.curImg.get(s[7]);
+					name33 = RecipeController.curImg.get(s[6]);
+					name11 = RecipeController.curImg.get(s[5]);
+					name13 = RecipeController.curImg.get(s[4]);
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
@@ -121,6 +159,12 @@ public class SelectionDisplayController {
 					loc11.setImage(new Image(new FileInputStream(s[7])));
 					loc31.setImage(new Image(new FileInputStream(s[6])));
 					loc33.setImage(new Image(new FileInputStream(s[5])));
+					
+					name13 = RecipeController.curImg.get(s[9]);
+					name22 = RecipeController.curImg.get(s[8]);
+					name11 = RecipeController.curImg.get(s[7]);
+					name31 = RecipeController.curImg.get(s[6]);
+					name33 = RecipeController.curImg.get(s[5]);
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
@@ -132,6 +176,13 @@ public class SelectionDisplayController {
 					loc34.setImage(new Image(new FileInputStream(s[8])));
 					loc10.setImage(new Image(new FileInputStream(s[7])));
 					loc30.setImage(new Image(new FileInputStream(s[6])));
+					
+					name12 = RecipeController.curImg.get(s[11]);
+					name32 = RecipeController.curImg.get(s[10]);
+					name14 = RecipeController.curImg.get(s[9]);
+					name34 = RecipeController.curImg.get(s[8]);
+					name10 = RecipeController.curImg.get(s[7]);
+					name30 = RecipeController.curImg.get(s[6]);
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
@@ -173,27 +224,88 @@ public class SelectionDisplayController {
 	}
 
 	/**
-	 * When the player clicked on an image on either IG or IS:
-	 * IG: stores the selection in a map, (name of ingredient, amount)
-	 * IS: stores in a queue, the order in which it needs to be in
-	 * @param event on mouse clicked
+	 * Convert a set of string to an array of string
+	 * @param s string set, that is for url
+	 * @return an array of image url
 	 */
+	private String[] setToArray(Set<String> s) {
+		int n = s.size(); 
+		String arr[] = new String[n]; 
+
+		int i = 0; 
+		for (String x : s) 
+			arr[i++] = x; 
+
+		return arr;
+	}
+
 	@FXML
-	private void add(MouseEvent event) {
-		String key = event.getSource().toString();
-		System.out.println(key);
-		
+	public void add10(MouseEvent event) {
+		add(name10);
+	}
+	
+	@FXML
+	public void add11(MouseEvent event) {
+		add(name11);
+	}
+	
+	@FXML
+	public void add12(MouseEvent event) {
+		add(name12);
+	}
+	
+	@FXML
+	public void add13(MouseEvent event) {
+		add(name13);
+	}
+	
+	@FXML
+	public void add14(MouseEvent event) {
+		add(name14);
+	}
+	
+	@FXML
+	public void add22(MouseEvent event) {
+		add(name22);
+	}
+	
+	@FXML
+	public void add30(MouseEvent event) {
+		add(name30);
+	}
+	
+	@FXML
+	public void add31(MouseEvent event) {
+		add(name31);
+	}
+	
+	@FXML
+	public void add32(MouseEvent event) {
+		add(name32);
+	}
+	
+	@FXML
+	public void add33(MouseEvent event) {
+		add(name33);
+	}
+	
+	@FXML
+	public void add34(MouseEvent event) {
+		add(name34);
+	}
+	
+	private void add(String key) {
 		if(RecipeController.curDis == 0) {			
 			if (userIG.containsKey((key))) {
-	            Integer total = userIG.get(key);
-	            
-	            if (total == 0) {
-	            	total = 1;
-	            }
-	            
-	            total++;
-	            userIG.put(key, total);
-	        }
+				Integer total = userIG.get(key);
+
+				if (total == 0) {
+					total = 1;
+				}
+
+				total++;
+				userIG.put(key, total);
+			}
 		}else if(RecipeController.curDis == 1) {
 			userIS.add(key);
 		}
@@ -201,7 +313,7 @@ public class SelectionDisplayController {
 			//empty
 		}
 	}
-
+	
 	/**
 	 * Not sure it it is necessary, but clear all the existing images
 	 */

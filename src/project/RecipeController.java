@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -35,7 +36,7 @@ public class RecipeController implements Initializable {
 	// naive way of passing data
 	protected static myLinkedList<Ingredient> curIG;
 	protected static myQueue<String> curIS;
-	protected static myQueue<String> curImg;
+	protected static Map<String, String> curImg;//new changes
 	protected static int curDis;
 
 	// strings for image file paths
