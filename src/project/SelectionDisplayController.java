@@ -3,7 +3,6 @@ package project;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -181,27 +180,26 @@ public class SelectionDisplayController {
 	 */
 	@FXML
 	private void add(MouseEvent event) {
-
-	}
-
-	/**
-	 * When the cursor moved away from the image view box,
-	 * display the image itself
-	 * @param event
-	 */
-	@FXML
-	private void displayImg(MouseEvent event) {
-
-	}
-
-	/**
-	 * When the cursor moved into the image view box,
-	 * display the name represented by the image
-	 * @param event on mouse enter
-	 */
-	@FXML
-	private void displayName(MouseEvent event) {
-
+		String key = event.getSource().toString();
+		System.out.println(key);
+		
+		if(RecipeController.curDis == 0) {			
+			if (userIG.containsKey((key))) {
+	            Integer total = userIG.get(key);
+	            
+	            if (total == 0) {
+	            	total = 1;
+	            }
+	            
+	            total++;
+	            userIG.put(key, total);
+	        }
+		}else if(RecipeController.curDis == 1) {
+			userIS.add(key);
+		}
+		else {
+			//empty
+		}
 	}
 
 	/**

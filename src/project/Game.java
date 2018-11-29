@@ -71,19 +71,19 @@ public class Game {
 	 */
 	protected static myQueue<String> sugarCookiesImg(){
 		myQueue<String> sugarCookiesIGImg = new myQueue<>();
-		
+
 		// ingredient img
 		sugarCookiesIGImg.add("resources/images/butter.PNG");
 		sugarCookiesIGImg.add("resources/images/sugar.PNG");
 		sugarCookiesIGImg.add("resources/images/flour.PNG");
 		sugarCookiesIGImg.add("resources/images/egg.PNG");
-		
+
 		//instruction img
 		sugarCookiesIGImg.add("resources/images/butter.PNG");
 		sugarCookiesIGImg.add("resources/images/butter.PNG");
 		sugarCookiesIGImg.add("resources/images/butter.PNG");
 		sugarCookiesIGImg.add("resources/images/butter.PNG");
-		
+
 		return sugarCookiesIGImg;
 	}
 
@@ -123,7 +123,7 @@ public class Game {
 	 */
 	protected static myQueue<String> chocolateCakeImg(){
 		myQueue<String> chocolateCakeImg = new myQueue<>();
-		
+
 		chocolateCakeImg.add("resources/images/flour.PNG");
 		chocolateCakeImg.add("resources/images/butter.PNG");//oil
 		chocolateCakeImg.add("resources/images/frosting.PNG");
@@ -132,10 +132,10 @@ public class Game {
 		chocolateCakeImg.add("resources/images/butter.PNG");
 		chocolateCakeImg.add("resources/images/butter.PNG");
 		chocolateCakeImg.add("resources/images/butter.PNG");
-		
+
 		return chocolateCakeImg;
 	}
-	
+
 	/**
 	 * Create the InGredients for a chocolate chip cookie
 	 * @return the linked list of the ingredients
@@ -167,14 +167,14 @@ public class Game {
 
 		return chocolateChipCookieIS;
 	}
-	
+
 	/**
 	 * Create a string of image file location for a chocolate chips cookie recipe
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
 	protected static myQueue<String> chocolateChipCookieImg(){
 		myQueue<String> chocolateChipCookieImg = new myQueue<>();
-		
+
 		chocolateChipCookieImg.add("resources/images/butter.PNG");
 		chocolateChipCookieImg.add("resources/images/flour.PNG");
 		chocolateChipCookieImg.add("resources/images/sugar.PNG");
@@ -185,7 +185,7 @@ public class Game {
 		chocolateChipCookieImg.add("resources/images/butter.PNG");
 		chocolateChipCookieImg.add("resources/images/butter.PNG");
 		chocolateChipCookieImg.add("resources/images/butter.PNG");
-		
+
 		return chocolateChipCookieImg;
 	}
 
@@ -227,7 +227,7 @@ public class Game {
 	 */
 	protected static myQueue<String> bananaBreadImg(){
 		myQueue<String> bananaBreadImg = new myQueue<>();
-		
+
 		bananaBreadImg.add("resources/images/butter.PNG"); // banana
 		bananaBreadImg.add("resources/images/flour.PNG");
 		bananaBreadImg.add("resources/images/sugar.PNG");
@@ -238,10 +238,10 @@ public class Game {
 		bananaBreadImg.add("resources/images/butter.PNG");
 		bananaBreadImg.add("resources/images/butter.PNG");
 		bananaBreadImg.add("resources/images/butter.PNG");
-		
+
 		return bananaBreadImg;
 	}
-	
+
 	/**
 	 * Create the InGredients for a white bread
 	 * @return the linked list of the ingredients
@@ -275,14 +275,14 @@ public class Game {
 
 		return whiteBreadIS;
 	}
-	
+
 	/**
 	 * Create a string of image file location for a white bread recipe
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
 	protected static myQueue<String> whiteBreadImg(){
 		myQueue<String> whiteBreadImg = new myQueue<>();
-		
+
 		whiteBreadImg.add("resources/images/butter.PNG");// yeast
 		whiteBreadImg.add("resources/images/flour.PNG");
 		whiteBreadImg.add("resources/images/sugar.PNG");
@@ -295,7 +295,7 @@ public class Game {
 		whiteBreadImg.add("resources/images/butter.PNG");
 		whiteBreadImg.add("resources/images/butter.PNG");
 		whiteBreadImg.add("resources/images/butter.PNG");
-		
+
 		return whiteBreadImg;
 	}
 
@@ -332,14 +332,14 @@ public class Game {
 
 		return fancyCakeIS;
 	}
-	
+
 	/**
 	 * Create a string of image file location for a white bread recipe
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
 	protected static myQueue<String> fancyCakeImg(){
 		myQueue<String> fancyCakeImg = new myQueue<>();
-		
+
 		fancyCakeImg.add("resources/images/flour.PNG");
 		fancyCakeImg.add("resources/images/butter.PNG");
 		fancyCakeImg.add("resources/images/sugar.PNG");
@@ -352,9 +352,10 @@ public class Game {
 		fancyCakeImg.add("resources/images/butter.PNG");
 		fancyCakeImg.add("resources/images/butter.PNG");
 		fancyCakeImg.add("resources/images/butter.PNG");
-		
+
 		return fancyCakeImg;
 	}
+
 
 	/**
 	 * checking to see if the ingredients the player picked match 
@@ -373,7 +374,7 @@ public class Game {
 		}else {
 			// a set for the ingredient names that the user inputed
 			Set<String> name = userIG.keySet();
-
+			
 			for(myLinkedList<Ingredient> curNode = definedIG.head; curNode != null; curNode = curNode.getNext()) {
 				if(!(name.contains(curNode.getInfo().getName()))){ // check if the defined ingredient exist in the user's set
 					return false;
@@ -407,7 +408,7 @@ public class Game {
 			 */
 			int size = definedIS.size();
 			for(int i = 0; i < size; i++) {
-				if(!(definedIS.peek().toString().equals(userIS.peek().toString()))) {
+				if(!(definedIS.peek().toString().equalsIgnoreCase(userIS.peek().toString()))) {
 					return false;
 				}
 
@@ -429,7 +430,7 @@ public class Game {
 	 * @param s the printList of the linked list of the ingredient
 	 * @return an array of just the ingredient name
 	 */
-	protected static String[] splitName(String s) {
+	protected static String[] split(String s, int n) {
 		if(s.length() <= 0) {
 			throw new IllegalArgumentException();
 		}
@@ -437,42 +438,9 @@ public class Game {
 		String[] arrayIG = new String[6];
 		String[] tempArray = s.split(" ");
 
-		//pos: 0, 3, 6...
 		for(int i = 0; i < arrayIG.length; i++) {
-			if((3*i) < tempArray.length) {
-				arrayIG[i] = tempArray[3*i];
-			}else {
-				break;
-			}
-		}
-
-		for(int i = arrayIG.length-1; i >= 0; i--) {
-			if(arrayIG[i] == null) {
-				arrayIG[i] = "";
-			}else {
-				break;
-			}
-		}
-		return arrayIG;
-	}
-
-	/**
-	 * Getting just the number of ingredients from the linked list
-	 * @param s the printList of the linked list of the ingredient
-	 * @return an array of just the ingredient amount
-	 */
-	protected static String[] splitNumber(String s) {
-		if(s.length() <= 0) {
-			throw new IllegalArgumentException();
-		}
-
-		String[] arrayIG = new String[6];
-		String[] tempArray = s.split(" ");
-
-		// pos: 1, 4, 7...
-		for(int i = 0; i < arrayIG.length; i++) {
-			if((3*i+1) < tempArray.length) {
-				arrayIG[i] = tempArray[3*i+1];
+			if((3*i + n) < tempArray.length) {
+				arrayIG[i] = tempArray[3*i+n];
 			}else {
 				break;
 			}
@@ -497,16 +465,16 @@ public class Game {
 		if(q == null) {
 			throw new IllegalArgumentException();
 		}
-		
+
 		String[] s = new String[q.size()];
 		int n = q.size();
-		
+
 		for(int i = 0; i < n; i++) {
 			String d  = q.remove().toString();
 			s[i] = d;
 			q.add(d);
 		}
-		
+
 		return s;
 	}
 }
