@@ -98,7 +98,7 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		easyBtn.setOnAction((event -> {
 			loadNext();
-			duration = 5000;
+			duration = 60000;
 		}));
 
 		/*
@@ -121,7 +121,7 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		mediumBtn.setOnAction((event -> {
 			loadNext();
-			duration = 10000;
+			duration = 45000;
 		}));
 
 		/*
@@ -144,7 +144,7 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		hardBtn.setOnAction((event -> {
 			loadNext();
-			duration = 15000;
+			duration = 30000;
 		}));
 
 	}

@@ -69,7 +69,7 @@ public class SelectionDisplayController {
 		resetGrid();
 
 		if(RecipeController.curDis == 0) {
-			if(s.length == 4) {
+			if(s.length/2 == 4) {
 				try {
 					loc11.setImage(new Image(new FileInputStream(s[0])));
 					loc31.setImage(new Image(new FileInputStream(s[1])));
