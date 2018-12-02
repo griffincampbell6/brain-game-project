@@ -25,9 +25,22 @@ public class Game {
 	private static final String MILK = "Milk";
 	private static final String RISE = "Let Rise";
 	private static final String PAN = "Place in Pan";
-	private static final String COCO = "Chocolate Chips";
+	private static final String COCO = "Chocolate-Chips";
 	private static final String SPRINKLES = "Sprinkles";
 
+	// ingredient names
+	private static final String BUTTER = "Butter";
+	private static final String SUGAR = "Sugar";
+	private static final String FLOUR = "FLour";
+	private static final String EGGIG = "Egg";
+	private static final String OIL = "Oil";
+	private static final String FROSTING = "Frosting";
+	private static final String CINNAMON= "Cinnamon";
+	private static final String BANANA = "Banana";
+	private static final String YEASTIG = "Yeast";
+	private static final String WATER = "WATER";
+	private static final String SALT = "SALT";
+	
 	// unit names
 	private static final String CUP = "c";
 	private static final String EGG = "egg(s)";
@@ -42,10 +55,10 @@ public class Game {
 	protected static myLinkedList<Ingredient> sugarCookiesIG(){
 		myLinkedList<Ingredient> sugarCookiesIG = new myLinkedList<>(); // Instantiate a linked list for ingredients 
 
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1))); // add the ingredients IG
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 3)));
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 3)));
-		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 1)));
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient(BUTTER, CUP, 1))); // add the ingredients IG
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient(SUGAR, CUP, 3)));
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FLOUR, CUP, 3)));
+		sugarCookiesIG.addLast(new myLinkedList<Ingredient>(new Ingredient(EGGIG, EGG, 1)));
 
 		return sugarCookiesIG;
 	}
@@ -70,19 +83,16 @@ public class Game {
 	 * @return the map of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> sugarCookiesImg(){
-		Map<String, String> sugarCookiesImg = new HashMap<>();
+		Map<String, String> sugarCookiesImg = new LinkedHashMap<>();
 
-		// ingredient img
-		sugarCookiesImg.put("resources/images/butter.PNG", "Butter");
-		sugarCookiesImg.put("resources/images/sugar.PNG", "Sugar");
-		sugarCookiesImg.put("resources/images/flour.PNG", "Flour");
-		sugarCookiesImg.put("resources/images/egg.PNG", "Egg");
-
-		//instruction img
-		sugarCookiesImg.put("resources/images/butter.PNG", CREAM);
-		sugarCookiesImg.put("resources/images/butter.PNG", STIR);
-		sugarCookiesImg.put("resources/images/butter.PNG", ROLL);
-		sugarCookiesImg.put("resources/images/butter.PNG", BAKE);
+		sugarCookiesImg.put("resources/images/butter.PNG", BUTTER);
+		sugarCookiesImg.put("resources/images/sugar.PNG", SUGAR);
+		sugarCookiesImg.put("resources/images/flour.PNG", FLOUR);
+		sugarCookiesImg.put("resources/images/egg.PNG", EGGIG);
+		sugarCookiesImg.put("resources/images/cream.PNG", CREAM); //missing
+		sugarCookiesImg.put("resources/images/stir.PNG", STIR);
+		sugarCookiesImg.put("resources/images/roll.PNG", ROLL);
+		sugarCookiesImg.put("resources/images/bake.PNG", BAKE);
 
 		return sugarCookiesImg;
 	}
@@ -94,10 +104,10 @@ public class Game {
 	protected static myLinkedList<Ingredient> chocolateCakeIG(){
 		myLinkedList<Ingredient> chocolateCakeIG = new myLinkedList<>();
 
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 2)));
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Oil", TBSP, 2)));
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Frosting", CUP, 2)));
-		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 2)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FLOUR, CUP, 2)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(OIL, TBSP, 2)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FROSTING, CUP, 2)));
+		chocolateCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(EGGIG, EGG, 2)));
 
 		return chocolateCakeIG;
 	}
@@ -122,16 +132,16 @@ public class Game {
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> chocolateCakeImg(){
-		Map<String, String> chocolateCakeImg = new HashMap<>();
+		Map<String, String> chocolateCakeImg = new LinkedHashMap<>();
 
-		chocolateCakeImg.put("resources/images/flour.PNG", "Flour");
-		chocolateCakeImg.put("resources/images/oil.PNG", "Oil");
-		chocolateCakeImg.put("resources/images/frosting.PNG", "Frosting");
-		chocolateCakeImg.put("resources/images/egg.PNG", "Egg");
-		chocolateCakeImg.put("resources/images/butter.PNG", MIX);
-		chocolateCakeImg.put("resources/images/butter.PNG", BAKE);
-		chocolateCakeImg.put("resources/images/butter.PNG", COOL);
-		chocolateCakeImg.put("resources/images/butter.PNG", FROST);
+		chocolateCakeImg.put("resources/images/flour.PNG", FLOUR);
+		chocolateCakeImg.put("resources/images/oil.PNG", OIL);
+		chocolateCakeImg.put("resources/images/frosting.PNG", FROSTING);
+		chocolateCakeImg.put("resources/images/egg.PNG", EGGIG);
+		chocolateCakeImg.put("resources/images/mix.PNG", MIX);
+		chocolateCakeImg.put("resources/images/bake.PNG", BAKE);
+		chocolateCakeImg.put("resources/images/cool.PNG", COOL);
+		chocolateCakeImg.put("resources/images/add-frosting.PNG", FROST);
 
 		return chocolateCakeImg;
 	}
@@ -143,11 +153,11 @@ public class Game {
 	protected static myLinkedList<Ingredient> chocolateChipCookieIG(){
 		myLinkedList<Ingredient> chocolateChipCookieIG = new myLinkedList<>();
 
-		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1)));
-		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 2)));
-		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 1)));
-		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 1)));
-		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Chocolate", CUP, 1)));
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient(BUTTER, CUP, 1)));
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FLOUR, CUP, 2)));
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient(SUGAR, CUP, 1)));
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient(EGGIG, EGG, 1)));
+		chocolateChipCookieIG.addLast(new myLinkedList<Ingredient>(new Ingredient(COCO, CUP, 1)));
 
 		return chocolateChipCookieIG;
 	}	
@@ -173,18 +183,18 @@ public class Game {
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> chocolateChipCookieImg(){
-		Map<String, String> chocolateChipCookieImg = new HashMap<>();
+		Map<String, String> chocolateChipCookieImg = new LinkedHashMap<>();
 
-		chocolateChipCookieImg.put("resources/images/butter.PNG", "Butter");
-		chocolateChipCookieImg.put("resources/images/flour.PNG", "Flour");
-		chocolateChipCookieImg.put("resources/images/sugar.PNG", "Sugar");
-		chocolateChipCookieImg.put("resources/images/egg.PNG", "Egg");
-		chocolateChipCookieImg.put("resources/images/chocholate-chips.PNG", "Chocolate");
-		chocolateChipCookieImg.put("resources/images/butter.PNG", CREAM);
-		chocolateChipCookieImg.put("resources/images/butter.PNG", STIR);
-		chocolateChipCookieImg.put("resources/images/butter.PNG", ADD + " " + COCO);
-		chocolateChipCookieImg.put("resources/images/butter.PNG", SHAPE);
-		chocolateChipCookieImg.put("resources/images/butter.PNG", BAKE);
+		chocolateChipCookieImg.put("resources/images/butter.PNG", BUTTER);
+		chocolateChipCookieImg.put("resources/images/flour.PNG", FLOUR);
+		chocolateChipCookieImg.put("resources/images/sugar.PNG", SUGAR);
+		chocolateChipCookieImg.put("resources/images/egg.PNG", EGGIG);
+		chocolateChipCookieImg.put("resources/images/chocholate-chips.PNG", COCO);
+		chocolateChipCookieImg.put("resources/images/cream.PNG", CREAM);
+		chocolateChipCookieImg.put("resources/images/stir.PNG", STIR);
+		chocolateChipCookieImg.put("resources/images/add-chocholate-chips.PNG", ADD + " " + COCO);
+		chocolateChipCookieImg.put("resources/images/shape.PNG", SHAPE);
+		chocolateChipCookieImg.put("resources/images/bake.PNG", BAKE);
 
 		return chocolateChipCookieImg;
 	}
@@ -196,11 +206,11 @@ public class Game {
 	protected static myLinkedList<Ingredient> bananaBreadIG(){
 		myLinkedList<Ingredient> bananaBreadIG = new myLinkedList<>();
 
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Banana", BAN, 3)));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 2)));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 1)));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 1)));
-		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Cinnamon", TBSP, 2)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(BANANA, BAN, 3)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FLOUR, CUP, 2)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(SUGAR, CUP, 1)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(EGGIG, EGG, 1)));
+		bananaBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(CINNAMON, TBSP, 2)));
 
 		return bananaBreadIG;
 	}
@@ -226,18 +236,18 @@ public class Game {
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> bananaBreadImg(){
-		Map<String, String> bananaBreadImg = new HashMap<>();
+		Map<String, String> bananaBreadImg = new LinkedHashMap<>();
 
-		bananaBreadImg.put("resources/images/butter.PNG", "Banana"); // banana
-		bananaBreadImg.put("resources/images/flour.PNG", "Flour");
-		bananaBreadImg.put("resources/images/sugar.PNG", "Sugar");
-		bananaBreadImg.put("resources/images/egg.PNG", "Egg");
-		bananaBreadImg.put("resources/images/cinnamon.PNG", "Cinnamon");
-		bananaBreadImg.put("resources/images/butter.PNG", MASH);
-		bananaBreadImg.put("resources/images/butter.PNG", MIX);
-		bananaBreadImg.put("resources/images/butter.PNG", POUR);
-		bananaBreadImg.put("resources/images/butter.PNG", BAKE);
-		bananaBreadImg.put("resources/images/butter.PNG", COOL);
+		bananaBreadImg.put("resources/images/banana.PNG", BANANA);
+		bananaBreadImg.put("resources/images/flour.PNG", FLOUR);
+		bananaBreadImg.put("resources/images/sugar.PNG", SUGAR);
+		bananaBreadImg.put("resources/images/egg.PNG", EGGIG);
+		bananaBreadImg.put("resources/images/cinnamon.PNG", CINNAMON);
+		bananaBreadImg.put("resources/images/mash.PNG", MASH);
+		bananaBreadImg.put("resources/images/mix.PNG", MIX);
+		bananaBreadImg.put("resources/images/pour.PNG", POUR);// missing
+		bananaBreadImg.put("resources/images/bake.PNG", BAKE);
+		bananaBreadImg.put("resources/images/cool.PNG", COOL);
 
 		return bananaBreadImg;
 	}
@@ -249,12 +259,12 @@ public class Game {
 	protected static myLinkedList<Ingredient> whiteBreadIG(){
 		myLinkedList<Ingredient> whiteBreadIG = new myLinkedList<>();
 
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Yeast", PKG, 1)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 6)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", TBSP, 3)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Water", CUP, 2)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Salt", TBSP, 1)));
-		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(YEASTIG, PKG, 1)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FLOUR, CUP, 6)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(SUGAR, TBSP, 3)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(WATER, CUP, 2)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(SALT, TBSP, 1)));
+		whiteBreadIG.addLast(new myLinkedList<Ingredient>(new Ingredient(BUTTER, CUP, 1)));
 
 		return whiteBreadIG;
 	}
@@ -267,7 +277,7 @@ public class Game {
 		myQueue<String> whiteBreadIS = new myQueue<>();
 
 		whiteBreadIS.add(YEAST);
-		whiteBreadIS.add(ADD + " " + MILK);
+		whiteBreadIS.add(ADD + " " + WATER);
 		whiteBreadIS.add(RISE);
 		whiteBreadIS.add(PAN);
 		whiteBreadIS.add(RISE);
@@ -281,20 +291,20 @@ public class Game {
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> whiteBreadImg(){
-		Map<String, String> whiteBreadImg = new HashMap<>();
+		Map<String, String> whiteBreadImg = new LinkedHashMap<>();
 
-		whiteBreadImg.put("resources/images/yeast.PNG", "Yeast");
-		whiteBreadImg.put("resources/images/flour.PNG", "Flour");
-		whiteBreadImg.put("resources/images/sugar.PNG", "Sugar");
-		whiteBreadImg.put("resources/images/water.PNG", "Water");
-		whiteBreadImg.put("resources/images/salt.PNG", "Salt");
-		whiteBreadImg.put("resources/images/butter.PNG", "Butter");
-		whiteBreadImg.put("resources/images/butter.PNG", YEAST);
-		whiteBreadImg.put("resources/images/butter.PNG", ADD + " " + MILK);
-		whiteBreadImg.put("resources/images/butter.PNG", RISE);
-		whiteBreadImg.put("resources/images/butter.PNG", PAN);
-		whiteBreadImg.put("resources/images/butter.PNG", RISE);
-		whiteBreadImg.put("resources/images/butter.PNG", BAKE);
+		whiteBreadImg.put("resources/images/yeast.PNG", YEASTIG);
+		whiteBreadImg.put("resources/images/flour.PNG", FLOUR);
+		whiteBreadImg.put("resources/images/sugar.PNG", SUGAR);
+		whiteBreadImg.put("resources/images/water.PNG", WATER);
+		whiteBreadImg.put("resources/images/salt.PNG", SALT);
+		whiteBreadImg.put("resources/images/butter.PNG", BUTTER);
+		whiteBreadImg.put("resources/images/yeast.PNG", YEAST);
+		whiteBreadImg.put("resources/images/add-water.PNG", ADD + " " + WATER);
+		whiteBreadImg.put("resources/images/rise.PNG", RISE);
+		whiteBreadImg.put("resources/images/pan.PNG", PAN);
+		whiteBreadImg.put("resources/images/rise.PNG", RISE);
+		whiteBreadImg.put("resources/images/bake.PNG", BAKE);
 
 		return whiteBreadImg;
 	}
@@ -306,12 +316,12 @@ public class Game {
 	protected static myLinkedList<Ingredient> fancyCakeIG(){
 		myLinkedList<Ingredient> fancyCakeIG = new myLinkedList<>();
 
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Flour", CUP, 2)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Butter", CUP, 1)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sugar", CUP, 1)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Egg", EGG, 2)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Frosting", CUP, 2)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient("Sprinkles", CUP, 1)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FLOUR, CUP, 2)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(BUTTER, CUP, 1)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(SUGAR, CUP, 1)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(EGG, EGG, 2)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FROSTING, CUP, 2)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(SPRINKLES, CUP, 1)));
 
 		return fancyCakeIG;
 	}
@@ -338,20 +348,20 @@ public class Game {
 	 * @return the queue of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> fancyCakeImg(){
-		Map<String, String> fancyCakeImg = new HashMap<>();
+		Map<String, String> fancyCakeImg = new LinkedHashMap<>();
 
-		fancyCakeImg.put("resources/images/flour.PNG", "Flour");
-		fancyCakeImg.put("resources/images/butter.PNG", "Buutter");
-		fancyCakeImg.put("resources/images/sugar.PNG", "Sugar");
-		fancyCakeImg.put("resources/images/egg.PNG", "Egg");
-		fancyCakeImg.put("resources/images/frosting.PNG", "Frosting");
-		fancyCakeImg.put("resources/images/sprinkles.PNG", "Sprinkles");
-		fancyCakeImg.put("resources/images/butter.PNG", CREAM);
-		fancyCakeImg.put("resources/images/butter.PNG", STIR);
-		fancyCakeImg.put("resources/images/butter.PNG", BAKE);
-		fancyCakeImg.put("resources/images/butter.PNG", COOL);
-		fancyCakeImg.put("resources/images/butter.PNG", FROST);
-		fancyCakeImg.put("resources/images/butter.PNG", ADD + " " + SPRINKLES);
+		fancyCakeImg.put("resources/images/flour.PNG", FLOUR);
+		fancyCakeImg.put("resources/images/butter.PNG", BUTTER);
+		fancyCakeImg.put("resources/images/sugar.PNG", SUGAR);
+		fancyCakeImg.put("resources/images/egg.PNG", EGGIG);
+		fancyCakeImg.put("resources/images/frosting.PNG", FROSTING);
+		fancyCakeImg.put("resources/images/sprinkles.PNG", SPRINKLES);
+		fancyCakeImg.put("resources/images/cream.PNG", CREAM);
+		fancyCakeImg.put("resources/images/stir.PNG", STIR);
+		fancyCakeImg.put("resources/images/bake.PNG", BAKE);
+		fancyCakeImg.put("resources/images/cool.PNG", COOL);
+		fancyCakeImg.put("resources/images/frost.PNG", FROST);
+		fancyCakeImg.put("resources/images/add-sprinkles.PNG", ADD + " " + SPRINKLES);
 
 		return fancyCakeImg;
 	}

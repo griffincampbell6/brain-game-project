@@ -98,7 +98,7 @@ public class DifficultyMenuController implements Initializable {
 		}));
 		easyBtn.setOnAction((event -> {
 			loadNext();
-			duration = 60000;
+			duration = 5000;
 		}));
 
 		/*

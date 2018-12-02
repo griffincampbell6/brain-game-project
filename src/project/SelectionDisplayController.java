@@ -3,6 +3,7 @@ package project;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -236,6 +237,7 @@ public class SelectionDisplayController {
 		for (String x : s) 
 			arr[i++] = x; 
 
+		System.out.println(Arrays.deepToString(arr));
 		return arr;
 	}
 
