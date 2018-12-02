@@ -301,9 +301,9 @@ public class Game {
 		whiteBreadImg.put("resources/images/butter.PNG", BUTTER);
 		whiteBreadImg.put("resources/images/feed-yeast.PNG", YEAST);
 		whiteBreadImg.put("resources/images/add-water.PNG", ADD + " " + WATER);
-		whiteBreadImg.put("resources/images/rise.PNG", RISE);//missing
-		whiteBreadImg.put("resources/images/pan.PNG", PAN);
-		whiteBreadImg.put("resources/images/rise2.PNG", RISE);//missing
+		whiteBreadImg.put("resources/images/rise.PNG", RISE);
+		whiteBreadImg.put("resources/images/pour.PNG", PAN);
+		whiteBreadImg.put("resources/images/rise2.PNG", RISE);
 		whiteBreadImg.put("resources/images/bake.PNG", BAKE);
 
 		return whiteBreadImg;
