@@ -381,7 +381,7 @@ public class Game {
 		 */
 		if(definedIG.getSize() != userIG.size()) {
 			return false;
-		}else {
+		}else {			
 			// a set for the ingredient names that the user inputed
 			Set<String> name = userIG.keySet();
 			

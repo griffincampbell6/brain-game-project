@@ -3,7 +3,6 @@ package project;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -60,14 +59,14 @@ public class SelectionDisplayController {
 	private String name34;
 
 	// Storing choices
-	protected static Map<String, Integer> userIG = new HashMap<>();
+	protected static Map<String, Integer> userIG = new HashMap<String, Integer>();
 	protected static myQueue<String> userIS = new myQueue<>();
 
 	/**
 	 * Displaying the image based on the amount of the IG/IS
 	 */
 	public void initialize() {
-		resetGrid();
+		reset();
 
 		if(RecipeController.curDis == 0) {
 			if(s.length/2 == 4) {
@@ -108,14 +107,14 @@ public class SelectionDisplayController {
 					loc32.setImage(new Image(new FileInputStream(s[3])));
 					loc30.setImage(new Image(new FileInputStream(s[4])));
 					loc34.setImage(new Image(new FileInputStream(s[5])));
-					
+
 					name10 = RecipeController.curImg.get(s[0]);
 					name12 = RecipeController.curImg.get(s[1]);
 					name14 = RecipeController.curImg.get(s[2]);
 					name30 = RecipeController.curImg.get(s[3]);
 					name32 = RecipeController.curImg.get(s[4]);
 					name34 = RecipeController.curImg.get(s[5]);
-					
+
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
@@ -128,6 +127,7 @@ public class SelectionDisplayController {
 			 */
 			delay(DifficultyMenuController.duration, () -> {
 				try {
+					RecipeController.curDis = 1;
 					Parent root =  FXMLLoader.load(getClass().getResource("itemDisplay.fxml"));
 					Scene scene = new Scene(root);
 					Stage stage = (Stage) gPane.getScene().getWindow();
@@ -137,7 +137,6 @@ public class SelectionDisplayController {
 				}
 			});
 
-			RecipeController.curDis = 1;
 		}else if(RecipeController.curDis == 1) {
 			if(s.length/2 == 4) {
 				try {
@@ -160,7 +159,7 @@ public class SelectionDisplayController {
 					loc11.setImage(new Image(new FileInputStream(s[7])));
 					loc31.setImage(new Image(new FileInputStream(s[6])));
 					loc33.setImage(new Image(new FileInputStream(s[5])));
-					
+
 					name13 = RecipeController.curImg.get(s[9]);
 					name22 = RecipeController.curImg.get(s[8]);
 					name11 = RecipeController.curImg.get(s[7]);
@@ -177,7 +176,7 @@ public class SelectionDisplayController {
 					loc34.setImage(new Image(new FileInputStream(s[8])));
 					loc10.setImage(new Image(new FileInputStream(s[7])));
 					loc30.setImage(new Image(new FileInputStream(s[6])));
-					
+
 					name12 = RecipeController.curImg.get(s[11]);
 					name32 = RecipeController.curImg.get(s[10]);
 					name14 = RecipeController.curImg.get(s[9]);
@@ -237,7 +236,6 @@ public class SelectionDisplayController {
 		for (String x : s) 
 			arr[i++] = x; 
 
-		System.out.println(Arrays.deepToString(arr));
 		return arr;
 	}
 
@@ -245,65 +243,63 @@ public class SelectionDisplayController {
 	public void add10(MouseEvent event) {
 		add(name10);
 	}
-	
+
 	@FXML
 	public void add11(MouseEvent event) {
 		add(name11);
 	}
-	
+
 	@FXML
 	public void add12(MouseEvent event) {
 		add(name12);
 	}
-	
+
 	@FXML
 	public void add13(MouseEvent event) {
 		add(name13);
 	}
-	
+
 	@FXML
 	public void add14(MouseEvent event) {
 		add(name14);
 	}
-	
+
 	@FXML
 	public void add22(MouseEvent event) {
 		add(name22);
 	}
-	
+
 	@FXML
 	public void add30(MouseEvent event) {
 		add(name30);
 	}
-	
+
 	@FXML
 	public void add31(MouseEvent event) {
 		add(name31);
 	}
-	
+
 	@FXML
 	public void add32(MouseEvent event) {
 		add(name32);
 	}
-	
+
 	@FXML
 	public void add33(MouseEvent event) {
 		add(name33);
 	}
-	
+
 	@FXML
 	public void add34(MouseEvent event) {
 		add(name34);
 	}
-	
+
 	private void add(String key) {
 		if(RecipeController.curDis == 0) {			
-			if (userIG.containsKey((key))) {
+			if (!(userIG.containsKey((key)))) {
+				userIG.put(key, 1);
+			}else {
 				Integer total = userIG.get(key);
-
-				if (total == 0) {
-					total = 1;
-				}
 
 				total++;
 				userIG.put(key, total);
@@ -315,11 +311,19 @@ public class SelectionDisplayController {
 			//empty
 		}
 	}
-	
+
 	/**
 	 * Not sure it it is necessary, but clear all the existing images
 	 */
-	private void resetGrid() {
+	private void reset() {
+		if(RecipeController.curDis == 0) {
+			userIG.clear();
+		}else if(RecipeController.curDis == 1) {
+			userIS.removeAll();
+		}else {
+			//empty
+		}
+		
 		loc11.setImage(null);
 		loc31.setImage(null);
 		loc13.setImage(null);

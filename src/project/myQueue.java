@@ -27,6 +27,13 @@ public class myQueue<E> {
 	}
 
 	/**
+	 * reset a queue
+	 */
+	public void removeAll() {
+		queue.head = null;
+	}
+	
+	/**
 	 * remove an element
 	 * @return removes and returns the value at the front of the list
 	 */
