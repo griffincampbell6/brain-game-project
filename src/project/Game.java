@@ -189,10 +189,10 @@ public class Game {
 		chocolateChipCookieImg.put("resources/images/flour.PNG", FLOUR);
 		chocolateChipCookieImg.put("resources/images/sugar.PNG", SUGAR);
 		chocolateChipCookieImg.put("resources/images/egg.PNG", EGGIG);
-		chocolateChipCookieImg.put("resources/images/chocholate-chips.PNG", COCO);
+		chocolateChipCookieImg.put("resources/images/chocolate-chips.PNG", COCO);
 		chocolateChipCookieImg.put("resources/images/cream.PNG", CREAM);
 		chocolateChipCookieImg.put("resources/images/stir.PNG", STIR);
-		chocolateChipCookieImg.put("resources/images/add-chocholate-chips.PNG", ADD + " " + COCO);
+		chocolateChipCookieImg.put("resources/images/add-chocolate-chips.PNG", ADD + " " + COCO);
 		chocolateChipCookieImg.put("resources/images/shape.PNG", SHAPE);
 		chocolateChipCookieImg.put("resources/images/bake.PNG", BAKE);
 
@@ -299,7 +299,7 @@ public class Game {
 		whiteBreadImg.put("resources/images/water.PNG", WATER);
 		whiteBreadImg.put("resources/images/salt.PNG", SALT);
 		whiteBreadImg.put("resources/images/butter.PNG", BUTTER);
-		whiteBreadImg.put("resources/images/add-yeast.PNG", YEAST);
+		whiteBreadImg.put("resources/images/feed-yeast.PNG", YEAST);
 		whiteBreadImg.put("resources/images/add-water.PNG", ADD + " " + WATER);
 		whiteBreadImg.put("resources/images/rise.PNG", RISE);//missing
 		whiteBreadImg.put("resources/images/pan.PNG", PAN);
