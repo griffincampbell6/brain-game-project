@@ -299,11 +299,11 @@ public class Game {
 		whiteBreadImg.put("resources/images/water.PNG", WATER);
 		whiteBreadImg.put("resources/images/salt.PNG", SALT);
 		whiteBreadImg.put("resources/images/butter.PNG", BUTTER);
-		whiteBreadImg.put("resources/images/yeast.PNG", YEAST);
+		whiteBreadImg.put("resources/images/add-yeast.PNG", YEAST);
 		whiteBreadImg.put("resources/images/add-water.PNG", ADD + " " + WATER);
-		whiteBreadImg.put("resources/images/rise.PNG", RISE);
+		whiteBreadImg.put("resources/images/rise.PNG", RISE);//missing
 		whiteBreadImg.put("resources/images/pan.PNG", PAN);
-		whiteBreadImg.put("resources/images/rise.PNG", RISE);
+		whiteBreadImg.put("resources/images/rise2.PNG", RISE);//missing
 		whiteBreadImg.put("resources/images/bake.PNG", BAKE);
 
 		return whiteBreadImg;
@@ -360,7 +360,7 @@ public class Game {
 		fancyCakeImg.put("resources/images/stir.PNG", STIR);
 		fancyCakeImg.put("resources/images/bake.PNG", BAKE);
 		fancyCakeImg.put("resources/images/cool.PNG", COOL);
-		fancyCakeImg.put("resources/images/frost.PNG", FROST);
+		fancyCakeImg.put("resources/images/add-frosting.PNG", FROST);
 		fancyCakeImg.put("resources/images/add-sprinkles.PNG", ADD + " " + SPRINKLES);
 
 		return fancyCakeImg;
