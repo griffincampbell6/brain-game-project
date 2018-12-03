@@ -22,7 +22,6 @@ public class Game {
 	private static final String MASH = "Mash";
 	private static final String POUR = "Pour";
 	private static final String YEAST = "Feed Yeast";
-	private static final String MILK = "Milk";
 	private static final String RISE = "Let Rise";
 	private static final String PAN = "Place in Pan";
 	private static final String COCO = "Chocolate-Chips";
@@ -129,7 +128,7 @@ public class Game {
 
 	/**
 	 * Create a string of image file location for a chocolate cake recipe
-	 * @return the queue of each image file corresponding to the ingredient
+	 * @return the map of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> chocolateCakeImg(){
 		Map<String, String> chocolateCakeImg = new LinkedHashMap<>();
@@ -180,7 +179,7 @@ public class Game {
 
 	/**
 	 * Create a string of image file location for a chocolate chips cookie recipe
-	 * @return the queue of each image file corresponding to the ingredient
+	 * @return the map of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> chocolateChipCookieImg(){
 		Map<String, String> chocolateChipCookieImg = new LinkedHashMap<>();
@@ -233,7 +232,7 @@ public class Game {
 
 	/**
 	 * Create a string of image file location for a banana bread recipe
-	 * @return the queue of each image file corresponding to the ingredient
+	 * @return the map of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> bananaBreadImg(){
 		Map<String, String> bananaBreadImg = new LinkedHashMap<>();
@@ -288,7 +287,7 @@ public class Game {
 
 	/**
 	 * Create a string of image file location for a white bread recipe
-	 * @return the queue of each image file corresponding to the ingredient
+	 * @return the map of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> whiteBreadImg(){
 		Map<String, String> whiteBreadImg = new LinkedHashMap<>();
@@ -319,7 +318,7 @@ public class Game {
 		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FLOUR, CUP, 2)));
 		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(BUTTER, CUP, 1)));
 		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(SUGAR, CUP, 1)));
-		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(EGG, EGG, 2)));
+		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(EGGIG, EGG, 2)));
 		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(FROSTING, CUP, 2)));
 		fancyCakeIG.addLast(new myLinkedList<Ingredient>(new Ingredient(SPRINKLES, CUP, 1)));
 
@@ -345,7 +344,7 @@ public class Game {
 
 	/**
 	 * Create a string of image file location for a white bread recipe
-	 * @return the queue of each image file corresponding to the ingredient
+	 * @return the map of each image file corresponding to the ingredient
 	 */
 	protected static Map<String, String> fancyCakeImg(){
 		Map<String, String> fancyCakeImg = new LinkedHashMap<>();
